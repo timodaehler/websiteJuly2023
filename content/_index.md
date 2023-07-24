@@ -35,9 +35,14 @@ sections:
       gradient_end: '#1976d2'
       gradient_start: '#004ba0'
       text_color_light: true
+# - block: about.biography
+#   content:
+#     title: Biography
+#     username: admin
+#   id: about
 - block: about.biography
   content:
-    title: Grüezi
+    title: Grüezi & Welcome
     username: admin
   id: about
 # - block: features
@@ -56,34 +61,72 @@ sections:
 #       icon_pack: fas
 #       name: Photography
 #     title: Skills
+
+
+
 - block: experience
   content:
     date_format: Jan 2006
     items:
-    - company: GenCoin
-      company_logo: org-gc
+    - company: University of Southern California
+      company_logo: org-usc-color
       company_url: ""
-      date_end: ""
-      date_start: "2021-01-01"
+      date_start: '2018-01-01'
+      date_end: '2021-08-01'
       description: |2-
-          Responsibilities include:
-
-          * Analysing
-          * Modelling
-          * Deploying
-      location: California
-      title: CEO
-    - company: University X
-      company_logo: org-x
+          Dissertation:
+        * Essays on Sovereign Debt
+        * Committee: Joshua Aizenman, Saori Katada, Pablo Barberá & Jeff Nugent
+          
+          Teaching: 
+        * Intermediate Macroeconomics
+        * Introduction to Macroeconomics
+        * International Economics
+      location: Los Angeles, CA
+      title: PhD in International Political Economy
+    
+    - company: University of Southern California
+      company_url: ''
+      company_logo: org-usc-color
+      location: Los Angeles, CA
+      date_start: '2016-08-01'
+      date_end: '2017-12-31'
+      title: MA in Economics
+      
+    - company: Harvard University
+      company_logo: org-harvard
       company_url: ""
-      date_end: "2020-12-31"
-      date_start: "2016-01-01"
-      description: Taught electronic engineering and researched semiconductor physics.
-      location: California
-      title: Professor of Semiconductor Physics
-    title: Experience
+      date_start: '2015-01-01'
+      date_end: '2015-05-30'
+      location: Cambridge, MA
+      title: Visiting Undergraduate Student
+      
+    - title: BA in Economics
+      company: University of St. Gallen
+      company_url: ''
+      company_logo: org-hsg-color
+      location: St. Gallen, Switzerland
+      date_start: '2011-09-01'
+      date_end: '2016-06-30'
+      description: 
+
+      
+    title: Education
   design:
     columns: "2"
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 - block: accomplishments
   content:
     date_format: Jan 2006
