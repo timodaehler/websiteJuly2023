@@ -37,25 +37,25 @@ sections:
       text_color_light: true
 - block: about.biography
   content:
-    title: Biography
+    title: Grüezi
     username: admin
   id: about
-- block: features
-  content:
-    items:
-    - description: 90%
-      icon: r-project
-      icon_pack: fab
-      name: R
-    - description: 100%
-      icon: chart-line
-      icon_pack: fas
-      name: Statistics
-    - description: 10%
-      icon: camera-retro
-      icon_pack: fas
-      name: Photography
-    title: Skills
+# - block: features
+#   content:
+#     items:
+#     - description: 90%
+#       icon: r-project
+#       icon_pack: fab
+#       name: R
+#     - description: 100%
+#       icon: chart-line
+#       icon_pack: fas
+#       name: Statistics
+#     - description: 10%
+#       icon: camera-retro
+#       icon_pack: fas
+#       name: Photography
+#     title: Skills
 - block: experience
   content:
     date_format: Jan 2006
