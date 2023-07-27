@@ -8,7 +8,7 @@ highlight_name: true
 organizations:
 - name: 
   url: 
-role: Economist & Mountain Lover
+role: Mountain lover
 social:
 - icon: envelope
   icon_pack: fas
@@ -27,7 +27,7 @@ social:
 #   link: https://github.com/timodaehler
 
 superuser: true
-title: Timo B. Dähler 
+title: Timo B. Dähler, PhD
 
 ---
 Thanks for stopping by! 

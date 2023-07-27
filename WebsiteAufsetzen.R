@@ -45,7 +45,6 @@ blogdown::new_site(theme = "wowchemy/starter-hugo-academic")
 # eine einmal gewählte Domain nicht mehr ändern kann. 
 # 
 # Der hat danach in config.toml die baserl auf seine url gesetzt
-# 
 
 
 

@@ -12,7 +12,7 @@ links:
 slides: example
 summary: An example of using the in-built project page.
 tags:
-- Macro
+- Deep Learning
 title: Example Project
 url_code: ""
 url_pdf: ""
