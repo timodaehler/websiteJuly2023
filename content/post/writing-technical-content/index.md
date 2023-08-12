@@ -388,3 +388,12 @@ renders as
 {{< icon name="r-project" pack="fab" >}} R
 
 ### Did you find this page helpful? Consider sharing it 🙌
+
+
+
+Here's a sentence with a footnote. [^1]
+
+[^1]: This is the footnote.
+
+
+
