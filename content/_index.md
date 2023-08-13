@@ -58,11 +58,11 @@ sections:
   design:
     columns: "2"
 
-- block: tag_cloud
-  content:
-    title: Popular Topics
-  design:
-    columns: "2"
+# - block: tag_cloud
+#   content:
+#     title: Popular Topics
+#   design:
+#     columns: "2"
     
 - block: portfolio
   content:
@@ -119,28 +119,28 @@ sections:
 #   design:
 #     columns: "2"
 
-- block: collection
-  content:
-    count: 5
-    filters:
-      author: ""
-      category: ""
-      exclude_featured: false
-      exclude_future: false
-      exclude_past: false
-      folders:
-      - post
-      publication_type: ""
-      tag: ""
-    offset: 0
-    order: desc
-    subtitle: ""
-    text: ""
-    title: Recent Posts
-  design:
-    columns: "2"
-    view: compact
-  id: posts
+# - block: collection
+#   content:
+#     count: 5
+#     filters:
+#       author: ""
+#       category: ""
+#       exclude_featured: false
+#       exclude_future: false
+#       exclude_past: false
+#       folders:
+#       - post
+#       publication_type: ""
+#       tag: ""
+#     offset: 0
+#     order: desc
+#     subtitle: ""
+#     text: ""
+#     title: Recent Posts
+#   design:
+#     columns: "2"
+#     view: compact
+#   id: posts
   
 # - block: markdown
 #   content:

@@ -36,7 +36,7 @@ I have an academic background in economics and professional experience in risk m
 
 If you think we could collaborate on cool work, I'd love to hear from you!
 
-{{% staticref "uploads/lebenslauf_24.7.2023.pdf" "newtab" %}}<i class="fa-solid fa-file-arrow-down"></i> CV GER{{% /staticref %}} 
+{{% staticref "uploads/resume.pdf" "newtab" %}}<i class="fa-solid fa-file-arrow-down"></i> CV{{% /staticref %}} 
 
 
 

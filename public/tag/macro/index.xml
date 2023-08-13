@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Macro | Timo B. Dähler</title>
+    <link>https://example.com/tag/macro/</link>
+      <atom:link href="https://example.com/tag/macro/index.xml" rel="self" type="application/rss+xml" />
+    <description>Macro</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Wed, 27 Apr 2016 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://example.com/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
+      <title>Macro</title>
+      <link>https://example.com/tag/macro/</link>
+    </image>
+    
+    <item>
+      <title>Example Project</title>
+      <link>https://example.com/project/example/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <guid>https://example.com/project/example/</guid>
+      <description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum.&lt;/p&gt;
+&lt;p&gt;
+
+
+
+&lt;script src=&#34;https://cdn.plot.ly/plotly-latest.min.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;script&gt;
+    function toggleFullscreen(iframeId) {
+        let iframe = document.getElementById(iframeId);
+        if (iframe.requestFullscreen) {
+            iframe.requestFullscreen();
+        } else if (iframe.mozRequestFullScreen) {  
+            iframe.mozRequestFullScreen();
+        } else if (iframe.webkitRequestFullscreen) {  
+            iframe.webkitRequestFullscreen();
+        } else if (iframe.msRequestFullscreen) {  
+            iframe.msRequestFullscreen();
+        }
+    }
+&lt;/script&gt;
+
+
+&lt;button onclick=&#34;toggleFullscreen(&#39;iframe1&#39;)&#34; style=&#34;font-size: 14px; padding: 5px 15px; border: none; border-radius: 20px; background-color: #007BFF; color: white; cursor: pointer; transition: background-color 0.3s;&#34; onmouseover=&#34;this.style.backgroundColor=&#39;#0056b3&#39;&#34; onmouseout=&#34;this.style.backgroundColor=&#39;#007BFF&#39;&#34;&gt;Open in Fullscreen&lt;/button&gt;&lt;/p&gt;
+&lt;iframe id=&#34;iframe1&#34; src=&#34;myplot.html&#34; width=&#34;100%&#34; height=&#34;600px&#34; frameborder=&#34;0&#34;&gt; &lt;/iframe&gt;
+&lt;p&gt;&lt;button onclick=&#34;toggleFullscreen(&#39;iframe2&#39;)&#34; style=&#34;font-size: 14px; padding: 5px 15px; border: none; border-radius: 20px; background-color: #007BFF; color: white; cursor: pointer; transition: background-color 0.3s;&#34; onmouseover=&#34;this.style.backgroundColor=&#39;#0056b3&#39;&#34; onmouseout=&#34;this.style.backgroundColor=&#39;#007BFF&#39;&#34;&gt;Open in Fullscreen&lt;/button&gt;&lt;/p&gt;
+&lt;iframe id=&#34;iframe2&#34; src=&#34;myplot_2.html&#34; width=&#34;100%&#34; height=&#34;600px&#34; frameborder=&#34;0&#34;&gt;&lt;/iframe&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

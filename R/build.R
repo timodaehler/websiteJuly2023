@@ -115,7 +115,7 @@ p_plotly <- ggplotly(p)
 # Extract the underlying list structure
 p_build <- plotly_build(p_plotly)
 p_list <- list(data = p_build$x$data, layout = p_build$x$layout)
-  
+
 # Save as a JSON file
 write_json(p_list, "/Users/timodaehler_1/Desktop/websiteJuly2023/content/project/example/myplot.json")
 
@@ -127,7 +127,7 @@ library(htmlwidgets)
 p <- plot_ly(data = mtcars, x = ~mpg, y = ~wt, type = "scatter", mode = "markers")
 
 # Save the plot as an HTML widget
-saveWidget(p, "/Users/timodaehler_1/Desktop/websiteJuly2023/static/project/example/myplot.html")
+# saveWidget(p, "/Users/timodaehler_1/Desktop/websiteJuly2023/static/project/example/myplot.html")
 
 
 
@@ -227,7 +227,7 @@ p
 # To save it as an HTML widget, you'd use:
 
 
-saveWidget(p, "/Users/timodaehler_1/Desktop/websiteJuly2023/content/project/example/myplot.html", selfcontained = FALSE)
+# saveWidget(p, "/Users/timodaehler_1/Desktop/websiteJuly2023/content/project/example/myplot.html", selfcontained = FALSE)
 
 
 
@@ -283,7 +283,7 @@ g <- ggplot(df_normalized, aes(x=Date, y=NormalizedValue, color=Index)) +
 p <- ggplotly(g)
 
 # Save the plotly plot as an HTML file
-saveWidget(p, "/Users/timodaehler_1/Desktop/websiteJuly2023/content/project/example/myplot_2.html", selfcontained = FALSE)
+# saveWidget(p, "/Users/timodaehler_1/Desktop/websiteJuly2023/content/project/example/myplot_2.html", selfcontained = FALSE)
 
 
 
