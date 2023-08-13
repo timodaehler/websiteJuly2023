@@ -1,0 +1,22 @@
+{{ if not ($.Page.Scratch.Get "plotlyloaded") }}
+{{ $.Page.Scratch.Set "plotlyloaded" 1 }}
+
+<!-- Load Plotly JavaScript library -->
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+<!-- Add the toggle fullscreen function -->
+<script>
+    function toggleFullscreen() {
+        let iframe = document.getElementById("plotlyIframe");
+        if (iframe.requestFullscreen) {
+            iframe.requestFullscreen();
+        } else if (iframe.mozRequestFullScreen) { /* Firefox */
+            iframe.mozRequestFullScreen();
+        } else if (iframe.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
+            iframe.webkitRequestFullscreen();
+        } else if (iframe.msRequestFullscreen) { /* IE/Edge */
+            iframe.msRequestFullscreen();
+        }
+    }
+</script>
+{{ end }}
