@@ -266,7 +266,7 @@ data.head()
 
 
 
-&lt;div id=&#34;chart-879562413&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
+&lt;div id=&#34;chart-762913548&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
 &lt;script&gt;
   (function() {
     let a = setInterval( function() {
@@ -276,7 +276,7 @@ data.head()
       clearInterval( a );
 
       Plotly.d3.json(&#34;./line-chart.json&#34;, function(chart) {
-        Plotly.plot(&#39;chart-879562413&#39;, chart.data, chart.layout, {responsive: true});
+        Plotly.plot(&#39;chart-762913548&#39;, chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
@@ -777,11 +777,19 @@ $$&lt;/p&gt;
     </item>
     
     <item>
-      <title>Example Project</title>
-      <link>https://example.com/project/example/</link>
+      <title>External Project</title>
+      <link>https://example.com/project/external-project/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
-      <guid>https://example.com/project/example/</guid>
-      <description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum.&lt;/p&gt;
+      <guid>https://example.com/project/external-project/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Policy Rates</title>
+      <link>https://example.com/project/policyrates/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <guid>https://example.com/project/policyrates/</guid>
+      <description>&lt;p&gt;Featured below are policy rates from central banks essential from a Swiss perspective.&lt;/p&gt;
 &lt;p&gt;
 
 
@@ -805,19 +813,11 @@ $$&lt;/p&gt;
 &lt;/script&gt;
 
 
-&lt;button onclick=&#34;toggleFullscreen(&#39;iframe1&#39;)&#34; style=&#34;font-size: 14px; padding: 5px 15px; border: none; border-radius: 20px; background-color: #007BFF; color: white; cursor: pointer; transition: background-color 0.3s;&#34; onmouseover=&#34;this.style.backgroundColor=&#39;#0056b3&#39;&#34; onmouseout=&#34;this.style.backgroundColor=&#39;#007BFF&#39;&#34;&gt;Open in Fullscreen&lt;/button&gt;&lt;/p&gt;
+&lt;button onclick=&#34;toggleFullscreen(&#39;iframe1&#39;)&#34; style=&#34;font-size: 14px; padding: 5px 15px; border: none; border-radius: 20px; background-color: #1664c0; color: white; cursor: pointer; transition: background-color 0.3s;&#34; onmouseover=&#34;this.style.backgroundColor=&#39;#0056b3&#39;&#34; onmouseout=&#34;this.style.backgroundColor=&#39;#007BFF&#39;&#34;&gt;Open in Fullscreen&lt;/button&gt;&lt;/p&gt;
 &lt;iframe id=&#34;iframe1&#34; src=&#34;myplot.html&#34; width=&#34;100%&#34; height=&#34;600px&#34; frameborder=&#34;0&#34;&gt; &lt;/iframe&gt;
-&lt;p&gt;&lt;button onclick=&#34;toggleFullscreen(&#39;iframe2&#39;)&#34; style=&#34;font-size: 14px; padding: 5px 15px; border: none; border-radius: 20px; background-color: #007BFF; color: white; cursor: pointer; transition: background-color 0.3s;&#34; onmouseover=&#34;this.style.backgroundColor=&#39;#0056b3&#39;&#34; onmouseout=&#34;this.style.backgroundColor=&#39;#007BFF&#39;&#34;&gt;Open in Fullscreen&lt;/button&gt;&lt;/p&gt;
+&lt;p&gt;&lt;button onclick=&#34;toggleFullscreen(&#39;iframe2&#39;)&#34; style=&#34;font-size: 14px; padding: 5px 15px; border: none; border-radius: 20px; background-color: #1664c0; color: white; cursor: pointer; transition: background-color 0.3s;&#34; onmouseover=&#34;this.style.backgroundColor=&#39;#0056b3&#39;&#34; onmouseout=&#34;this.style.backgroundColor=&#39;#007BFF&#39;&#34;&gt;Open in Fullscreen&lt;/button&gt;&lt;/p&gt;
 &lt;iframe id=&#34;iframe2&#34; src=&#34;myplot_2.html&#34; width=&#34;100%&#34; height=&#34;600px&#34; frameborder=&#34;0&#34;&gt;&lt;/iframe&gt;
 </description>
-    </item>
-    
-    <item>
-      <title>External Project</title>
-      <link>https://example.com/project/external-project/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
-      <guid>https://example.com/project/external-project/</guid>
-      <description></description>
     </item>
     
     <item>

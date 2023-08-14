@@ -10,6 +10,37 @@ sections:
     username: admin
   id: about
 
+
+
+# - block: tag_cloud
+#   content:
+#     title: Popular Topics
+#   design:
+#     columns: "2"
+    
+- block: portfolio
+  content:
+    buttons:
+    - name: All
+      tag: '*'
+    - name: Macro
+      tag: Macro
+    - name: Markets
+      tag: Markets
+    - name: FX
+      tag: Demo
+    default_button_index: 0
+    filters:
+      folders:
+      - project
+    title: Projects
+  design:
+    columns: "1"
+    flip_alt_rows: false
+    view: showcase
+  id: projects
+  
+  
 - block: experience
   content:
     date_format: Jan 2006
@@ -57,34 +88,8 @@ sections:
     title: Education
   design:
     columns: "2"
-
-# - block: tag_cloud
-#   content:
-#     title: Popular Topics
-#   design:
-#     columns: "2"
-    
-- block: portfolio
-  content:
-    buttons:
-    - name: All
-      tag: '*'
-    - name: Macro
-      tag: Macro
-    - name: Markets
-      tag: Markets
-    - name: FX
-      tag: Demo
-    default_button_index: 0
-    filters:
-      folders:
-      - project
-    title: Projects
-  design:
-    columns: "1"
-    flip_alt_rows: false
-    view: showcase
-  id: projects
+  
+  
 
 # - block: accomplishments
 #   content:
