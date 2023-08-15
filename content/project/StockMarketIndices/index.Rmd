@@ -10,10 +10,10 @@ links:
 #   name: Follow
 #   url: https://twitter.com/georgecushen
 # slides: example
-summary: Policy Rates of Major Central Banks over Time
+summary: Standardized Index Values of Major Stock Market Indices
 tags:
-- MACRO
-title: Policy Rates
+- MARKETS
+title: Stock Markets
 url_code: ""
 url_pdf: ""
 url_slides: ""
@@ -29,6 +29,8 @@ Featured below are policy rates from central banks essential from a Swiss perspe
 
 <iframe id="iframe1" src="myplot.html" width="100%" height="600px" frameborder="0"> </iframe>
 This chart was last updated on `r format(Sys.Date(), "%d.%m.%Y")` and is updated once a month.
+
+
 
 
 

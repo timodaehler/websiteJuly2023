@@ -23,12 +23,12 @@ sections:
     buttons:
     - name: All
       tag: '*'
-    - name: Macro
-      tag: Macro
-    - name: Markets
-      tag: Markets
+    - name: MACRO
+      tag: MACRO
+    - name: MARKETS
+      tag: MARKETS
     - name: FX
-      tag: Demo
+      tag: FX
     default_button_index: 0
     filters:
       folders:

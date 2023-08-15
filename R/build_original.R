@@ -283,7 +283,7 @@ g <- ggplot(df_normalized, aes(x=Date, y=NormalizedValue, color=Index)) +
 p <- ggplotly(g)
 
 # Save the plotly plot as an HTML file
-# saveWidget(p, "/Users/timodaehler_1/Desktop/websiteJuly2023/content/project/example/myplot_2.html", selfcontained = FALSE)
+saveWidget(p, "/Users/timodaehler_1/Desktop/websiteJuly2023/content/project/StockMarketIndices/myplot.html", selfcontained = FALSE)
 
 
 
