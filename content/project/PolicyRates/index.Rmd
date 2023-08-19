@@ -33,6 +33,10 @@ This chart was last updated on `r format(Sys.Date(), "%d.%m.%Y")` and is updated
 
 
 
+<iframe id="iframe2" src="myplot3.html" width="100%" height="600px" frameborder="0"> </iframe>
+
+
+
 
 
 
