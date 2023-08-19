@@ -33,9 +33,6 @@ This chart was last updated on 19.08.2023 and is updated once a month.
 
 
 
-<iframe id="iframe2" src="myplot3.html" width="100%" height="600px" frameborder="0"> </iframe>
-
-
 
 
 

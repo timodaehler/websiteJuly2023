@@ -10,10 +10,10 @@ links:
 #   name: Follow
 #   url: https://twitter.com/georgecushen
 # slides: example
-summary: Policy Rates of Major Central Banks over Time
+summary: FX Rates vis-a-vis major trading partners
 tags:
-- MACRO
-title: Policy Rates
+- FX
+title: FX Rates
 url_code: ""
 url_pdf: ""
 url_slides: ""

@@ -74,7 +74,6 @@ exchange_rates_long %>%
   )
 
 
-
 library(gt)
 
 table_output <- 
