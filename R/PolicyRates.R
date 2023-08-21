@@ -2,7 +2,6 @@
 library(RColorBrewer)
 library(tidyverse)
 library(scales)
-library(hrbrthemes)
 library(htmlwidgets)
 library(plotly)
 
@@ -59,8 +58,7 @@ data$Date <- as.Date(format(data$Date, "%Y-%m-01"), format = "%Y-%m-%d") +  mont
 data_prime_rates <- data
 
 # Determine the number of colors needed based on unique Central Banks
-num_colors <- length(unique(data_prime_rates$`Central Bank`))
-colors <- brewer.pal(num_colors, "Set1")
+colors <- brewer.pal(length(unique(data_prime_rates$`Central Bank`)), "Set1")
 
 
 # Plot the data using plotly
@@ -117,9 +115,11 @@ p <- plot_ly(
     )
   )
 
-
+p
 
 # Export to PolicyRates
 saveWidget(p, "/Users/timodaehler_1/Desktop/websiteJuly2023/content/project/PolicyRates/myplot.html")
+
+
 
 

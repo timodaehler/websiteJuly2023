@@ -2,7 +2,7 @@
 library(priceR)
 library(ggplot2)
 library(tidyr)
-library(hrbrthemes)
+# library(hrbrthemes)
 library(lubridate)
 library(WDI)
 library(dplyr)
@@ -182,7 +182,7 @@ fx_rates_vs_ppp_implied_rates <-
   ))
 
 # Fetch the Set1 colors
-set1_colors <- brewer.pal(8, "Set1")
+set1_colors <- brewer.pal(length(unique(fx_rates_vs_ppp_implied_rates$currency)), "Set1")
 
 # Split the data by currency
 currencies <- unique(fx_rates_vs_ppp_implied_rates$currency)
@@ -259,7 +259,7 @@ saveWidget(final_plot, "/Users/timodaehler_1/Desktop/websiteJuly2023/content/pro
 library(priceR)
 library(ggplot2)
 library(tidyr)
-library(hrbrthemes)
+# library(hrbrthemes)
 library(lubridate)
 library(WDI)
 library(dplyr)
@@ -485,7 +485,7 @@ long_data <-
 #   filter(date >= as.Date("2009-01-01"))
 
 
-color_palette <- brewer.pal(length(unique(long_data$Currency)), "Set1")
+color_palette <- brewer.pal(8, "Set1")
 
 # Create plotly plot
 p <- plot_ly() 
