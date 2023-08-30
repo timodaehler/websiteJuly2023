@@ -3,6 +3,7 @@ library(dplyr)
 library(plotly)
 library(zoo)
 library(fredr)
+library(quantmod)
 
 # Fetch data from FRED
 WILL5000PR_data <- fredr(series_id = "WILL5000PR")  # Wilshire 5000 Index

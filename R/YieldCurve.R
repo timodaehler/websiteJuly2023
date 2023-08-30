@@ -44,6 +44,42 @@ color_scale <- list(
   c(1, "darkblue")          # Dark blue for maximum yield (most positive)
 )
 
+plot_ly(data = yield_df, x = ~maturity_vals, y = ~Date, z = as.matrix(yield_df[,-1]), type = "surface", colorscale = color_scale) %>%
+  layout(scene = list(
+    xaxis = list(title = "Maturity", autorange = "reversed"),
+    yaxis = list(title = "Date",
+                 tickvals = as.Date(paste0(unique_years, "-01-01")),
+                 ticktext = unique_years),
+    zaxis = list(title = "Yield"),
+    camera = list(
+      eye = list(x = 2, y = 4.5, z = 2)  # Adjust these values as necessary
+    ),
+    aspectratio = list(x=1, y=4, z=1)  # Adjust this to make y-axis longer relative to others
+  ))
+
+
+
+
+# Filter for the latest date
+latest_date_yield <- yield_df %>% 
+  filter(Date == max(Date))
+
+# Extract yield values
+yields_latest_date <- unlist(latest_date_yield[,-1])
+
+# Create a 2D line plot for the yield curve of the latest date
+plot_ly(x = maturity_vals, y = yields_latest_date, type = "scatter", mode = "lines+markers") %>%
+  layout(
+    xaxis = list(title = "Maturity"),
+    yaxis = list(title = "Yield"),
+    title = paste("Yield Curve for", latest_date_yield$Date)
+  )
+
+
+
+
+
+
 # # Use the custom color scale in the plot
 # plot_ly(data = yield_df, x = ~maturity_vals, y = ~Date, z = as.matrix(yield_df[,-1]), type = "surface", colorscale = color_scale) %>%
 #   layout(scene = list(
@@ -68,18 +104,3 @@ color_scale <- list(
 #       eye = list(x = 2, y = 2, z = 2)  # Adjust these values as necessary
 #     )
 #   ))
-
-
-plot_ly(data = yield_df, x = ~maturity_vals, y = ~Date, z = as.matrix(yield_df[,-1]), type = "surface", colorscale = color_scale) %>%
-  layout(scene = list(
-    xaxis = list(title = "Maturity", autorange = "reversed"),
-    yaxis = list(title = "Date",
-                 tickvals = as.Date(paste0(unique_years, "-01-01")),
-                 ticktext = unique_years),
-    zaxis = list(title = "Yield"),
-    camera = list(
-      eye = list(x = 2, y = 4.5, z = 2)  # Adjust these values as necessary
-    ),
-    aspectratio = list(x=1, y=4, z=1)  # Adjust this to make y-axis longer relative to others
-  ))
-
