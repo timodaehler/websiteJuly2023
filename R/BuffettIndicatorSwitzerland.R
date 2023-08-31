@@ -156,11 +156,23 @@ fit_swiss <- lm(log(Buffett_Indicator_Swiss) ~ Date, data = joined_data_swiss)
 # Generate predictions
 joined_data_swiss$predicted <- exp(predict(fit_swiss))
 
+median_value_swiss <- median(joined_data_swiss$Buffett_Indicator_Swiss, na.rm = TRUE)
+
+
 # Plot using plotly
 plot_ly() %>%
   add_trace(data = joined_data_swiss, x = ~Date, y = ~Buffett_Indicator_Swiss, type = "scatter", mode = "lines", name = "Buffett Indicator") %>%
   add_trace(data = joined_data_swiss, x = ~Date, y = ~predicted, type = "scatter", mode = "lines", line = list(color = 'red'), name = "Historical Trend Line") %>%
   layout(title = "Buffett Indicator for Switzerland Over Time with Historical Trend Line",
          xaxis = list(title = "Year"),
-         yaxis = list(title = "Market Cap to GDP Ratio"))
+         yaxis = list(title = "Market Cap to GDP Ratio"),
+         shapes = list(
+           list(type = "line",
+                x0 = min(joined_data_swiss$Date),
+                x1 = max(joined_data_swiss$Date),
+                y0 = median_value_swiss,
+                y1 = median_value_swiss,
+                line = list(color = "black", width = 2, dash = "dash"))
+         ))
+
 

@@ -44,9 +44,20 @@ fit <- lm(log(Buffett_Indicator) ~ Date, data = joined_data)
 # Generate predictions
 joined_data$predicted <- exp(predict(fit))
 
+median_value <- median(joined_data$Buffett_Indicator, na.rm = TRUE)
+
 plot_ly() %>%
   add_trace(data = joined_data, x = ~Date, y = ~Buffett_Indicator, type = "scatter", mode = "lines", name = "Buffett Indicator") %>%
   add_trace(data = joined_data, x = ~Date, y = ~predicted, type = "scatter", mode = "lines", line = list(color = 'red'), name = "Historical Trend Line") %>%
   layout(title = "Buffett Indicator Over Time with Historical Trend Line",
          xaxis = list(title = "Year"),
-         yaxis = list(title = "Market Cap to GDP Ratio"))
+         yaxis = list(title = "Market Cap to GDP Ratio"),
+         shapes = list(
+           list(type = "line",
+                x0 = min(joined_data$Date),
+                x1 = max(joined_data$Date),
+                y0 = median_value,
+                y1 = median_value,
+                line = list(color = "black", width = 2, dash = "dash"))
+         ))
+
