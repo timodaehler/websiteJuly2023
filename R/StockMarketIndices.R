@@ -36,11 +36,11 @@ p_stock_indices <- plot_ly(
   line = list(width = 2)
 )  %>%
   layout(
-    xaxis = list(title = "Date"),
+    # xaxis = list(title = "Date"),
     yaxis = list(title = "Normalized Value"),
     showlegend = TRUE,
     legend = list(
-      title = list(text = "Index"),
+      # title = list(text = "Index"),
       orientation = "h",
       xanchor = "center",
       yanchor = "bottom",
@@ -49,7 +49,7 @@ p_stock_indices <- plot_ly(
     ),
     annotations = list(
       list(
-        text = "Source: Yahoo Finance",
+        # text = "Source: Yahoo Finance",
         xref = "paper",
         yref = "paper",
         x = 1,
@@ -77,12 +77,15 @@ p_stock_indices <- plot_ly(
 
 p_stock_indices
 
+# Update date
+saveRDS(Sys.time(), "content/project/StockMarketIndices/StockMarketIndices1_update_date.rds")
 
-# Export to StockMarketIndices
-saveWidget(p_stock_indices, "/Users/timodaehler_1/Desktop/websiteJuly2023/content/project/StockMarketIndices/myplot.html", selfcontained = FALSE)
+# Export 
+saveWidget(p_stock_indices, "content/project/StockMarketIndices/StockMarketIndices1.html", selfcontained = FALSE)
 
-
-
+# Clean-up
+rm(list = ls())
+gc()
 
 
 
@@ -151,8 +154,8 @@ combined_plot <- layout(combined_plot,
                           xanchor = "center",
                           yanchor = "bottom",
                           x = 0.5,
-                          y = -0.1,
-                          title = list(text = "Index")
+                          y = -0.1
+                          # title = list(text = "Index")
                         )
 )
 
@@ -160,5 +163,15 @@ combined_plot
 
 
 # Export to StockMarketIndices
-saveWidget(p_stock_indices_raw, "/Users/timodaehler_1/Desktop/websiteJuly2023/content/project/StockMarketIndices/myplot2.html", selfcontained = FALSE)
+# saveWidget(p_stock_indices_raw, "/Users/timodaehler_1/Desktop/websiteJuly2023/content/project/StockMarketIndices/myplot2.html", selfcontained = FALSE)
+
+# Update date
+saveRDS(Sys.time(), "content/project/StockMarketIndices/StockMarketIndices2_update_date.rds")
+
+# Export 
+saveWidget(combined_plot, "content/project/StockMarketIndices/StockMarketIndices2.html", selfcontained = FALSE)
+
+# Clean-up
+rm(list = ls())
+gc()
 
