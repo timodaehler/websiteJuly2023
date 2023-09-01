@@ -266,7 +266,7 @@ data.head()
 
 
 
-&lt;div id=&#34;chart-684925371&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
+&lt;div id=&#34;chart-876593124&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
 &lt;script&gt;
   (function() {
     let a = setInterval( function() {
@@ -276,7 +276,7 @@ data.head()
       clearInterval( a );
 
       Plotly.d3.json(&#34;./line-chart.json&#34;, function(chart) {
-        Plotly.plot(&#39;chart-684925371&#39;, chart.data, chart.layout, {responsive: true});
+        Plotly.plot(&#39;chart-876593124&#39;, chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
@@ -793,9 +793,13 @@ $$&lt;/p&gt;
 
 
 &lt;button onclick=&#34;toggleFullscreen(&#39;iframe1&#39;)&#34; style=&#34;font-size: 14px; padding: 5px 15px; border: none; border-radius: 20px; background-color: #1664c0; color: white; cursor: pointer; transition: background-color 0.3s;&#34; onmouseover=&#34;this.style.backgroundColor=&#39;#0056b3&#39;&#34; onmouseout=&#34;this.style.backgroundColor=&#39;#007BFF&#39;&#34;&gt;Open in Fullscreen&lt;/button&gt;&lt;/p&gt;
-&lt;iframe id=&#34;iframe1&#34; src=&#34;PPPvsMarket.html&#34; width=&#34;100%&#34; height=&#34;600px&#34; frameborder=&#34;0&#34;&gt; &lt;/iframe&gt;
+&lt;iframe id=&#34;iframe1&#34; src=&#34;PPPvsMarketFXRate1.html&#34; width=&#34;100%&#34; height=&#34;600px&#34; frameborder=&#34;0&#34;&gt; &lt;/iframe&gt;
+&lt;p&gt;&lt;br&gt; &lt;br&gt; &lt;br&gt;&lt;/p&gt;
 &lt;p&gt;&lt;button onclick=&#34;toggleFullscreen(&#39;iframe2&#39;)&#34; style=&#34;font-size: 14px; padding: 5px 15px; border: none; border-radius: 20px; background-color: #1664c0; color: white; cursor: pointer; transition: background-color 0.3s;&#34; onmouseover=&#34;this.style.backgroundColor=&#39;#0056b3&#39;&#34; onmouseout=&#34;this.style.backgroundColor=&#39;#007BFF&#39;&#34;&gt;Open in Fullscreen&lt;/button&gt;&lt;/p&gt;
-&lt;iframe id=&#34;iframe2&#34; src=&#34;DeviationFromPPP.html&#34; width=&#34;100%&#34; height=&#34;600px&#34; frameborder=&#34;0&#34;&gt; &lt;/iframe&gt;
+&lt;iframe id=&#34;iframe2&#34; src=&#34;PPPvsMarketFXRate2.html&#34; width=&#34;100%&#34; height=&#34;600px&#34; frameborder=&#34;0&#34;&gt; &lt;/iframe&gt;
+&lt;p&gt;Last update: 2023-08-31
+&lt;br&gt;
+Source:&lt;/p&gt;
 </description>
     </item>
     
