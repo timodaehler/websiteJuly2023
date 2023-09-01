@@ -1,5 +1,5 @@
 ---
-date: "2016-04-27T00:00:00Z"
+date: "2023-08-31T00:00:00Z"
 external_link: ""
 image: 
   caption: Photo by rawpixel on Unsplash
@@ -19,19 +19,24 @@ url_pdf: ""
 url_slides: ""
 url_video: ""
 ---
+{{< load-plotly >}}
 
 Featured below are policy rates from central banks essential from a Swiss perspective.
 
-
-
-{{< load-plotly >}}
-<button onclick="toggleFullscreen('iframe1')" style="font-size: 14px; padding: 5px 15px; border: none; border-radius: 20px; background-color: #1664c0; color: white; cursor: pointer; transition: background-color 0.3s;" onmouseover="this.style.backgroundColor='#0056b3'" onmouseout="this.style.backgroundColor='#007BFF'">Open in Fullscreen</button>
-
-
+### Policy Rates
 <br> 
 
-<iframe id="iframe1" src="myplot.html" width="100%" height="600px" frameborder="0"> </iframe>
+<button onclick="toggleFullscreen('iframe1')" style="font-size: 14px; padding: 5px 15px; border: none; border-radius: 20px; background-color: #1664c0; color: white; cursor: pointer; transition: background-color 0.3s;" onmouseover="this.style.backgroundColor='#0056b3'" onmouseout="this.style.backgroundColor='#007BFF'">Open in Fullscreen</button>
+<iframe id="iframe1" src="PolicyRates1.html" width="100%" height="600px" frameborder="0"> </iframe>
 
+
+
+<br> <br> 
+Last update: 2023-09-01 14:01:12 CET
+
+#### Data Sources: 
+* Policy Rates: [SNB](https://data.snb.ch/de/topics/snb/cube/snboffzisa)
+  
 
 
 

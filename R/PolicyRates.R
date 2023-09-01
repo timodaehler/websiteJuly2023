@@ -80,7 +80,7 @@ p <- plot_ly(
     ),
     showlegend = TRUE,
     legend = list(
-      title = list(text = "Central Bank"),
+      # title = list(text = "Central Bank"),
       orientation = "h",
       xanchor = "center",
       yanchor = "bottom",
@@ -118,7 +118,17 @@ p <- plot_ly(
 p
 
 # Export to PolicyRates
-saveWidget(p, "/Users/timodaehler_1/Desktop/websiteJuly2023/content/project/PolicyRates/myplot.html")
+# saveWidget(p, "/Users/timodaehler_1/Desktop/websiteJuly2023/content/project/PolicyRates/myplot.html")
+
+# Update date
+saveRDS(Sys.time(), "content/project/PolicyRates/PolicyRates1_update_date.rds")
+
+# Export 
+saveWidget(p, "content/project/PolicyRates/PolicyRates1.html")
+
+# Clean-up
+rm(list = ls())
+gc()
 
 
 
