@@ -28,7 +28,7 @@ last_price_each_year_df$Year <- year(last_price_each_year_df$Date)
 
 # ---------- Import Dividend Data ----------
 # Define the path to the Excel file
-excel_path <- "/Users/timodaehler_1/Desktop/websiteJuly2023/R/UBSFunds_Distribution_20230831_125743.xlsx"
+excel_path <- "/Users/timodaehler_1/Desktop/websiteJuly2023/gitignorefiles/UBSFunds_Distribution_20230831_125743.xlsx"
 # Read data from the Excel file
 distribution_data <- read_excel(excel_path)
 
@@ -51,7 +51,21 @@ merged_data <- merged_data %>% mutate(Dividend_Yield = Total_Distribution / `SPM
 
 # ---------- Data Visualization ----------
 # Create the plot
-plot_ly(data = merged_data, x = ~Year, y = ~Dividend_Yield, type = "scatter", mode = "lines") %>%
-  layout(title = "Dividend Yield Over Time",
-         xaxis = list(title = "Year"),
+p <- 
+  plot_ly(data = merged_data, x = ~Year, y = ~Dividend_Yield, type = "scatter", mode = "lines") %>%
+  layout(
+    # title = "",
+         xaxis = list(title = ""),
          yaxis = list(title = "Dividend Yield (%)"))
+
+p
+
+# Update date
+saveRDS(Sys.time(), "content/project/DividendYields/DividendYields1_update_date.rds")
+
+# Export 
+saveWidget(p, "content/project/DividendYields/DividendYields1.html")
+
+# Clean-up
+rm(list = ls())
+gc()

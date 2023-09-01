@@ -12,13 +12,25 @@ sp500_data <- Quandl("MULTPL/SP500_DIV_YIELD_MONTH", api_key="rsJKAethJVUA76dPfk
 # Create a line chart using the 'plotly' library
 # X-axis represents the 'Date' and Y-axis represents 'Value' (Dividend Yield)
 # Add layout details like titles and axis labels
-plot_ly(data = sp500_data, x = ~Date, y = ~Value, type = "scatter", mode = "lines") %>%
+p <- 
+  plot_ly(data = sp500_data, x = ~Date, y = ~Value, type = "scatter", mode = "lines") %>%
   layout(
-    title = "S&P 500 Dividend Yield Over Time",
-    xaxis = list(title = "Date"),
+    # title = "S&P 500 Dividend Yield Over Time",
+    xaxis = list(title = ""),
     yaxis = list(title = "Dividend Yield (%)")
   )
 
+p
+
+# Update date
+saveRDS(Sys.time(), "content/project/DividendYields/DividendYields2_update_date.rds")
+
+# Export 
+saveWidget(p, "content/project/DividendYields/DividendYields2.html")
+
+# Clean-up
+rm(list = ls())
+gc()
 
 
 # Old, manual approach -------------------------------------------------------------------------
