@@ -40,7 +40,7 @@ Last update: 2023-09-01 14:58:53 CET
 * GDP: [World Bank](https://data.worldbank.org/indicator/NY.GDP.MKTP.CD.)
   
 ***
-test
+
 
 ### US Buffett Indicator
 <br> 

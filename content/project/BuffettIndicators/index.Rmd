@@ -42,7 +42,7 @@ Last update: `r BuffettIndicators1_update_date` CET
 * GDP: [World Bank](https://data.worldbank.org/indicator/NY.GDP.MKTP.CD.)
   
 ***
-test
+
 
 ### US Buffett Indicator
 <br> 
