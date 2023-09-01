@@ -53,12 +53,3 @@ Last update: 2023-09-01 13:43:55 CET
 
 #### Data Sources: 
 * Stock Market Indices: [Yahoo Finance](https://finance.yahoo.com)
-
-
-
-
-
-
-
-
-

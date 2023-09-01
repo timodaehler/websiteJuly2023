@@ -161,10 +161,6 @@ combined_plot <- layout(combined_plot,
 
 combined_plot
 
-
-# Export to StockMarketIndices
-# saveWidget(p_stock_indices_raw, "/Users/timodaehler_1/Desktop/websiteJuly2023/content/project/StockMarketIndices/myplot2.html", selfcontained = FALSE)
-
 # Update date
 saveRDS(Sys.time(), "content/project/StockMarketIndices/StockMarketIndices2_update_date.rds")
 

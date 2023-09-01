@@ -57,12 +57,3 @@ Last update: `r StockMarketIndices2_update_date` CET
 
 #### Data Sources: 
 * Stock Market Indices: [Yahoo Finance](https://finance.yahoo.com)
-
-
-
-
-
-
-
-
-
