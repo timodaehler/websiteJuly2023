@@ -206,19 +206,19 @@ combined_data <-
 combined_data <- 
   combined_data %>%
   mutate(
-    EUR_deviation = (EUR_rate - EUR_ppp) / EUR_ppp,
-    USD_deviation = (USD_rate - USD_ppp) / USD_ppp,
-    JPY_deviation = (JPY_rate - JPY_ppp) / JPY_ppp,
-    GBP_deviation = (GBP_rate - GBP_ppp) / GBP_ppp,
-    CNY_deviation = (CNY_rate - CNY_ppp) / CNY_ppp,  # Added CNY
-    INR_deviation = (INR_rate - INR_ppp) / INR_ppp   # Added INR
+    "EUR" = (EUR_rate - EUR_ppp) / EUR_ppp,
+    "USD" = (USD_rate - USD_ppp) / USD_ppp,
+    "JPY" = (JPY_rate - JPY_ppp) / JPY_ppp,
+    "GBP" = (GBP_rate - GBP_ppp) / GBP_ppp,
+    "CNY" = (CNY_rate - CNY_ppp) / CNY_ppp,  # Added CNY
+    "INR" = (INR_rate - INR_ppp) / INR_ppp   # Added INR
   )
 
 # Reshape the data to long format
 long_data <- 
   combined_data %>%
   pivot_longer(
-    cols = ends_with("_deviation"), 
+    cols = c("EUR", "USD", "JPY", "GBP", "CNY", "INR"), #ends_with("_deviation"), 
     names_to = "Currency", 
     values_to = "Deviation"
   )
@@ -318,7 +318,7 @@ final_plot <- p %>%
       ticktext = scales::percent(seq(-1, 5.5, 0.5))
     ),
     legend = list(
-      title = list(text = "<b>Deviation from PPP-implied exchange rate</b>"),
+      # title = list(text = "<b>Deviation from PPP-implied exchange rate</b>"),
       orientation = "h",
       xanchor = "center",
       yanchor = "top",
@@ -330,8 +330,11 @@ final_plot <- p %>%
 
 final_plot
 
+# Update date
+saveRDS(Sys.time(), "content/project/PPPvsMarketFXRate/PPPvsMarketFXRate2_update_date.rds")
+
 # Export 
-saveWidget(final_plot, "content/project/FXRates/PPPvsMarketFXRate2.html")
+saveWidget(final_plot, "content/project/PPPvsMarketFXRate/PPPvsMarketFXRate2.html")
 
 # Clean-up
 rm(list = ls())

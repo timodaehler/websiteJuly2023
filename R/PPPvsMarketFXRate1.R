@@ -229,24 +229,27 @@ for (curr in currencies) {
 # Combine plots using subplot
 final_plot <- subplot(plots_list, nrows = 2)
 
-# Adding a global annotation for the data source
-final_plot <- layout(final_plot, annotations = list(
-  list(
-    text = paste("Source: World Bank. Updated:", formatted_today_date),
-    xref = "paper",
-    yref = "paper",
-    x = 1,
-    xanchor = "right",
-    y = -0.5,  # Adjusted this value to avoid overlapping with the subplot legends
-    yanchor = "top",
-    showarrow = FALSE
-  )
-))
+# # Adding a global annotation for the data source
+# final_plot <- layout(final_plot, annotations = list(
+#   list(
+#     text = paste("Source: World Bank. Updated:", formatted_today_date),
+#     xref = "paper",
+#     yref = "paper",
+#     x = 1,
+#     xanchor = "right",
+#     y = -0.5,  # Adjusted this value to avoid overlapping with the subplot legends
+#     yanchor = "top",
+#     showarrow = FALSE
+#   )
+# ))
 
 final_plot
 
+# Update date
+saveRDS(Sys.time(), "content/project/PPPvsMarketFXRate/PPPvsMarketFXRate1_update_date.rds")
+
 # Export 
-saveWidget(final_plot, "content/project/FXRates/PPPvsMarketFXRate1.html")
+saveWidget(final_plot, "content/project/PPPvsMarketFXRate/PPPvsMarketFXRate1.html")
 
 # Clean-up
 rm(list = ls())
