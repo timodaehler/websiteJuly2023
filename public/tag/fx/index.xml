@@ -5,7 +5,7 @@
     <link>https://example.com/tag/fx/</link>
       <atom:link href="https://example.com/tag/fx/index.xml" rel="self" type="application/rss+xml" />
     <description>FX</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Wed, 27 Apr 2016 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Tue, 01 Aug 2023 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://example.com/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
       <title>FX</title>
@@ -14,11 +14,10 @@
     
     <item>
       <title>FX Rates</title>
-      <link>https://example.com/project/fxrates/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
-      <guid>https://example.com/project/fxrates/</guid>
-      <description>&lt;p&gt;Featured below is the value of one Swiss Franc in the foreign currencies of major trading partners.&lt;/p&gt;
-&lt;p&gt;
+      <link>https://example.com/project/pppvsmarketfxrate/</link>
+      <pubDate>Tue, 01 Aug 2023 00:00:00 +0000</pubDate>
+      <guid>https://example.com/project/pppvsmarketfxrate/</guid>
+      <description>
 
 
 
@@ -41,14 +40,30 @@
 &lt;/script&gt;
 
 
-&lt;button onclick=&#34;toggleFullscreen(&#39;iframe1&#39;)&#34; style=&#34;font-size: 14px; padding: 5px 15px; border: none; border-radius: 20px; background-color: #1664c0; color: white; cursor: pointer; transition: background-color 0.3s;&#34; onmouseover=&#34;this.style.backgroundColor=&#39;#0056b3&#39;&#34; onmouseout=&#34;this.style.backgroundColor=&#39;#007BFF&#39;&#34;&gt;Open in Fullscreen&lt;/button&gt;&lt;/p&gt;
+&lt;p&gt;Featured below is the value of one Swiss Franc in the foreign currencies of major trading partners.&lt;/p&gt;
+&lt;h3 id=&#34;market-fx-rates-vs-ppp-implied-fx-rates&#34;&gt;Market FX Rates vs PPP-implied FX Rates&lt;/h3&gt;
+&lt;br&gt; 
+&lt;p&gt;&lt;button onclick=&#34;toggleFullscreen(&#39;iframe1&#39;)&#34; style=&#34;font-size: 14px; padding: 5px 15px; border: none; border-radius: 20px; background-color: #1664c0; color: white; cursor: pointer; transition: background-color 0.3s;&#34; onmouseover=&#34;this.style.backgroundColor=&#39;#0056b3&#39;&#34; onmouseout=&#34;this.style.backgroundColor=&#39;#007BFF&#39;&#34;&gt;Open in Fullscreen&lt;/button&gt;&lt;/p&gt;
 &lt;iframe id=&#34;iframe1&#34; src=&#34;PPPvsMarketFXRate1.html&#34; width=&#34;100%&#34; height=&#34;600px&#34; frameborder=&#34;0&#34;&gt; &lt;/iframe&gt;
-&lt;p&gt;&lt;br&gt; &lt;br&gt; &lt;br&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br&gt; &lt;br&gt;
+Last update: 2023-09-01 11:56:07 CET&lt;/p&gt;
+&lt;h4 id=&#34;data-sources&#34;&gt;Data Sources:&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Exchange Rates: &lt;a href=&#34;https://sdw.ecb.europa.eu/curConverter.do&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ECB&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;PPP Conversion Factors: &lt;a href=&#34;https://data.worldbank.org/indicator/PA.NUS.PPP&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;World Bank&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;deviation-of-market-fx-rates-from-ppp-implied-fx-rates&#34;&gt;Deviation of Market FX Rates from PPP-implied FX Rates&lt;/h3&gt;
+&lt;br&gt; 
 &lt;p&gt;&lt;button onclick=&#34;toggleFullscreen(&#39;iframe2&#39;)&#34; style=&#34;font-size: 14px; padding: 5px 15px; border: none; border-radius: 20px; background-color: #1664c0; color: white; cursor: pointer; transition: background-color 0.3s;&#34; onmouseover=&#34;this.style.backgroundColor=&#39;#0056b3&#39;&#34; onmouseout=&#34;this.style.backgroundColor=&#39;#007BFF&#39;&#34;&gt;Open in Fullscreen&lt;/button&gt;&lt;/p&gt;
 &lt;iframe id=&#34;iframe2&#34; src=&#34;PPPvsMarketFXRate2.html&#34; width=&#34;100%&#34; height=&#34;600px&#34; frameborder=&#34;0&#34;&gt; &lt;/iframe&gt;
-&lt;p&gt;Last update: 2023-08-31
-&lt;br&gt;
-Source:&lt;/p&gt;
+&lt;p&gt;&lt;br&gt; &lt;br&gt;
+Last update: 2023-09-01 12:00:10 CET&lt;/p&gt;
+&lt;h4 id=&#34;data-sources-1&#34;&gt;Data Sources:&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Exchange Rates: &lt;a href=&#34;https://sdw.ecb.europa.eu/curConverter.do&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ECB&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;PPP Conversion Factors: &lt;a href=&#34;https://data.worldbank.org/indicator/PA.NUS.PPP&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;World Bank&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </description>
     </item>
     

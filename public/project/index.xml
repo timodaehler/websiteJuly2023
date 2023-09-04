@@ -5,7 +5,7 @@
     <link>https://example.com/project/</link>
       <atom:link href="https://example.com/project/index.xml" rel="self" type="application/rss+xml" />
     <description>Projects</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Wed, 27 Apr 2016 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sat, 02 Sep 2023 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://example.com/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
       <title>Projects</title>
@@ -13,12 +13,11 @@
     </image>
     
     <item>
-      <title>FX Rates</title>
-      <link>https://example.com/project/fxrates/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
-      <guid>https://example.com/project/fxrates/</guid>
-      <description>&lt;p&gt;Featured below is the value of one Swiss Franc in the foreign currencies of major trading partners.&lt;/p&gt;
-&lt;p&gt;
+      <title>Shiller PE</title>
+      <link>https://example.com/project/shillerpe/</link>
+      <pubDate>Sat, 02 Sep 2023 00:00:00 +0000</pubDate>
+      <guid>https://example.com/project/shillerpe/</guid>
+      <description>
 
 
 
@@ -41,24 +40,136 @@
 &lt;/script&gt;
 
 
-&lt;button onclick=&#34;toggleFullscreen(&#39;iframe1&#39;)&#34; style=&#34;font-size: 14px; padding: 5px 15px; border: none; border-radius: 20px; background-color: #1664c0; color: white; cursor: pointer; transition: background-color 0.3s;&#34; onmouseover=&#34;this.style.backgroundColor=&#39;#0056b3&#39;&#34; onmouseout=&#34;this.style.backgroundColor=&#39;#007BFF&#39;&#34;&gt;Open in Fullscreen&lt;/button&gt;&lt;/p&gt;
-&lt;iframe id=&#34;iframe1&#34; src=&#34;PPPvsMarketFXRate1.html&#34; width=&#34;100%&#34; height=&#34;600px&#34; frameborder=&#34;0&#34;&gt; &lt;/iframe&gt;
-&lt;p&gt;&lt;br&gt; &lt;br&gt; &lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Featured below are some Shiller PE Ratios&lt;/p&gt;
+&lt;h3 id=&#34;shiller-pe&#34;&gt;Shiller PE&lt;/h3&gt;
+&lt;br&gt; 
+&lt;p&gt;&lt;button onclick=&#34;toggleFullscreen(&#39;iframe1&#39;)&#34; style=&#34;font-size: 14px; padding: 5px 15px; border: none; border-radius: 20px; background-color: #1664c0; color: white; cursor: pointer; transition: background-color 0.3s;&#34; onmouseover=&#34;this.style.backgroundColor=&#39;#0056b3&#39;&#34; onmouseout=&#34;this.style.backgroundColor=&#39;#007BFF&#39;&#34;&gt;Open in Fullscreen&lt;/button&gt;&lt;/p&gt;
+&lt;iframe id=&#34;iframe1&#34; src=&#34;ShillerPE1.html&#34; width=&#34;100%&#34; height=&#34;600px&#34; frameborder=&#34;0&#34;&gt; &lt;/iframe&gt;
+&lt;p&gt;&lt;br&gt; &lt;br&gt;
+Last update: 2023-09-04 13:03:25 CET&lt;/p&gt;
+&lt;h4 id=&#34;data-sources&#34;&gt;Data Sources:&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Yields: &lt;a href=&#34;https://data.nasdaq.com/data//MULTPL/SHILLER_PE_RATIO_MONTH-Shiller-PE-Ratio-by-Month&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;S&amp;amp;P500 Shiller PE Ratio &lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Buffett Indicators</title>
+      <link>https://example.com/project/buffettindicators/</link>
+      <pubDate>Thu, 31 Aug 2023 00:00:00 +0000</pubDate>
+      <guid>https://example.com/project/buffettindicators/</guid>
+      <description>
+
+
+
+&lt;script src=&#34;https://cdn.plot.ly/plotly-latest.min.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;script&gt;
+    function toggleFullscreen(iframeId) {
+        let iframe = document.getElementById(iframeId);
+        if (iframe.requestFullscreen) {
+            iframe.requestFullscreen();
+        } else if (iframe.mozRequestFullScreen) {  
+            iframe.mozRequestFullScreen();
+        } else if (iframe.webkitRequestFullscreen) {  
+            iframe.webkitRequestFullscreen();
+        } else if (iframe.msRequestFullscreen) {  
+            iframe.msRequestFullscreen();
+        }
+    }
+&lt;/script&gt;
+
+
+&lt;p&gt;Featured below are some Buffett Indicators&lt;/p&gt;
+&lt;h3 id=&#34;swiss-buffett-indicator&#34;&gt;Swiss Buffett Indicator&lt;/h3&gt;
+&lt;br&gt; 
+&lt;p&gt;&lt;button onclick=&#34;toggleFullscreen(&#39;iframe1&#39;)&#34; style=&#34;font-size: 14px; padding: 5px 15px; border: none; border-radius: 20px; background-color: #1664c0; color: white; cursor: pointer; transition: background-color 0.3s;&#34; onmouseover=&#34;this.style.backgroundColor=&#39;#0056b3&#39;&#34; onmouseout=&#34;this.style.backgroundColor=&#39;#007BFF&#39;&#34;&gt;Open in Fullscreen&lt;/button&gt;&lt;/p&gt;
+&lt;iframe id=&#34;iframe1&#34; src=&#34;BuffettIndicators1.html&#34; width=&#34;100%&#34; height=&#34;600px&#34; frameborder=&#34;0&#34;&gt; &lt;/iframe&gt;
+&lt;p&gt;&lt;br&gt; &lt;br&gt;
+Last update: 2023-09-01 14:58:53 CET&lt;/p&gt;
+&lt;h4 id=&#34;data-sources&#34;&gt;Data Sources:&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;SPI Market Cap: &lt;a href=&#34;https://finance.yahoo.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Yahoo Finance&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;SPI: &lt;a href=&#34;https://data.snb.ch/api/cube/capchstocki/data/csv/de&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;SNB&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;GDP: &lt;a href=&#34;https://data.worldbank.org/indicator/NY.GDP.MKTP.CD.&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;World Bank&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;us-buffett-indicator&#34;&gt;US Buffett Indicator&lt;/h3&gt;
+&lt;br&gt; 
 &lt;p&gt;&lt;button onclick=&#34;toggleFullscreen(&#39;iframe2&#39;)&#34; style=&#34;font-size: 14px; padding: 5px 15px; border: none; border-radius: 20px; background-color: #1664c0; color: white; cursor: pointer; transition: background-color 0.3s;&#34; onmouseover=&#34;this.style.backgroundColor=&#39;#0056b3&#39;&#34; onmouseout=&#34;this.style.backgroundColor=&#39;#007BFF&#39;&#34;&gt;Open in Fullscreen&lt;/button&gt;&lt;/p&gt;
-&lt;iframe id=&#34;iframe2&#34; src=&#34;PPPvsMarketFXRate2.html&#34; width=&#34;100%&#34; height=&#34;600px&#34; frameborder=&#34;0&#34;&gt; &lt;/iframe&gt;
-&lt;p&gt;Last update: 2023-08-31
-&lt;br&gt;
-Source:&lt;/p&gt;
+&lt;iframe id=&#34;iframe2&#34; src=&#34;BuffettIndicators2.html&#34; width=&#34;100%&#34; height=&#34;600px&#34; frameborder=&#34;0&#34;&gt; &lt;/iframe&gt;
+&lt;p&gt;&lt;br&gt; &lt;br&gt;
+Last update: 2023-09-01 15:31:27 CET&lt;/p&gt;
+&lt;h4 id=&#34;data-sources-1&#34;&gt;Data Sources:&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Wilshire 5000 Market Cap: &lt;a href=&#34;https://fred.stlouisfed.org/series/WILL5000PR&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Federal Reserve Bank of St. Louis&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;GDP: &lt;a href=&#34;https://fred.stlouisfed.org/series/GDP&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Federal Reserve Bank of St. Louis&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Dividend Yields</title>
+      <link>https://example.com/project/dividendyields/</link>
+      <pubDate>Thu, 31 Aug 2023 00:00:00 +0000</pubDate>
+      <guid>https://example.com/project/dividendyields/</guid>
+      <description>
+
+
+
+&lt;script src=&#34;https://cdn.plot.ly/plotly-latest.min.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;script&gt;
+    function toggleFullscreen(iframeId) {
+        let iframe = document.getElementById(iframeId);
+        if (iframe.requestFullscreen) {
+            iframe.requestFullscreen();
+        } else if (iframe.mozRequestFullScreen) {  
+            iframe.mozRequestFullScreen();
+        } else if (iframe.webkitRequestFullscreen) {  
+            iframe.webkitRequestFullscreen();
+        } else if (iframe.msRequestFullscreen) {  
+            iframe.msRequestFullscreen();
+        }
+    }
+&lt;/script&gt;
+
+
+&lt;p&gt;Featured below are some Dividend yields&lt;/p&gt;
+&lt;h3 id=&#34;spi-dividend-yield&#34;&gt;SPI Dividend Yield&lt;/h3&gt;
+&lt;br&gt; 
+&lt;p&gt;&lt;button onclick=&#34;toggleFullscreen(&#39;iframe1&#39;)&#34; style=&#34;font-size: 14px; padding: 5px 15px; border: none; border-radius: 20px; background-color: #1664c0; color: white; cursor: pointer; transition: background-color 0.3s;&#34; onmouseover=&#34;this.style.backgroundColor=&#39;#0056b3&#39;&#34; onmouseout=&#34;this.style.backgroundColor=&#39;#007BFF&#39;&#34;&gt;Open in Fullscreen&lt;/button&gt;&lt;/p&gt;
+&lt;iframe id=&#34;iframe1&#34; src=&#34;DividendYields1.html&#34; width=&#34;100%&#34; height=&#34;600px&#34; frameborder=&#34;0&#34;&gt; &lt;/iframe&gt;
+&lt;p&gt;&lt;br&gt; &lt;br&gt;
+Last update: 2023-09-01 16:04:21 CET&lt;/p&gt;
+&lt;h4 id=&#34;data-sources&#34;&gt;Data Sources:&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Dividends: &lt;a href=&#34;https://www.ubs.com/ch/en/assetmanagement/funds/etf/ch0130595124-ubs-etf-ch-spi-mid-pd001.html#Holdings&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;UBS&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Prices: &lt;a href=&#34;https://finance.yahoo.com/quote/SPMCHA.SW?p=SPMCHA.SW&amp;amp;.tsrc=fin-srch&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Yahoo Finance&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;sp500-dividend-yield&#34;&gt;S&amp;amp;P500 Dividend Yield&lt;/h3&gt;
+&lt;br&gt; 
+&lt;p&gt;&lt;button onclick=&#34;toggleFullscreen(&#39;iframe2&#39;)&#34; style=&#34;font-size: 14px; padding: 5px 15px; border: none; border-radius: 20px; background-color: #1664c0; color: white; cursor: pointer; transition: background-color 0.3s;&#34; onmouseover=&#34;this.style.backgroundColor=&#39;#0056b3&#39;&#34; onmouseout=&#34;this.style.backgroundColor=&#39;#007BFF&#39;&#34;&gt;Open in Fullscreen&lt;/button&gt;&lt;/p&gt;
+&lt;iframe id=&#34;iframe2&#34; src=&#34;DividendYields2.html&#34; width=&#34;100%&#34; height=&#34;600px&#34; frameborder=&#34;0&#34;&gt; &lt;/iframe&gt;
+&lt;p&gt;&lt;br&gt; &lt;br&gt;
+Last update: 2023-09-01 16:04:15 CET&lt;/p&gt;
+&lt;h4 id=&#34;data-sources-1&#34;&gt;Data Sources:&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Dividend Yields: &lt;a href=&#34;https://data.nasdaq.com/data/MULTPL/SP500_DIV_YIELD_MONTH-sp-500-dividend-yield-by-month&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Nasdaq Data Link&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </description>
     </item>
     
     <item>
       <title>Policy Rates</title>
       <link>https://example.com/project/policyrates/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 31 Aug 2023 00:00:00 +0000</pubDate>
       <guid>https://example.com/project/policyrates/</guid>
-      <description>&lt;p&gt;Featured below are policy rates from central banks essential from a Swiss perspective.&lt;/p&gt;
-&lt;p&gt;
+      <description>
 
 
 
@@ -81,19 +192,26 @@ Source:&lt;/p&gt;
 &lt;/script&gt;
 
 
-&lt;button onclick=&#34;toggleFullscreen(&#39;iframe1&#39;)&#34; style=&#34;font-size: 14px; padding: 5px 15px; border: none; border-radius: 20px; background-color: #1664c0; color: white; cursor: pointer; transition: background-color 0.3s;&#34; onmouseover=&#34;this.style.backgroundColor=&#39;#0056b3&#39;&#34; onmouseout=&#34;this.style.backgroundColor=&#39;#007BFF&#39;&#34;&gt;Open in Fullscreen&lt;/button&gt;&lt;/p&gt;
+&lt;p&gt;Featured below are policy rates from central banks essential from a Swiss perspective.&lt;/p&gt;
+&lt;h3 id=&#34;policy-rates&#34;&gt;Policy Rates&lt;/h3&gt;
 &lt;br&gt; 
-&lt;iframe id=&#34;iframe1&#34; src=&#34;myplot.html&#34; width=&#34;100%&#34; height=&#34;600px&#34; frameborder=&#34;0&#34;&gt; &lt;/iframe&gt;
+&lt;p&gt;&lt;button onclick=&#34;toggleFullscreen(&#39;iframe1&#39;)&#34; style=&#34;font-size: 14px; padding: 5px 15px; border: none; border-radius: 20px; background-color: #1664c0; color: white; cursor: pointer; transition: background-color 0.3s;&#34; onmouseover=&#34;this.style.backgroundColor=&#39;#0056b3&#39;&#34; onmouseout=&#34;this.style.backgroundColor=&#39;#007BFF&#39;&#34;&gt;Open in Fullscreen&lt;/button&gt;&lt;/p&gt;
+&lt;iframe id=&#34;iframe1&#34; src=&#34;PolicyRates1.html&#34; width=&#34;100%&#34; height=&#34;600px&#34; frameborder=&#34;0&#34;&gt; &lt;/iframe&gt;
+&lt;p&gt;&lt;br&gt; &lt;br&gt;
+Last update: 2023-09-01 14:01:12 CET&lt;/p&gt;
+&lt;h4 id=&#34;data-sources&#34;&gt;Data Sources:&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Policy Rates: &lt;a href=&#34;https://data.snb.ch/de/topics/snb/cube/snboffzisa&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;SNB&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </description>
     </item>
     
     <item>
       <title>Stock Markets</title>
       <link>https://example.com/project/stockmarketindices/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 31 Aug 2023 00:00:00 +0000</pubDate>
       <guid>https://example.com/project/stockmarketindices/</guid>
-      <description>&lt;p&gt;Featured below are policy rates from central banks essential from a Swiss perspective.&lt;/p&gt;
-&lt;p&gt;
+      <description>
 
 
 
@@ -116,13 +234,178 @@ Source:&lt;/p&gt;
 &lt;/script&gt;
 
 
-&lt;button onclick=&#34;toggleFullscreen(&#39;iframe1&#39;)&#34; style=&#34;font-size: 14px; padding: 5px 15px; border: none; border-radius: 20px; background-color: #1664c0; color: white; cursor: pointer; transition: background-color 0.3s;&#34; onmouseover=&#34;this.style.backgroundColor=&#39;#0056b3&#39;&#34; onmouseout=&#34;this.style.backgroundColor=&#39;#007BFF&#39;&#34;&gt;Open in Fullscreen&lt;/button&gt;&lt;/p&gt;
-&lt;iframe id=&#34;iframe1&#34; src=&#34;myplot.html&#34; width=&#34;100%&#34; height=&#34;600px&#34; frameborder=&#34;0&#34;&gt; &lt;/iframe&gt;
-This chart was last updated on 16.08.2023 and is updated once a month.
-&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Featured below are the indeces of major stock marekts around the world.&lt;/p&gt;
+&lt;h3 id=&#34;equity-indices-normalized-2007-01-04--100&#34;&gt;Equity Indices (Normalized 2007-01-04 = 100%)&lt;/h3&gt;
+&lt;br&gt; 
+&lt;p&gt;&lt;button onclick=&#34;toggleFullscreen(&#39;iframe1&#39;)&#34; style=&#34;font-size: 14px; padding: 5px 15px; border: none; border-radius: 20px; background-color: #1664c0; color: white; cursor: pointer; transition: background-color 0.3s;&#34; onmouseover=&#34;this.style.backgroundColor=&#39;#0056b3&#39;&#34; onmouseout=&#34;this.style.backgroundColor=&#39;#007BFF&#39;&#34;&gt;Open in Fullscreen&lt;/button&gt;&lt;/p&gt;
+&lt;iframe id=&#34;iframe1&#34; src=&#34;StockMarketIndices1.html&#34; width=&#34;100%&#34; height=&#34;600px&#34; frameborder=&#34;0&#34;&gt; &lt;/iframe&gt;
+&lt;p&gt;&lt;br&gt; &lt;br&gt;
+Last update: 2023-09-01 13:40:37 CET&lt;/p&gt;
+&lt;h4 id=&#34;data-sources&#34;&gt;Data Sources:&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Stock Market Indices: &lt;a href=&#34;https://finance.yahoo.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Yahoo Finance&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;equity-indices&#34;&gt;Equity Indices&lt;/h3&gt;
+&lt;br&gt; 
 &lt;p&gt;&lt;button onclick=&#34;toggleFullscreen(&#39;iframe2&#39;)&#34; style=&#34;font-size: 14px; padding: 5px 15px; border: none; border-radius: 20px; background-color: #1664c0; color: white; cursor: pointer; transition: background-color 0.3s;&#34; onmouseover=&#34;this.style.backgroundColor=&#39;#0056b3&#39;&#34; onmouseout=&#34;this.style.backgroundColor=&#39;#007BFF&#39;&#34;&gt;Open in Fullscreen&lt;/button&gt;&lt;/p&gt;
-&lt;iframe id=&#34;iframe2&#34; src=&#34;myplot2.html&#34; width=&#34;100%&#34; height=&#34;600px&#34; frameborder=&#34;0&#34;&gt; &lt;/iframe&gt;
-This chart was last updated on 16.08.2023 and is updated once a month.
+&lt;iframe id=&#34;iframe2&#34; src=&#34;StockMarketIndices2.html&#34; width=&#34;100%&#34; height=&#34;600px&#34; frameborder=&#34;0&#34;&gt; &lt;/iframe&gt;
+&lt;p&gt;&lt;br&gt; &lt;br&gt;
+Last update: 2023-09-01 13:43:55 CET&lt;/p&gt;
+&lt;h4 id=&#34;data-sources-1&#34;&gt;Data Sources:&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Stock Market Indices: &lt;a href=&#34;https://finance.yahoo.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Yahoo Finance&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Yields</title>
+      <link>https://example.com/project/yieldcurves/</link>
+      <pubDate>Thu, 31 Aug 2023 00:00:00 +0000</pubDate>
+      <guid>https://example.com/project/yieldcurves/</guid>
+      <description>
+
+
+
+&lt;script src=&#34;https://cdn.plot.ly/plotly-latest.min.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;script&gt;
+    function toggleFullscreen(iframeId) {
+        let iframe = document.getElementById(iframeId);
+        if (iframe.requestFullscreen) {
+            iframe.requestFullscreen();
+        } else if (iframe.mozRequestFullScreen) {  
+            iframe.mozRequestFullScreen();
+        } else if (iframe.webkitRequestFullscreen) {  
+            iframe.webkitRequestFullscreen();
+        } else if (iframe.msRequestFullscreen) {  
+            iframe.msRequestFullscreen();
+        }
+    }
+&lt;/script&gt;
+
+
+&lt;p&gt;Featured below are some yields&lt;/p&gt;
+&lt;h3 id=&#34;swiss-yield-curve&#34;&gt;Swiss Yield Curve&lt;/h3&gt;
+&lt;br&gt; 
+&lt;p&gt;&lt;button onclick=&#34;toggleFullscreen(&#39;iframe1&#39;)&#34; style=&#34;font-size: 14px; padding: 5px 15px; border: none; border-radius: 20px; background-color: #1664c0; color: white; cursor: pointer; transition: background-color 0.3s;&#34; onmouseover=&#34;this.style.backgroundColor=&#39;#0056b3&#39;&#34; onmouseout=&#34;this.style.backgroundColor=&#39;#007BFF&#39;&#34;&gt;Open in Fullscreen&lt;/button&gt;&lt;/p&gt;
+&lt;iframe id=&#34;iframe1&#34; src=&#34;YieldCurves1.html&#34; width=&#34;100%&#34; height=&#34;600px&#34; frameborder=&#34;0&#34;&gt; &lt;/iframe&gt;
+&lt;p&gt;&lt;br&gt; &lt;br&gt;
+Last update: 2023-09-01 14:13:00 CET&lt;/p&gt;
+&lt;h4 id=&#34;data-sources&#34;&gt;Data Sources:&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Yields: &lt;a href=&#34;https://data.snb.ch/api/cube/rendoblid/data/csv/de&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;SNB&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;us-yield-curve&#34;&gt;US Yield Curve&lt;/h3&gt;
+&lt;br&gt; 
+&lt;p&gt;&lt;button onclick=&#34;toggleFullscreen(&#39;iframe2&#39;)&#34; style=&#34;font-size: 14px; padding: 5px 15px; border: none; border-radius: 20px; background-color: #1664c0; color: white; cursor: pointer; transition: background-color 0.3s;&#34; onmouseover=&#34;this.style.backgroundColor=&#39;#0056b3&#39;&#34; onmouseout=&#34;this.style.backgroundColor=&#39;#007BFF&#39;&#34;&gt;Open in Fullscreen&lt;/button&gt;&lt;/p&gt;
+&lt;iframe id=&#34;iframe2&#34; src=&#34;YieldCurves2.html&#34; width=&#34;100%&#34; height=&#34;600px&#34; frameborder=&#34;0&#34;&gt; &lt;/iframe&gt;
+&lt;p&gt;&lt;br&gt; &lt;br&gt;
+Last update: 2023-09-01 14:16:28 CET&lt;/p&gt;
+&lt;h4 id=&#34;data-sources-1&#34;&gt;Data Sources:&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Yields: &lt;a href=&#34;https://fred.stlouisfed.org/searchresults/?st=Market%20Yield%20on%20U.S.%20Treasury%20Securities&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Federal Reserve Bank of St. Louis&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>FX Rates</title>
+      <link>https://example.com/project/pppvsmarketfxrate/</link>
+      <pubDate>Tue, 01 Aug 2023 00:00:00 +0000</pubDate>
+      <guid>https://example.com/project/pppvsmarketfxrate/</guid>
+      <description>
+
+
+
+&lt;script src=&#34;https://cdn.plot.ly/plotly-latest.min.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;script&gt;
+    function toggleFullscreen(iframeId) {
+        let iframe = document.getElementById(iframeId);
+        if (iframe.requestFullscreen) {
+            iframe.requestFullscreen();
+        } else if (iframe.mozRequestFullScreen) {  
+            iframe.mozRequestFullScreen();
+        } else if (iframe.webkitRequestFullscreen) {  
+            iframe.webkitRequestFullscreen();
+        } else if (iframe.msRequestFullscreen) {  
+            iframe.msRequestFullscreen();
+        }
+    }
+&lt;/script&gt;
+
+
+&lt;p&gt;Featured below is the value of one Swiss Franc in the foreign currencies of major trading partners.&lt;/p&gt;
+&lt;h3 id=&#34;market-fx-rates-vs-ppp-implied-fx-rates&#34;&gt;Market FX Rates vs PPP-implied FX Rates&lt;/h3&gt;
+&lt;br&gt; 
+&lt;p&gt;&lt;button onclick=&#34;toggleFullscreen(&#39;iframe1&#39;)&#34; style=&#34;font-size: 14px; padding: 5px 15px; border: none; border-radius: 20px; background-color: #1664c0; color: white; cursor: pointer; transition: background-color 0.3s;&#34; onmouseover=&#34;this.style.backgroundColor=&#39;#0056b3&#39;&#34; onmouseout=&#34;this.style.backgroundColor=&#39;#007BFF&#39;&#34;&gt;Open in Fullscreen&lt;/button&gt;&lt;/p&gt;
+&lt;iframe id=&#34;iframe1&#34; src=&#34;PPPvsMarketFXRate1.html&#34; width=&#34;100%&#34; height=&#34;600px&#34; frameborder=&#34;0&#34;&gt; &lt;/iframe&gt;
+&lt;p&gt;&lt;br&gt; &lt;br&gt;
+Last update: 2023-09-01 11:56:07 CET&lt;/p&gt;
+&lt;h4 id=&#34;data-sources&#34;&gt;Data Sources:&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Exchange Rates: &lt;a href=&#34;https://sdw.ecb.europa.eu/curConverter.do&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ECB&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;PPP Conversion Factors: &lt;a href=&#34;https://data.worldbank.org/indicator/PA.NUS.PPP&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;World Bank&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;deviation-of-market-fx-rates-from-ppp-implied-fx-rates&#34;&gt;Deviation of Market FX Rates from PPP-implied FX Rates&lt;/h3&gt;
+&lt;br&gt; 
+&lt;p&gt;&lt;button onclick=&#34;toggleFullscreen(&#39;iframe2&#39;)&#34; style=&#34;font-size: 14px; padding: 5px 15px; border: none; border-radius: 20px; background-color: #1664c0; color: white; cursor: pointer; transition: background-color 0.3s;&#34; onmouseover=&#34;this.style.backgroundColor=&#39;#0056b3&#39;&#34; onmouseout=&#34;this.style.backgroundColor=&#39;#007BFF&#39;&#34;&gt;Open in Fullscreen&lt;/button&gt;&lt;/p&gt;
+&lt;iframe id=&#34;iframe2&#34; src=&#34;PPPvsMarketFXRate2.html&#34; width=&#34;100%&#34; height=&#34;600px&#34; frameborder=&#34;0&#34;&gt; &lt;/iframe&gt;
+&lt;p&gt;&lt;br&gt; &lt;br&gt;
+Last update: 2023-09-01 12:00:10 CET&lt;/p&gt;
+&lt;h4 id=&#34;data-sources-1&#34;&gt;Data Sources:&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Exchange Rates: &lt;a href=&#34;https://sdw.ecb.europa.eu/curConverter.do&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ECB&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;PPP Conversion Factors: &lt;a href=&#34;https://data.worldbank.org/indicator/PA.NUS.PPP&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;World Bank&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Bitcoin</title>
+      <link>https://example.com/project/bitcoin/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://example.com/project/bitcoin/</guid>
+      <description>
+
+
+
+&lt;script src=&#34;https://cdn.plot.ly/plotly-latest.min.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;script&gt;
+    function toggleFullscreen(iframeId) {
+        let iframe = document.getElementById(iframeId);
+        if (iframe.requestFullscreen) {
+            iframe.requestFullscreen();
+        } else if (iframe.mozRequestFullScreen) {  
+            iframe.mozRequestFullScreen();
+        } else if (iframe.webkitRequestFullscreen) {  
+            iframe.webkitRequestFullscreen();
+        } else if (iframe.msRequestFullscreen) {  
+            iframe.msRequestFullscreen();
+        }
+    }
+&lt;/script&gt;
+
+
+&lt;p&gt;Featured below is the Bitcoin&amp;rsquo;s value in USD&lt;/p&gt;
+&lt;h3 id=&#34;bitcoin&#34;&gt;Bitcoin&lt;/h3&gt;
+&lt;br&gt; 
+&lt;p&gt;&lt;button onclick=&#34;toggleFullscreen(&#39;iframe1&#39;)&#34; style=&#34;font-size: 14px; padding: 5px 15px; border: none; border-radius: 20px; background-color: #1664c0; color: white; cursor: pointer; transition: background-color 0.3s;&#34; onmouseover=&#34;this.style.backgroundColor=&#39;#0056b3&#39;&#34; onmouseout=&#34;this.style.backgroundColor=&#39;#007BFF&#39;&#34;&gt;Open in Fullscreen&lt;/button&gt;&lt;/p&gt;
+&lt;iframe id=&#34;iframe1&#34; src=&#34;Bitcoin1.html&#34; width=&#34;100%&#34; height=&#34;600px&#34; frameborder=&#34;0&#34;&gt; &lt;/iframe&gt;
+&lt;p&gt;&lt;br&gt; &lt;br&gt;
+Last update: 2023-09-04 13:02:43 CET&lt;/p&gt;
+&lt;h4 id=&#34;data-sources&#34;&gt;Data Sources:&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Yields: &lt;a href=&#34;https://finance.yahoo.com/quote/BTC-USD?p=BTC-USD&amp;amp;.tsrc=fin-srch&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Yahoo Finance&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </description>
     </item>
     

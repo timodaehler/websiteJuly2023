@@ -40,7 +40,7 @@ Last update: 2023-09-01 14:13:00 CET
 ***
 
 
-### US Yield Curve test
+### US Yield Curve
 <br> 
 
 <button onclick="toggleFullscreen('iframe2')" style="font-size: 14px; padding: 5px 15px; border: none; border-radius: 20px; background-color: #1664c0; color: white; cursor: pointer; transition: background-color 0.3s;" onmouseover="this.style.backgroundColor='#0056b3'" onmouseout="this.style.backgroundColor='#007BFF'">Open in Fullscreen</button>
