@@ -2,6 +2,7 @@
 library(tidyquant)
 library(tidyverse)
 library(lubridate)
+library(htmlwidgets)
 
 # List of Stock Indices (excluding the unavailable ones, and adding Wilshire 5000, Mexican Bolsa, and TSE)
 indices <- c("^DJI", "^GSPC", "^IXIC", "^FTSE", "^GDAXI", "^FCHI", 
@@ -122,28 +123,44 @@ country_lat_lon <- data.frame(
 final_data <- merge(index_percentage_changes, country_lat_lon, by = "country")
 
 # Manually adjust coordinates for specific indices to avoid overlap
-final_data <- 
-  final_data %>%
+# final_data <-
+#   final_data %>%
+#   mutate(
+#     latitude = case_when(
+#       index_name == "FTSE 100" ~ 60,  # Move more towards North Atlantic
+#       index_name == "CAC 40" ~ 42,   # Move more towards South West
+#       index_name == "DAX" ~ 54,      # Move more towards North East
+#       index_name == "Swiss Market Index (SMI)" ~ 50, # Move more towards North East
+#       index_name == "Euro Stoxx 50" ~ 60,  # Move more towards North East
+#       index_name == "SENSEX" ~ 10,   # Move Indian index more South
+#       index_name == "Nikkei 225" ~ 45, # Move Japan further Northeast
+#       TRUE ~ latitude
+#     ),
+#     longitude = case_when(
+#       index_name == "FTSE 100" ~ -30, # Move more towards North Atlantic
+#       index_name == "CAC 40" ~ -13,  # Move more towards South West
+#       index_name == "DAX" ~ 20,      # Move more towards North East
+#       index_name == "Swiss Market Index (SMI)" ~ 20, # Move more towards North East
+#       index_name == "Euro Stoxx 50" ~ 40,  # Move more towards North East
+#       index_name == "SENSEX" ~ 80,   # Keep longitude the same for the Indian index
+#       index_name == "Nikkei 225" ~ 160, # Move Japan further Northeast
+#       TRUE ~ longitude
+#     )
+#   )
+
+# Aggregate index names and YTD changes for each country
+# agg_data <- final_data %>%
+#   group_by(country, latitude, longitude) %>%
+#   summarise(
+#     popup_text = paste0("<strong>", index_name, ":</strong> ", sprintf("%.2f%%", ytd_percentage_change), " YTD", collapse = "<br>")
+#   ) %>%
+#   ungroup()
+
+agg_data <- agg_data %>%
   mutate(
-    latitude = case_when(
-      index_name == "FTSE 100" ~ 60,  # Move more towards North Atlantic
-      index_name == "CAC 40" ~ 42,   # Move more towards South West
-      index_name == "DAX" ~ 54,      # Move more towards North East
-      index_name == "Swiss Market Index (SMI)" ~ 50, # Move more towards North East
-      index_name == "Euro Stoxx 50" ~ 60,  # Move more towards North East
-      index_name == "SENSEX" ~ 10,   # Move Indian index more South
-      index_name == "Nikkei 225" ~ 45, # Move Japan further Northeast
-      TRUE ~ latitude
-    ),
-    longitude = case_when(
-      index_name == "FTSE 100" ~ -30, # Move more towards North Atlantic
-      index_name == "CAC 40" ~ -10,  # Move more towards South West
-      index_name == "DAX" ~ 20,      # Move more towards North East
-      index_name == "Swiss Market Index (SMI)" ~ 20, # Move more towards North East
-      index_name == "Euro Stoxx 50" ~ 40,  # Move more towards North East
-      index_name == "SENSEX" ~ 80,   # Keep longitude the same for the Indian index
-      index_name == "Nikkei 225" ~ 160, # Move Japan further Northeast
-      TRUE ~ longitude
+    label_direction = case_when(
+      country == "United Kingdom" ~ 'left',
+      TRUE ~ 'auto'
     )
   )
 
@@ -153,19 +170,53 @@ leaflet(agg_data) %>%
   addCircleMarkers(
     lng = ~longitude,
     lat = ~latitude,
-    popup = ~sprintf(
-      "<strong>Country:</strong> %s <br> %s",
-      country,
-      popup_text
-    ),
-    label = ~sprintf("<strong>Country:</strong> %s <br> %s", country, popup_text),
-    labelOptions = labelOptions(noHide = TRUE, direction = 'auto')
+    popup = ~sprintf("<strong>Country:</strong> %s <br> %s", country, popup_text),
+    label = ~country,
+    labelOptions = labelOptions(
+      noHide = TRUE, 
+      direction = ~label_direction
+    )
   )
 
+# # Create Leaflet map
+# leaflet(agg_data) %>%
+#   addProviderTiles(providers$OpenStreetMap) %>%
+#   addCircleMarkers(
+#     lng = ~longitude,
+#     lat = ~latitude,
+#     popup = ~sprintf(
+#       "<strong>Country:</strong> %s <br> %s",
+#       country,
+#       popup_text
+#     ),
+#     label = ~sprintf("<strong>Country:</strong> %s <br> %s", country, popup_text),
+#     labelOptions = labelOptions(noHide = TRUE, direction = 'auto')
+#   )
+
+# Save map
+# Create Leaflet map
+my_map <- 
+  leaflet(agg_data) %>%
+  addTiles(
+    urlTemplate = "https://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}{r}.png",
+    attribution = '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions" target="_blank">CARTO</a>'
+  ) %>%
+  addCircleMarkers(
+    lng = ~longitude,
+    lat = ~latitude,
+    color = "#1664c0", # setting the circle color to darker blue
+    popup = ~sprintf("<strong>Country:</strong> %s <br> %s", country, popup_text),
+    label = ~country,
+    labelOptions = labelOptions(
+      noHide = TRUE, 
+      direction = ~label_direction
+    )
+  ) %>%
+  setView(lng = 2, lat = 48, zoom = 2) # set default center to (0, 0) and zoom level to 2
+
+my_map
 
 
-
-
-
+saveWidget(my_map, "~/Desktop/websiteJuly2023/themes/starter-hugo-academic/static/uploads/my_map.html", selfcontained = TRUE)
 
 

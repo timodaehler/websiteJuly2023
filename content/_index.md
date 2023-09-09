@@ -10,7 +10,18 @@ sections:
     username: admin
   id: about
 
-
+- block: markdown
+  content:
+    subtitle: "Global Stock Indices Performance"
+    text: |
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-between;">
+        <div style="width: 100%; margin-bottom: 20px;">
+          <iframe src="/uploads/my_map.html" width="100%" height="600px" frameborder="0"></iframe>
+        </div>
+      </div>
+    title: "Performance of Various Global Stock Indices"
+  design:
+    columns: "1"
 
 # - block: tag_cloud
 #   content:
@@ -177,6 +188,22 @@ sections:
 #     title: "Latest Exchange Rates Against Swiss Franc (Shown Four Times)"
 #   design:
 #     columns: "1"
+
+
+
+# - block: markdown
+#   content:
+#     subtitle: "Exchange Rates"
+#     text: |
+#       <div style="display: flex; flex-wrap: wrap; justify-content: space-between;">
+#         <div style="width: 48%; margin-bottom: 20px;">
+#           <iframe src="/uploads/myplot3.html" width="100%" height="600px" frameborder="0"></iframe>
+#         </div>
+#       </div>
+#     title: "Latest Exchange Rates Against Swiss Franc (Shown Four Times)"
+#   design:
+#     columns: "1"
+
 
 
     
