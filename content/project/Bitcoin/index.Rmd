@@ -43,3 +43,4 @@ Last update: `r Bitcoin1_update_date` CET
 
 <iframe src="pretty_table_btc.html" width="100%" height="300"></iframe>
 
+<iframe src="pretty_table_btc_2.html" width="100%" height="300"></iframe>

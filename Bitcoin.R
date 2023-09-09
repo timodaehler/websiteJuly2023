@@ -1,8 +1,25 @@
+# Dieser Code lädt zuerst die Bitcon Kursdaten von Yahoo. 
+# Danach werden die Daten von einem xts zoo Objekt in ein 
+# dataframe verwandelt. Basierend darauf wird die Zeitreihe
+# mit Plotly geplottet und das plotly sowie das update 
+# date exportiert. 
+# 
+# Im zweiten Teil werden die heruntergeladenen und bearbeiteten
+# Daten weiterverwendet, um die prozentuellen Veränderungen
+# seit Jahresbeginn, seit 3 Jahren und seit 5 Jahren zu 
+# berechnen. Diese Veränderungen werden in ein gt Table gebracht und 
+# dann exportiert um im Rahmen des .rmd files wieder importiert und als 
+# gt file angezeigt werden zu können. 
+
+
+# Teil 1: plotly ----------------------------------------------------------
+
 # Import necessary libraries
 library(htmlwidgets)
 library(quantmod)
 library(plotly)
 library(dplyr)
+library(gt)
 
 # Download BTC-USD daily data from Yahoo Finance and store it in btc_data
 btc_data <- getSymbols("BTC-USD", auto.assign = FALSE)
@@ -21,7 +38,6 @@ saveRDS(btc_data, "/Users/timodaehler_1/Desktop/websiteJuly2023/content/project/
 # Calculate the median of Close prices
 median_close <- median(btc_data$Close)
 
-# Create the main Plotly time series plot
 # Create the main Plotly time series plot
 btc_plot <- 
   plot_ly(data = btc_data, x = ~Date, y = ~Close, type = "scatter", mode = "lines", name = "1 Bitcoin in USD") %>%
@@ -47,24 +63,21 @@ btc_plot
 # Update date
 saveRDS(Sys.time(), "content/project/Bitcoin/Bitcoin1_update_date.rds")
 
-# Export 
+# Export the plot
 saveWidget(btc_plot, "content/project/Bitcoin/Bitcoin1.html")
 
-# Clean-up
-rm(list = ls())
-gc()
 
 
 
 
 
 
-# Load the packages
-library(dplyr)
-library(gt)
+# Teil 2: gt table --------------------------------------------------------
 
 # Order the data by Date
-btc_data <- btc_data %>% arrange(Date)
+btc_data <- 
+  btc_data %>% 
+  arrange(Date)
 
 # Get the latest date in the dataset
 latest_date_btc <- max(btc_data$Date)
@@ -85,13 +98,15 @@ five_year_data_btc <- btc_data %>% filter(Date >= five_years_ago_btc)
 five_year_change_btc <- (last(five_year_data_btc$Close) / first(five_year_data_btc$Close) - 1) * 100
 
 # Create a data frame to hold the metrics for Bitcoin
-metrics_data_btc <- data.frame(
+metrics_data_btc <- 
+  data.frame(
   Metric = c("Year-To-Date Change (%)", "One-Year Change (%)", "Five-Year Change (%)"),
   Value = c(ytd_change_btc, one_year_change_btc, five_year_change_btc)
 )
 
 # Create a pretty table using the gt package
-pretty_table_btc <- gt(metrics_data_btc) %>% 
+pretty_table_btc <- 
+  gt(metrics_data_btc) %>% 
   tab_header(
     title = "Bitcoin Performance Metrics",
     subtitle = paste("As of", latest_date_btc)
@@ -102,3 +117,54 @@ pretty_table_btc
 
 gt::gtsave(pretty_table_btc, "/Users/timodaehler_1/Desktop/websiteJuly2023/content/project/Bitcoin/pretty_table_btc.html")
 
+
+
+
+
+
+# Next try ----------------------------------------------------------------
+
+
+
+# Using the gt package for table styling
+library(gt)
+
+# Create a simple table
+simple_table <- 
+  data.frame(
+  Metric = c("Year-To-Date", "One Year", "Five Years"),
+  Value = c(5.2, -3.1, 12.5) )
+
+# Create a gt object
+styled_table <- 
+  simple_table %>%
+  gt() %>%
+  
+  # Center all the text in the cells
+  tab_style(
+    style = cell_text(align = "center", weight = "bold"),
+    locations = cells_body()
+  ) %>%
+  
+  # Color the header cells in blue
+  tab_style(
+    style = cell_fill(color = "#007BFF"),
+    locations = cells_column_labels()
+  ) %>%
+  
+  # Color the data cells in light gray
+  tab_style(
+    style = cell_fill(color = "#F5F5F5"),
+    locations = cells_body()
+  )
+
+# Show the table
+styled_table
+
+gt::gtsave(styled_table, "/Users/timodaehler_1/Desktop/websiteJuly2023/content/project/Bitcoin/pretty_table_btc_2.html")
+
+
+
+# # Clean-up
+# rm(list = ls())
+# gc()

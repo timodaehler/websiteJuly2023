@@ -41,3 +41,4 @@ Last update: 2023-09-04 16:29:07 CET
 
 <iframe src="pretty_table_btc.html" width="100%" height="300"></iframe>
 
+<iframe src="pretty_table_btc_2.html" width="100%" height="300"></iframe>
