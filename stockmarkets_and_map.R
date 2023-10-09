@@ -86,6 +86,7 @@ print(index_summary)
 
 
 # Create a new DataFrame with percentage changes
+# Modify the index_percentage_changes dataframe to include most_recent_close
 index_percentage_changes <- index_summary %>%
   mutate(
     ytd_percentage_change = ((most_recent_close - last_year_close) / last_year_close) * 100,
@@ -94,12 +95,7 @@ index_percentage_changes <- index_summary %>%
     three_year_percentage_change = ((most_recent_close - three_years_ago_close) / three_years_ago_close) * 100,
     five_year_percentage_change = ((most_recent_close - five_years_ago_close) / five_years_ago_close) * 100
   ) %>%
-  select(country, index_name, ytd_percentage_change, one_year_percentage_change, two_year_percentage_change, three_year_percentage_change, five_year_percentage_change)
-
-# Print out the new DataFrame
-print(index_percentage_changes)
-
-index_percentage_changes
+  select(country, index_name, most_recent_close, ytd_percentage_change, one_year_percentage_change, two_year_percentage_change, three_year_percentage_change, five_year_percentage_change)
 
 
 # Install required packages if not already installed
@@ -121,6 +117,73 @@ country_lat_lon <- data.frame(
 
 # Merge the dataframes based on the country column
 final_data <- merge(index_percentage_changes, country_lat_lon, by = "country")
+
+# Print out the new DataFrame
+print(index_percentage_changes)
+
+index_percentage_changes
+
+
+
+
+# Merge the dataframes based on the country column
+final_data <- merge(index_percentage_changes, country_lat_lon, by = "country")
+
+# Einschub
+library(countrycode)
+library(gt)
+library(dplyr)
+
+# Add alpha2 column
+final_data$alpha2 <- countrycode(final_data$country, "country.name", "iso2c")
+# Handle "Europe" -> "EU"
+final_data$alpha2[final_data$country == "Europe"] <- "EU"
+
+# Function to generate the image tag with new dimensions
+img_tag <- function(alpha2_code) {
+  return(paste0('<img src="flags/', tolower(alpha2_code), '.png" width="60" height="40"/>'))
+}
+
+# Create a directory to store flags
+dir.create("flags", showWarnings = FALSE)
+
+# Download flags based on alpha2 code
+for (code in unique(final_data$alpha2)) {
+  url <- paste0("https://flagcdn.com/128x96/", tolower(code), ".png")
+  destfile <- paste0("flags/", tolower(code), ".png")
+  download.file(url, destfile, mode = "wb")
+}
+
+# Add img tag column
+final_data$img <- sapply(final_data$alpha2, img_tag)
+
+# Drop unnecessary columns and rename others
+final_data <- final_data %>%
+  select(-alpha2, -latitude, -longitude) %>%
+  rename(
+    "Index level" = most_recent_close,
+    "YTD % Δ" = ytd_percentage_change,
+    "1Yr % Δ" = one_year_percentage_change,
+    "2Yr % Δ" = two_year_percentage_change,
+    "3Yr % Δ" = three_year_percentage_change,
+    "5Yr % Δ" = five_year_percentage_change,
+    Country = country,
+    Index = index_name
+  )
+
+# Create the table with gt
+gt_table <- final_data %>%
+  select(img, everything()) %>% # Move 'img' column to the front
+  gt() %>%
+  tab_options(table.width = px(1000)) %>% 
+  fmt_markdown(columns = vars(img)) %>%
+  fmt_number(columns = vars("YTD % Δ", "1Yr % Δ", "2Yr % Δ", "3Yr % Δ", "5Yr % Δ"), decimals = 2) %>%
+  cols_label(img = "")
+
+gt_table
+
+
+gtsave(gt_table, filename = "~/Desktop/websiteJuly2023/themes/starter-hugo-academic/static/uploads/current_index_performances.html")
 
 # Manually adjust coordinates for specific indices to avoid overlap
 # final_data <-

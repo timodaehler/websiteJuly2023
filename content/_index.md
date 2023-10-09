@@ -14,14 +14,25 @@ sections:
   content:
     subtitle: "Global Stock Indices Performance"
     text: |
+    
       <div style="display: flex; flex-wrap: wrap; justify-content: space-between;">
         <div style="width: 100%; margin-bottom: 20px;">
           <iframe src="/uploads/my_map.html" width="100%" height="600px" frameborder="0"></iframe>
         </div>
       </div>
+    
+
     title: "Performance of Various Global Stock Indices"
   design:
     columns: "1"
+    
+        #   <div style="display: flex; flex-wrap: wrap; justify-content: space-between;">
+        # <div style="width: 100%; margin-bottom: 20px;">
+        #   <iframe src="/uploads/current_index_performances.html" width="100%" height="600px" frameborder="0"></iframe>
+        # </div>
+
+    
+
 
 # - block: tag_cloud
 #   content:
