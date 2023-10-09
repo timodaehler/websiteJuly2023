@@ -32,7 +32,7 @@ Featured below are some yields
 
 
 <br> <br> 
-Last update: 2023-09-01 14:13:00 CET
+Last update: 2023-10-09 21:54:57 CET
 
 #### Data Sources: 
 * Yields: [SNB](https://data.snb.ch/api/cube/rendoblid/data/csv/de)
@@ -49,7 +49,7 @@ Last update: 2023-09-01 14:13:00 CET
 
 
 <br> <br> 
-Last update: 2023-09-01 14:16:28 CET
+Last update: 2023-10-09 21:55:09 CET
 
 #### Data Sources: 
 * Yields: [Federal Reserve Bank of St. Louis](https://fred.stlouisfed.org/searchresults/?st=Market%20Yield%20on%20U.S.%20Treasury%20Securities)
