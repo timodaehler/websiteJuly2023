@@ -23,6 +23,25 @@ url_video: ""
 
 Featured below are the indeces of major stock marekts around the world. 
 
+
+
+
+### Global Equity Indices Overview
+<br> 
+
+<iframe src="/uploads/current_index_performances.html" width="100%" height="600px" frameborder="0"></iframe>
+
+<br> <br> 
+Last update: 2023-09-01 13:43:55 CET
+
+#### Data Sources: 
+* Stock Market Indices: [Yahoo Finance](https://finance.yahoo.com)
+
+
+***
+
+
+
 ### Equity Indices (Normalized 2007-01-04 = 100%)
 <br> 
 
@@ -53,3 +72,8 @@ Last update: 2023-09-01 13:43:55 CET
 
 #### Data Sources: 
 * Stock Market Indices: [Yahoo Finance](https://finance.yahoo.com)
+
+
+
+
+
