@@ -8,7 +8,7 @@ highlight_name: true
 organizations:
 - name: 
   url: 
-role: Mountain lover
+# role: Mountain lover
 social:
 - icon: envelope
   icon_pack: fas
