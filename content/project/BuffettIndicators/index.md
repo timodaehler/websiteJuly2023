@@ -32,7 +32,7 @@ Featured below are some Buffett Indicators
 
 
 <br> <br> 
-Last update: 2023-09-01 14:58:53 CET
+Last update: 2023-09-01 13:58:53 CET
 
 #### Data Sources: 
 * SPI Market Cap: [Yahoo Finance](https://finance.yahoo.com)
@@ -51,7 +51,7 @@ Last update: 2023-09-01 14:58:53 CET
 
 
 <br> <br> 
-Last update: 2023-09-01 15:31:27 CET
+Last update: 2023-09-01 14:31:27 CET
 
 #### Data Sources: 
 * Wilshire 5000 Market Cap: [Federal Reserve Bank of St. Louis](https://fred.stlouisfed.org/series/WILL5000PR)

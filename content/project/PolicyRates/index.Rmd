@@ -18,6 +18,11 @@ url_code: ""
 url_pdf: ""
 url_slides: ""
 url_video: ""
+
+output:
+  md_document:
+    variant: gfm
+
 ---
 {{< load-plotly >}}
 

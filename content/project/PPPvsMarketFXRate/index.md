@@ -32,7 +32,7 @@ Featured below is the value of one Swiss Franc in the foreign currencies of majo
 
 
 <br> <br> 
-Last update: 2023-09-01 11:56:07 CET
+Last update: 2023-09-01 10:56:07 CET
 
 #### Data Sources: 
 * Exchange Rates: [ECB](https://sdw.ecb.europa.eu/curConverter.do)
@@ -50,7 +50,7 @@ Last update: 2023-09-01 11:56:07 CET
 
 
 <br> <br> 
-Last update: 2023-09-01 12:00:10 CET
+Last update: 2023-09-01 11:00:10 CET
 
 #### Data Sources: 
 * Exchange Rates: [ECB](https://sdw.ecb.europa.eu/curConverter.do)

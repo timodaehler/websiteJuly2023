@@ -32,7 +32,7 @@ Featured below is the Bitcoin's value in USD
 
 
 <br> <br> 
-Last update: 2023-09-04 16:29:07 CET
+Last update: 2023-10-22 21:20:35 CET
 
 #### Data Sources: 
 * Yields: [Yahoo Finance](https://finance.yahoo.com/quote/BTC-USD?p=BTC-USD&.tsrc=fin-srch)

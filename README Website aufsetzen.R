@@ -50,3 +50,95 @@ blogdown::new_site(theme = "wowchemy/starter-hugo-academic")
 
 
 
+
+
+
+
+library(rmarkdown)
+
+knit_single_file <- function(file_path) {
+  tryCatch({
+    rmarkdown::render(input = file_path, quiet = TRUE)
+    message("Successfully knitted: ", file_path)
+  }, error = function(e) {
+    message("Failed to knit: ", file_path, "\n", "Error: ", e$message)
+  })
+}
+
+# Use it like this
+knit_single_file("/Users/timodaehler_1/Desktop/websiteJuly2023/content/project/Bitcoin/index.Rmd")
+
+
+
+
+get_index_paths <- function(directory) {
+  # Search for 'index.Rmd' files in the directory and its subdirectories
+  index_files <- list.files(directory, pattern = "index\\.Rmd$", recursive = TRUE, full.names = TRUE)
+  return(index_files)
+}
+
+# Use the function like this:
+index_paths <- get_index_paths("/Users/timodaehler_1/Desktop/websiteJuly2023/content/project/")
+print(index_paths)
+
+
+
+library(rmarkdown)
+
+knit_single_file <- function(file_path) {
+  tryCatch({
+    rmarkdown::render(input = file_path, quiet = TRUE)
+    message("Successfully knitted: ", file_path)
+  }, error = function(e) {
+    message("Failed to knit: ", file_path, "\n", "Error: ", e$message)
+  })
+}
+
+
+
+knit_single_file <- function(file_path) {
+  tryCatch({
+    rmarkdown::render(input = file_path, output_format = "md_document", quiet = TRUE)
+    message("Successfully knitted: ", file_path)
+  }, error = function(e) {
+    message("Failed to knit: ", file_path, "\n", "Error: ", e$message)
+  })
+}
+
+knit_single_file("/Users/timodaehler_1/Desktop/websiteJuly2023/content/project//PolicyRates/index.Rmd")
+
+
+
+
+
+
+knit_single_file <- function(file_path) {
+  tryCatch({
+    rmarkdown::render(
+      input = file_path, 
+      output_format = rmarkdown::md_document(variant = "gfm", preserve_yaml = TRUE),
+      quiet = TRUE
+    )
+    message("Successfully knitted: ", file_path)
+  }, error = function(e) {
+    message("Failed to knit: ", file_path, "\n", "Error: ", e$message)
+  })
+}
+
+knit_single_file("/Users/timodaehler_1/Desktop/websiteJuly2023/content/project//PolicyRates/index.Rmd")
+
+
+
+
+
+knit_all_index_files <- function(directory) {
+  index_paths <- get_index_paths(directory)
+  for (path in index_paths) {
+    knit_single_file(path)
+  }
+}
+
+# Knit all the index.Rmd files in the project folder and subfolders
+knit_all_index_files("/Users/timodaehler_1/Desktop/websiteJuly2023/content/project/")
+
+serve_site()

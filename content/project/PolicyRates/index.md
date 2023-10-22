@@ -18,30 +18,30 @@ url_code: ""
 url_pdf: ""
 url_slides: ""
 url_video: ""
----
-{{< load-plotly >}}
 
-Featured below are policy rates from central banks essential from a Swiss perspective.
+output:
+  md_document:
+    variant: gfm
+
+---
+
+{{\< load-plotly \>}}
+
+Featured below are policy rates from central banks essential from a
+Swiss perspective.
 
 ### Policy Rates
-<br> 
 
-<button onclick="toggleFullscreen('iframe1')" style="font-size: 14px; padding: 5px 15px; border: none; border-radius: 20px; background-color: #1664c0; color: white; cursor: pointer; transition: background-color 0.3s;" onmouseover="this.style.backgroundColor='#0056b3'" onmouseout="this.style.backgroundColor='#007BFF'">Open in Fullscreen</button>
-<iframe id="iframe1" src="PolicyRates1.html" width="100%" height="600px" frameborder="0"> </iframe>
+<br>
 
+<button onclick="toggleFullscreen(&#39;iframe1&#39;)" style="font-size: 14px; padding: 5px 15px; border: none; border-radius: 20px; background-color: #1664c0; color: white; cursor: pointer; transition: background-color 0.3s;" onmouseover="this.style.backgroundColor=&#39;#0056b3&#39;" onmouseout="this.style.backgroundColor=&#39;#007BFF&#39;">
+Open in Fullscreen
+</button>
+<iframe id="iframe1" src="PolicyRates1.html" width="100%" height="600px" frameborder="0">
+</iframe>
 
+<br> <br> Last update: 2023-10-22 21:52:42 CET
 
-<br> <br> 
-Last update: 2023-09-01 14:01:12 CET
+#### Data Sources:
 
-#### Data Sources: 
-* Policy Rates: [SNB](https://data.snb.ch/de/topics/snb/cube/snboffzisa)
-  
-
-
-
-
-
-
-
-
+- Policy Rates: [SNB](https://data.snb.ch/de/topics/snb/cube/snboffzisa)

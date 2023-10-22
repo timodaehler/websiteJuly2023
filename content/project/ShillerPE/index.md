@@ -32,7 +32,7 @@ Featured below are some Shiller PE Ratios
 
 
 <br> <br> 
-Last update: 2023-09-04 13:03:25 CET
+Last update: 2023-09-04 12:12:01 CET
 
 #### Data Sources: 
 * Yields: [S&P500 Shiller PE Ratio ](https://data.nasdaq.com/data//MULTPL/SHILLER_PE_RATIO_MONTH-Shiller-PE-Ratio-by-Month)

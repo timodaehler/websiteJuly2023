@@ -32,7 +32,7 @@ Featured below are some Dividend yields
 
 
 <br> <br> 
-Last update: 2023-09-01 16:04:21 CET
+Last update: 2023-09-01 15:04:21 CET
 
 #### Data Sources: 
 * Dividends: [UBS](https://www.ubs.com/ch/en/assetmanagement/funds/etf/ch0130595124-ubs-etf-ch-spi-mid-pd001.html#Holdings)
@@ -50,7 +50,7 @@ Last update: 2023-09-01 16:04:21 CET
 
 
 <br> <br> 
-Last update: 2023-09-01 16:04:15 CET
+Last update: 2023-09-01 15:04:15 CET
 
 #### Data Sources: 
 * Dividend Yields: [Nasdaq Data Link](https://data.nasdaq.com/data/MULTPL/SP500_DIV_YIELD_MONTH-sp-500-dividend-yield-by-month)
