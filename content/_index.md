@@ -10,26 +10,27 @@ sections:
     username: admin
   id: about
 
-- block: markdown
-  content:
-    subtitle: "Global Stock Indices Performance"
-    text: |
-    
-      <div style="display: flex; flex-wrap: wrap; justify-content: space-between;">
-        <div style="width: 100%; margin-bottom: 20px;">
-          <iframe src="/uploads/my_map.html" width="100%" height="600px" frameborder="0"></iframe>
-        </div>
-      </div>
-    
 
-    title: "Performance of Various Global Stock Indices"
-  design:
-    columns: "1"
-    
-        #   <div style="display: flex; flex-wrap: wrap; justify-content: space-between;">
-        # <div style="width: 100%; margin-bottom: 20px;">
-        #   <iframe src="/uploads/current_index_performances.html" width="100%" height="600px" frameborder="0"></iframe>
-        # </div>
+# - block: markdown
+#   content:
+#     subtitle: "Global Stock Indices Performance"
+#     text: |
+#     
+#       <div style="display: flex; flex-wrap: wrap; justify-content: space-between;">
+#         <div style="width: 100%; margin-bottom: 20px;">
+#           <iframe src="/uploads/my_map.html" width="100%" height="600px" frameborder="0"></iframe>
+#         </div>
+#       </div>
+#     
+# 
+#     title: "Performance of Various Global Stock Indices"
+#   design:
+#     columns: "1"
+#     
+#         #   <div style="display: flex; flex-wrap: wrap; justify-content: space-between;">
+#         # <div style="width: 100%; margin-bottom: 20px;">
+#         #   <iframe src="/uploads/current_index_performances.html" width="100%" height="600px" frameborder="0"></iframe>
+#         # </div>
 
     
 
@@ -55,12 +56,12 @@ sections:
     filters:
       folders:
       - project
-    title: Projects
+    title: Financial Charts
   design:
     columns: "1"
     flip_alt_rows: false
     view: showcase
-  id: projects
+  id: FinancialCharts
   
   
 - block: experience
@@ -110,6 +111,7 @@ sections:
     title: Education
   design:
     columns: "2"
+  id: experience
   
   
 

@@ -1,7 +1,7 @@
 library(devtools)
 library(blogdown)
 
-# test  
+
 blogdown::install_hugo() 
 # Die Version wird später noch wichtig sein: 
 # The latest Hugo version is v0.115.4 
