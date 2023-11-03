@@ -1,5 +1,5 @@
 ---
-date: "2023-09-021T00:00:00Z"
+date: "2023-09-21T00:00:00Z"
 external_link: ""
 image: 
   caption: Photo by rawpixel on Unsplash
@@ -19,29 +19,26 @@ url_pdf: ""
 url_slides: ""
 url_video: ""
 ---
-
 <!-- {{< load-plotly >}} -->
 
-Featured below is the Bitcoin’s value in USD
+Featured below is the Bitcoin's value in USD
 
 ### Bitcoin
+<br> 
 
-<br>
+<button onclick="toggleFullscreen('iframe1')" style="font-size: 14px; padding: 5px 15px; border: none; border-radius: 20px; background-color: #1664c0; color: white; cursor: pointer; transition: background-color 0.3s;" onmouseover="this.style.backgroundColor='#0056b3'" onmouseout="this.style.backgroundColor='#007BFF'">Open in Fullscreen</button>
+<iframe id="iframe1" src="Bitcoin1.html" width="100%" height="600px" frameborder="0"> </iframe>
 
-<button onclick="toggleFullscreen(&#39;iframe1&#39;)" style="font-size: 14px; padding: 5px 15px; border: none; border-radius: 20px; background-color: #1664c0; color: white; cursor: pointer; transition: background-color 0.3s;" onmouseover="this.style.backgroundColor=&#39;#0056b3&#39;" onmouseout="this.style.backgroundColor=&#39;#007BFF&#39;">
-Open in Fullscreen
-</button>
-<iframe id="iframe1" src="Bitcoin1.html" width="100%" height="600px" frameborder="0">
-</iframe>
 
-<br> <br> Last update: 2023-11-03 13:44:30 CET
 
-#### Data Sources:
+<br> <br> 
+Last update: 2023-11-03 13:44:30 CET
 
-- Yields: [Yahoo
-  Finance](https://finance.yahoo.com/quote/BTC-USD?p=BTC-USD&.tsrc=fin-srch)
+#### Data Sources: 
+* Yields: [Yahoo Finance](https://finance.yahoo.com/quote/BTC-USD?p=BTC-USD&.tsrc=fin-srch)
 
-<iframe src="pretty_table_btc.html" width="100%" height="300">
-</iframe>
-<iframe src="pretty_table_btc_2.html" width="100%" height="300">
-</iframe>
+
+
+<iframe src="pretty_table_btc.html" width="100%" height="300"></iframe>
+
+<iframe src="pretty_table_btc_2.html" width="100%" height="300"></iframe>
