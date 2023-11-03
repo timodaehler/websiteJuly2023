@@ -19,21 +19,24 @@ url_pdf: ""
 url_slides: ""
 url_video: ""
 ---
-{{< load-plotly >}}
+
+<!-- {{< load-plotly >}} -->
 
 Featured below are some Shiller PE Ratios
 
 ### Shiller PE
-<br> 
 
-<button onclick="toggleFullscreen('iframe1')" style="font-size: 14px; padding: 5px 15px; border: none; border-radius: 20px; background-color: #1664c0; color: white; cursor: pointer; transition: background-color 0.3s;" onmouseover="this.style.backgroundColor='#0056b3'" onmouseout="this.style.backgroundColor='#007BFF'">Open in Fullscreen</button>
-<iframe id="iframe1" src="ShillerPE1.html" width="100%" height="600px" frameborder="0"> </iframe>
+<br>
 
+<button onclick="toggleFullscreen(&#39;iframe1&#39;)" style="font-size: 14px; padding: 5px 15px; border: none; border-radius: 20px; background-color: #1664c0; color: white; cursor: pointer; transition: background-color 0.3s;" onmouseover="this.style.backgroundColor=&#39;#0056b3&#39;" onmouseout="this.style.backgroundColor=&#39;#007BFF&#39;">
+Open in Fullscreen
+</button>
+<iframe id="iframe1" src="ShillerPE1.html" width="100%" height="600px" frameborder="0">
+</iframe>
 
+<br> <br> Last update: 2023-09-04 12:12:01 CET
 
-<br> <br> 
-Last update: 2023-09-04 12:12:01 CET
+#### Data Sources:
 
-#### Data Sources: 
-* Yields: [S&P500 Shiller PE Ratio ](https://data.nasdaq.com/data//MULTPL/SHILLER_PE_RATIO_MONTH-Shiller-PE-Ratio-by-Month)
-  
+- Yields: [S&P500 Shiller PE
+  Ratio](https://data.nasdaq.com/data//MULTPL/SHILLER_PE_RATIO_MONTH-Shiller-PE-Ratio-by-Month)

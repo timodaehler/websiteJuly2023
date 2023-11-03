@@ -19,7 +19,7 @@ url_pdf: ""
 url_slides: ""
 url_video: ""
 ---
-{{< load-plotly >}}
+<!-- {{< load-plotly >}} -->
 
 Featured below are the indeces of major stock marekts around the world. 
 

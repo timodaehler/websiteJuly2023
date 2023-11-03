@@ -49,24 +49,29 @@ blogdown::new_site(theme = "wowchemy/starter-hugo-academic")
 
 
 
-
-
-
+rm(list = ls())
+gc()
 
 
 library(rmarkdown)
+library(blogdown)
 
-knit_single_file <- function(file_path) {
-  tryCatch({
-    rmarkdown::render(input = file_path, quiet = TRUE)
-    message("Successfully knitted: ", file_path)
-  }, error = function(e) {
-    message("Failed to knit: ", file_path, "\n", "Error: ", e$message)
-  })
-}
+
+stop_server()
+# 
+# library(rmarkdown)
+# 
+# knit_single_file <- function(file_path) {
+#   tryCatch({
+#     rmarkdown::render(input = file_path, quiet = TRUE)
+#     message("Successfully knitted: ", file_path)
+#   }, error = function(e) {
+#     message("Failed to knit: ", file_path, "\n", "Error: ", e$message)
+#   })
+# }
 
 # Use it like this
-knit_single_file("/Users/timodaehler_1/Desktop/websiteJuly2023/content/project/Bitcoin/index.Rmd")
+# knit_single_file("/Users/timodaehler_1/Desktop/websiteJuly2023/content/project/Bitcoin/index.Rmd")
 
 
 
@@ -83,30 +88,29 @@ print(index_paths)
 
 
 
-library(rmarkdown)
 
-knit_single_file <- function(file_path) {
-  tryCatch({
-    rmarkdown::render(input = file_path, quiet = TRUE)
-    message("Successfully knitted: ", file_path)
-  }, error = function(e) {
-    message("Failed to knit: ", file_path, "\n", "Error: ", e$message)
-  })
-}
-
+# knit_single_file <- function(file_path) {
+#   tryCatch({
+#     rmarkdown::render(input = file_path, quiet = TRUE)
+#     message("Successfully knitted: ", file_path)
+#   }, error = function(e) {
+#     message("Failed to knit: ", file_path, "\n", "Error: ", e$message)
+#   })
+# }
 
 
-knit_single_file <- function(file_path) {
-  tryCatch({
-    rmarkdown::render(input = file_path, output_format = "md_document", quiet = TRUE)
-    message("Successfully knitted: ", file_path)
-  }, error = function(e) {
-    message("Failed to knit: ", file_path, "\n", "Error: ", e$message)
-  })
-}
 
-knit_single_file("/Users/timodaehler_1/Desktop/websiteJuly2023/content/project//PolicyRates/index.Rmd")
-
+# knit_single_file <- function(file_path) {
+#   tryCatch({
+#     rmarkdown::render(input = file_path, output_format = "md_document", quiet = TRUE)
+#     message("Successfully knitted: ", file_path)
+#   }, error = function(e) {
+#     message("Failed to knit: ", file_path, "\n", "Error: ", e$message)
+#   })
+# }
+# 
+# knit_single_file("/Users/timodaehler_1/Desktop/websiteJuly2023/content/project//PolicyRates/index.Rmd")
+# 
 
 
 
@@ -125,7 +129,7 @@ knit_single_file <- function(file_path) {
   })
 }
 
-knit_single_file("/Users/timodaehler_1/Desktop/websiteJuly2023/content/project//PolicyRates/index.Rmd")
+# knit_single_file("/Users/timodaehler_1/Desktop/websiteJuly2023/content/project//Bitcoin/index.Rmarkdown")
 
 
 
@@ -140,5 +144,6 @@ knit_all_index_files <- function(directory) {
 
 # Knit all the index.Rmd files in the project folder and subfolders
 knit_all_index_files("/Users/timodaehler_1/Desktop/websiteJuly2023/content/project/")
+
 
 serve_site()

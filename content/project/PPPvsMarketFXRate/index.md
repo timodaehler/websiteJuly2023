@@ -19,44 +19,46 @@ url_pdf: ""
 url_slides: ""
 url_video: ""
 ---
-{{< load-plotly >}}
 
-Featured below is the value of one Swiss Franc in the foreign currencies of major trading partners.
+<!-- {{< load-plotly >}} -->
+
+Featured below is the value of one Swiss Franc in the foreign currencies
+of major trading partners.
 
 ### Market FX Rates vs PPP-implied FX Rates
-<br> 
 
-<button onclick="toggleFullscreen('iframe1')" style="font-size: 14px; padding: 5px 15px; border: none; border-radius: 20px; background-color: #1664c0; color: white; cursor: pointer; transition: background-color 0.3s;" onmouseover="this.style.backgroundColor='#0056b3'" onmouseout="this.style.backgroundColor='#007BFF'">Open in Fullscreen</button>
-<iframe id="iframe1" src="PPPvsMarketFXRate1.html" width="100%" height="600px" frameborder="0"> </iframe>
+<br>
 
+<button onclick="toggleFullscreen(&#39;iframe1&#39;)" style="font-size: 14px; padding: 5px 15px; border: none; border-radius: 20px; background-color: #1664c0; color: white; cursor: pointer; transition: background-color 0.3s;" onmouseover="this.style.backgroundColor=&#39;#0056b3&#39;" onmouseout="this.style.backgroundColor=&#39;#007BFF&#39;">
+Open in Fullscreen
+</button>
+<iframe id="iframe1" src="PPPvsMarketFXRate1.html" width="100%" height="600px" frameborder="0">
+</iframe>
 
+<br> <br> Last update: 2023-09-01 10:56:07 CET
 
-<br> <br> 
-Last update: 2023-09-01 10:56:07 CET
+#### Data Sources:
 
-#### Data Sources: 
-* Exchange Rates: [ECB](https://sdw.ecb.europa.eu/curConverter.do)
-* PPP Conversion Factors: [World Bank](https://data.worldbank.org/indicator/PA.NUS.PPP)
-  
-***
+- Exchange Rates: [ECB](https://sdw.ecb.europa.eu/curConverter.do)
+- PPP Conversion Factors: [World
+  Bank](https://data.worldbank.org/indicator/PA.NUS.PPP)
 
+------------------------------------------------------------------------
 
 ### Deviation of Market FX Rates from PPP-implied FX Rates
-<br> 
 
-<button onclick="toggleFullscreen('iframe2')" style="font-size: 14px; padding: 5px 15px; border: none; border-radius: 20px; background-color: #1664c0; color: white; cursor: pointer; transition: background-color 0.3s;" onmouseover="this.style.backgroundColor='#0056b3'" onmouseout="this.style.backgroundColor='#007BFF'">Open in Fullscreen</button>
-<iframe id="iframe2" src="PPPvsMarketFXRate2.html" width="100%" height="600px" frameborder="0"> </iframe>
+<br>
 
+<button onclick="toggleFullscreen(&#39;iframe2&#39;)" style="font-size: 14px; padding: 5px 15px; border: none; border-radius: 20px; background-color: #1664c0; color: white; cursor: pointer; transition: background-color 0.3s;" onmouseover="this.style.backgroundColor=&#39;#0056b3&#39;" onmouseout="this.style.backgroundColor=&#39;#007BFF&#39;">
+Open in Fullscreen
+</button>
+<iframe id="iframe2" src="PPPvsMarketFXRate2.html" width="100%" height="600px" frameborder="0">
+</iframe>
 
+<br> <br> Last update: 2023-09-01 11:00:10 CET
 
-<br> <br> 
-Last update: 2023-09-01 11:00:10 CET
+#### Data Sources:
 
-#### Data Sources: 
-* Exchange Rates: [ECB](https://sdw.ecb.europa.eu/curConverter.do)
-* PPP Conversion Factors: [World Bank](https://data.worldbank.org/indicator/PA.NUS.PPP)
-  
-
-
-
-
+- Exchange Rates: [ECB](https://sdw.ecb.europa.eu/curConverter.do)
+- PPP Conversion Factors: [World
+  Bank](https://data.worldbank.org/indicator/PA.NUS.PPP)

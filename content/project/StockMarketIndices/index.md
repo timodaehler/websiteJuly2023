@@ -19,37 +19,41 @@ url_pdf: ""
 url_slides: ""
 url_video: ""
 ---
-{{< load-plotly >}}
 
-Featured below are the indeces of major stock marekts around the world. 
+<!-- {{< load-plotly >}} -->
+
+Featured below are the indeces of major stock marekts around the world.
 
 ### Equity Indices (Normalized 2007-01-04 = 100%)
-<br> 
 
-<button onclick="toggleFullscreen('iframe1')" style="font-size: 14px; padding: 5px 15px; border: none; border-radius: 20px; background-color: #1664c0; color: white; cursor: pointer; transition: background-color 0.3s;" onmouseover="this.style.backgroundColor='#0056b3'" onmouseout="this.style.backgroundColor='#007BFF'">Open in Fullscreen</button>
-<iframe id="iframe1" src="StockMarketIndices1.html" width="100%" height="600px" frameborder="0"> </iframe>
+<br>
 
+<button onclick="toggleFullscreen(&#39;iframe1&#39;)" style="font-size: 14px; padding: 5px 15px; border: none; border-radius: 20px; background-color: #1664c0; color: white; cursor: pointer; transition: background-color 0.3s;" onmouseover="this.style.backgroundColor=&#39;#0056b3&#39;" onmouseout="this.style.backgroundColor=&#39;#007BFF&#39;">
+Open in Fullscreen
+</button>
+<iframe id="iframe1" src="StockMarketIndices1.html" width="100%" height="600px" frameborder="0">
+</iframe>
 
+<br> <br> Last update: 2023-10-10 07:10:13 CET
 
-<br> <br> 
-Last update: 2023-10-10 07:10:13 CET
+#### Data Sources:
 
-#### Data Sources: 
-* Stock Market Indices: [Yahoo Finance](https://finance.yahoo.com)
-  
-***
+- Stock Market Indices: [Yahoo Finance](https://finance.yahoo.com)
 
+------------------------------------------------------------------------
 
 ### Equity Indices
-<br> 
 
-<button onclick="toggleFullscreen('iframe2')" style="font-size: 14px; padding: 5px 15px; border: none; border-radius: 20px; background-color: #1664c0; color: white; cursor: pointer; transition: background-color 0.3s;" onmouseover="this.style.backgroundColor='#0056b3'" onmouseout="this.style.backgroundColor='#007BFF'">Open in Fullscreen</button>
-<iframe id="iframe2" src="StockMarketIndices2.html" width="100%" height="600px" frameborder="0"> </iframe>
+<br>
 
+<button onclick="toggleFullscreen(&#39;iframe2&#39;)" style="font-size: 14px; padding: 5px 15px; border: none; border-radius: 20px; background-color: #1664c0; color: white; cursor: pointer; transition: background-color 0.3s;" onmouseover="this.style.backgroundColor=&#39;#0056b3&#39;" onmouseout="this.style.backgroundColor=&#39;#007BFF&#39;">
+Open in Fullscreen
+</button>
+<iframe id="iframe2" src="StockMarketIndices2.html" width="100%" height="600px" frameborder="0">
+</iframe>
 
+<br> <br> Last update: 2023-10-10 07:10:17 CET
 
-<br> <br> 
-Last update: 2023-10-10 07:10:17 CET
+#### Data Sources:
 
-#### Data Sources: 
-* Stock Market Indices: [Yahoo Finance](https://finance.yahoo.com)
+- Stock Market Indices: [Yahoo Finance](https://finance.yahoo.com)

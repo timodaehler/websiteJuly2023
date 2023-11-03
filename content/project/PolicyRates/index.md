@@ -25,7 +25,7 @@ output:
 
 ---
 
-{{\< load-plotly \>}}
+<!-- {{< load-plotly >}} -->
 
 Featured below are policy rates from central banks essential from a
 Swiss perspective.

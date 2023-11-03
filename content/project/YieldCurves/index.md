@@ -19,38 +19,42 @@ url_pdf: ""
 url_slides: ""
 url_video: ""
 ---
-{{< load-plotly >}}
+
+<!-- {{< load-plotly >}} -->
 
 Featured below are some yields
 
 ### Swiss Yield Curve
-<br> 
 
-<button onclick="toggleFullscreen('iframe1')" style="font-size: 14px; padding: 5px 15px; border: none; border-radius: 20px; background-color: #1664c0; color: white; cursor: pointer; transition: background-color 0.3s;" onmouseover="this.style.backgroundColor='#0056b3'" onmouseout="this.style.backgroundColor='#007BFF'">Open in Fullscreen</button>
-<iframe id="iframe1" src="YieldCurves1.html" width="100%" height="600px" frameborder="0"> </iframe>
+<br>
 
+<button onclick="toggleFullscreen(&#39;iframe1&#39;)" style="font-size: 14px; padding: 5px 15px; border: none; border-radius: 20px; background-color: #1664c0; color: white; cursor: pointer; transition: background-color 0.3s;" onmouseover="this.style.backgroundColor=&#39;#0056b3&#39;" onmouseout="this.style.backgroundColor=&#39;#007BFF&#39;">
+Open in Fullscreen
+</button>
+<iframe id="iframe1" src="YieldCurves1.html" width="100%" height="600px" frameborder="0">
+</iframe>
 
+<br> <br> Last update: 2023-10-09 21:54:57 CET
 
-<br> <br> 
-Last update: 2023-10-09 21:54:57 CET
+#### Data Sources:
 
-#### Data Sources: 
-* Yields: [SNB](https://data.snb.ch/api/cube/rendoblid/data/csv/de)
-  
-***
+- Yields: [SNB](https://data.snb.ch/api/cube/rendoblid/data/csv/de)
 
+------------------------------------------------------------------------
 
 ### US Yield Curve
-<br> 
 
-<button onclick="toggleFullscreen('iframe2')" style="font-size: 14px; padding: 5px 15px; border: none; border-radius: 20px; background-color: #1664c0; color: white; cursor: pointer; transition: background-color 0.3s;" onmouseover="this.style.backgroundColor='#0056b3'" onmouseout="this.style.backgroundColor='#007BFF'">Open in Fullscreen</button>
-<iframe id="iframe2" src="YieldCurves2.html" width="100%" height="600px" frameborder="0"> </iframe>
+<br>
 
+<button onclick="toggleFullscreen(&#39;iframe2&#39;)" style="font-size: 14px; padding: 5px 15px; border: none; border-radius: 20px; background-color: #1664c0; color: white; cursor: pointer; transition: background-color 0.3s;" onmouseover="this.style.backgroundColor=&#39;#0056b3&#39;" onmouseout="this.style.backgroundColor=&#39;#007BFF&#39;">
+Open in Fullscreen
+</button>
+<iframe id="iframe2" src="YieldCurves2.html" width="100%" height="600px" frameborder="0">
+</iframe>
 
+<br> <br> Last update: 2023-10-09 21:55:09 CET
 
-<br> <br> 
-Last update: 2023-10-09 21:55:09 CET
+#### Data Sources:
 
-#### Data Sources: 
-* Yields: [Federal Reserve Bank of St. Louis](https://fred.stlouisfed.org/searchresults/?st=Market%20Yield%20on%20U.S.%20Treasury%20Securities)
-
+- Yields: [Federal Reserve Bank of
+  St. Louis](https://fred.stlouisfed.org/searchresults/?st=Market%20Yield%20on%20U.S.%20Treasury%20Securities)
