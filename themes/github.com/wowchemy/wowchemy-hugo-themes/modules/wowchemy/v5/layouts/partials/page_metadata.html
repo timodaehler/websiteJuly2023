@@ -14,7 +14,7 @@
   {{ end }}
 
   {{ if not (in (slice "event" "page") $page.Type) | and (ne $page.Params.show_date false) }}
-
+<!-- @Timo: Hier hatte es das zeugs wegen dem Datum auf allen Blog Posts --> 
   {{ end }}
 
   {{ if and (eq $is_list 1) (eq $page.Type "publication") }}

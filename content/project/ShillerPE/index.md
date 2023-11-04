@@ -21,6 +21,23 @@ url_video: ""
 ---
 
 <!-- {{< load-plotly >}} -->
+<!-- Load Plotly JavaScript library -->
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<!-- Add the toggle fullscreen function -->
+<script>
+    function toggleFullscreen(iframeId) {
+        let iframe = document.getElementById(iframeId);
+        if (iframe.requestFullscreen) {
+            iframe.requestFullscreen();
+        } else if (iframe.mozRequestFullScreen) { /* Firefox */
+            iframe.mozRequestFullScreen();
+        } else if (iframe.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
+            iframe.webkitRequestFullscreen();
+        } else if (iframe.msRequestFullscreen) { /* IE/Edge */
+            iframe.msRequestFullscreen();
+        }
+    }
+</script>
 
 Featured below are some Shiller PE Ratios
 

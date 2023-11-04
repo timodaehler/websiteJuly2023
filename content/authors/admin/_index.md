@@ -10,9 +10,9 @@ organizations:
   url: 
 # role: Mountain lover
 social:
-- icon: envelope
-  icon_pack: fas
-  link: "mailto:daehler@usc.edu"
+# - icon: envelope
+#   icon_pack: fas
+#   link: "mailto:daehler@usc.edu"
 - icon: linkedin
   icon_pack: fab
   link: https://www.linkedin.com/in/timodaehler/
@@ -36,7 +36,6 @@ When I'm not designing models, analyzing data, or identifying potential risks, y
 
 If you resonate with my journey or see potential for collaboration, let's connect!
 
-{{% staticref "uploads/resume.pdf" "newtab" %}}<i class="fa-solid fa-file-arrow-down"></i> CV{{% /staticref %}} 
-
+<a href="/uploads/resume.pdf" target="_blank" role="button" style="font-size: 14px; padding: 5px 15px; border: none; border-radius: 20px; background-color: #1664c0; color: white; cursor: pointer; transition: background-color 0.3s; text-decoration: none;" onmouseover="this.style.backgroundColor='#0056b3'" onmouseout="this.style.backgroundColor='#007BFF'">DOWNLOAD CV</a>
 
 

@@ -19,26 +19,46 @@ url_pdf: ""
 url_slides: ""
 url_video: ""
 ---
-<!-- {{< load-plotly >}} -->
 
-Featured below is the Bitcoin's value in USD
+<!-- {{< load-plotly >}} -->
+<!-- Load Plotly JavaScript library -->
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<!-- Add the toggle fullscreen function -->
+<script>
+    function toggleFullscreen(iframeId) {
+        let iframe = document.getElementById(iframeId);
+        if (iframe.requestFullscreen) {
+            iframe.requestFullscreen();
+        } else if (iframe.mozRequestFullScreen) { /* Firefox */
+            iframe.mozRequestFullScreen();
+        } else if (iframe.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
+            iframe.webkitRequestFullscreen();
+        } else if (iframe.msRequestFullscreen) { /* IE/Edge */
+            iframe.msRequestFullscreen();
+        }
+    }
+</script>
+
+Featured below is the Bitcoin’s value in USD
 
 ### Bitcoin
-<br> 
 
-<button onclick="toggleFullscreen('iframe1')" style="font-size: 14px; padding: 5px 15px; border: none; border-radius: 20px; background-color: #1664c0; color: white; cursor: pointer; transition: background-color 0.3s;" onmouseover="this.style.backgroundColor='#0056b3'" onmouseout="this.style.backgroundColor='#007BFF'">Open in Fullscreen</button>
-<iframe id="iframe1" src="Bitcoin1.html" width="100%" height="600px" frameborder="0"> </iframe>
+<br>
 
+<button onclick="toggleFullscreen(&#39;iframe1&#39;)" style="font-size: 14px; padding: 5px 15px; border: none; border-radius: 20px; background-color: #1664c0; color: white; cursor: pointer; transition: background-color 0.3s;" onmouseover="this.style.backgroundColor=&#39;#0056b3&#39;" onmouseout="this.style.backgroundColor=&#39;#007BFF&#39;">
+Open in Fullscreen
+</button>
+<iframe id="iframe1" src="Bitcoin1.html" width="100%" height="600px" frameborder="0">
+</iframe>
 
+<br> <br> Last update: 2023-11-03 13:44:30 CET
 
-<br> <br> 
-Last update: 2023-11-03 13:44:30 CET
+#### Data Sources:
 
-#### Data Sources: 
-* Yields: [Yahoo Finance](https://finance.yahoo.com/quote/BTC-USD?p=BTC-USD&.tsrc=fin-srch)
+- Yields: [Yahoo
+  Finance](https://finance.yahoo.com/quote/BTC-USD?p=BTC-USD&.tsrc=fin-srch)
 
-
-
-<iframe src="pretty_table_btc.html" width="100%" height="300"></iframe>
-
-<iframe src="pretty_table_btc_2.html" width="100%" height="300"></iframe>
+<iframe src="pretty_table_btc.html" width="100%" height="300">
+</iframe>
+<iframe src="pretty_table_btc_2.html" width="100%" height="300">
+</iframe>
