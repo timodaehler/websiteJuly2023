@@ -77,7 +77,7 @@ total_market_cap_SPI <- sum(my_data$MarketCapNumeric, na.rm = TRUE)  # na.rm = T
 total_market_cap_SPI_bn <- total_market_cap_SPI/1E9
 
 # Print the total market capitalization of SPI
-print(paste("Total Market Capitalization of SPI (bn): ", total_market_cap_SPI_bn))
+# print(paste("Total Market Capitalization of SPI (bn): ", total_market_cap_SPI_bn))
 
 # Retrieve the current system date and format it
 # update_date <- Sys.Date()

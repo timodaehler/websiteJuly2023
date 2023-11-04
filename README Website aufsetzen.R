@@ -71,7 +71,7 @@ list_r_scripts <- function(directory) {
   files <- list.files(directory, full.names = TRUE, recursive = FALSE)
   # Filter for files that end with the .R extension (case insensitive)
   r_scripts <- grep("\\.R$", files, value = TRUE, ignore.case = TRUE)
-  
+
   # Print the scripts to the console
   cat("R scripts found:\n")
   if (length(r_scripts) > 0) {
@@ -79,7 +79,7 @@ list_r_scripts <- function(directory) {
   } else {
     cat("No R scripts found in the directory.\n")
   }
-  
+
   return(r_scripts)
 }
 
@@ -94,11 +94,11 @@ run_r_scripts <- function(scripts_to_run) {
     cat("No scripts to run.\n")
     return()
   }
-  
+
   # Iterate over each script path
   for (script in scripts_to_run) {
     cat("Running:", script, "...\n")
-    
+
     # Try sourcing the script and catch any errors
     tryCatch({
       source(script)

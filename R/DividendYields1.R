@@ -1,12 +1,12 @@
 # Ich habe die Dividenden von hier:
 # https://www.ubs.com/ch/en/assetmanagement/funds/etf/ch0130595124-ubs-etf-ch-spi-mid-pd001.html#Holdings
 
-# Packages
-library(quantmod)
-library(lubridate)
-library(readxl)
-library(dplyr)
-library(plotly)
+# # Packages
+# library(quantmod)
+# library(lubridate)
+# library(readxl)
+# library(dplyr)
+# library(plotly)
 
 # ---------- Data Extraction ----------
 # Define the ticker symbol for stock data
@@ -66,6 +66,3 @@ saveRDS(Sys.time(), "content/project/DividendYields/DividendYields1_update_date.
 # Export 
 saveWidget(p, "content/project/DividendYields/DividendYields1.html")
 
-# Clean-up
-rm(list = ls())
-gc()

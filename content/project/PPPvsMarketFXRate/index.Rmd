@@ -56,7 +56,7 @@ PPPvsMarketFXRate1_update_date <- readRDS("~/Desktop/websiteJuly2023/content/pro
 Last update: `r PPPvsMarketFXRate1_update_date` CET
 
 #### Data Sources: 
-* Exchange Rates: [ECB](https://sdw.ecb.europa.eu/curConverter.do)
+* Exchange Rates: [Yahoo Finance](https://finance.yahoo.com/)
 * PPP Conversion Factors: [World Bank](https://data.worldbank.org/indicator/PA.NUS.PPP)
   
 ***
@@ -76,7 +76,7 @@ PPPvsMarketFXRate2_update_date <- readRDS("~/Desktop/websiteJuly2023/content/pro
 Last update: `r PPPvsMarketFXRate2_update_date` CET
 
 #### Data Sources: 
-* Exchange Rates: [ECB](https://sdw.ecb.europa.eu/curConverter.do)
+* Exchange Rates: [Yahoo Finance](https://finance.yahoo.com/)
 * PPP Conversion Factors: [World Bank](https://data.worldbank.org/indicator/PA.NUS.PPP)
   
 

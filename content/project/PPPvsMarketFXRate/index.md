@@ -52,11 +52,11 @@ Open in Fullscreen
 <iframe id="iframe1" src="PPPvsMarketFXRate1.html" width="100%" height="600px" frameborder="0">
 </iframe>
 
-<br> <br> Last update: 2023-09-01 10:56:07 CET
+<br> <br> Last update: 2023-11-04 16:43:23 CET
 
 #### Data Sources:
 
-- Exchange Rates: [ECB](https://sdw.ecb.europa.eu/curConverter.do)
+- Exchange Rates: [Yahoo Finance](https://finance.yahoo.com/)
 - PPP Conversion Factors: [World
   Bank](https://data.worldbank.org/indicator/PA.NUS.PPP)
 
@@ -72,10 +72,10 @@ Open in Fullscreen
 <iframe id="iframe2" src="PPPvsMarketFXRate2.html" width="100%" height="600px" frameborder="0">
 </iframe>
 
-<br> <br> Last update: 2023-09-01 11:00:10 CET
+<br> <br> Last update: 2023-11-04 16:43:24 CET
 
 #### Data Sources:
 
-- Exchange Rates: [ECB](https://sdw.ecb.europa.eu/curConverter.do)
+- Exchange Rates: [Yahoo Finance](https://finance.yahoo.com/)
 - PPP Conversion Factors: [World
   Bank](https://data.worldbank.org/indicator/PA.NUS.PPP)

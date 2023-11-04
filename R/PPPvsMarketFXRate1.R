@@ -1,3 +1,88 @@
+
+
+
+
+if (!require("quantmod")) {
+  install.packages("quantmod")
+}
+library(quantmod)
+
+
+
+# Update date
+saveRDS(Sys.time(), "content/project/PPPvsMarketFXRate/PPPvsMarketFXRate1_update_date.rds")
+
+
+# Set base currency and target currencies
+base_currency <- "CHF"
+target_currencies <- c("EUR", "USD", "JPY", "GBP", "CNY", "INR")
+
+# Initialize a list to store the exchange rate data
+exchange_rates_list <- list()
+
+# Function to fetch and store exchange rates
+get_exchange_rates <- function(base, target, start_date, end_date) {
+  currency_pair <- paste0(base, target, "=X") # Format required by Yahoo Finance
+  getSymbols(currency_pair, src = "yahoo", from = start_date, to = end_date, auto.assign = FALSE)
+}
+
+# Loop over the target currencies and fetch the data
+for (currency in target_currencies) {
+  cat("Fetching data for", currency, "\n")
+  exchange_rates_list[[currency]] <- tryCatch({
+    get_exchange_rates(base_currency, currency, "2000-01-01", Sys.Date())
+  }, error = function(e) {
+    cat("Error fetching data for", currency, ":", e$message, "\n")
+    NULL # Return NULL if there was an error
+  })
+}
+
+# Check the structure of the first element in the list as an example
+if (length(exchange_rates_list) > 0) {
+  print(head(exchange_rates_list[[1]]))
+}
+
+
+# Load required library
+library(xts)
+
+# Function to extract the closing prices and convert them to a data frame
+extract_and_merge_closing_prices <- function(rates_list) {
+  # List to store closing prices of each currency
+  closing_prices_list <- list()
+  
+  # Extract closing prices for each currency pair
+  for (currency in names(rates_list)) {
+    closing_prices <- Cl(rates_list[[currency]]) # Cl is a function from quantmod to get closing prices
+    colnames(closing_prices) <- currency # Rename the column to the currency code
+    closing_prices_list[[currency]] <- closing_prices
+  }
+  
+  # Merge all the closing prices by date
+  merged_closing_prices <- do.call(merge, closing_prices_list)
+  
+  # Convert to a data frame
+  closing_prices_df <- data.frame(date=index(merged_closing_prices), coredata(merged_closing_prices))
+  
+  return(closing_prices_df)
+}
+
+# Create the dataframe
+exchange_rates_df <- extract_and_merge_closing_prices(exchange_rates_list)
+
+# View the first few rows of the dataframe
+head(exchange_rates_df)
+
+
+
+
+
+
+
+
+
+# --------------------------------------------------------------
+
 # Load necessary libraries
 library(priceR)
 library(ggplot2)
@@ -11,44 +96,44 @@ library(plotly)
 library(RColorBrewer)
 library(htmlwidgets)
 
-# Assuming you have today's date in a variable like this:
-update_date <- Sys.Date()  # This gives today's date
-
-# Format today's date in a readable format:
-formatted_today_date <- format(update_date, format = "%d %B %Y")  # e.g., "05 August 2023"
-
-# Set base currency and a vector of target currencies
-base_currency <- "CHF"
-target_currencies <- c("EUR", "USD", "JPY", "GBP", "CNY", "INR") # Added "CNY" and "INR"
-
-
-# Create an empty list to store the exchange rate data for each target currency
-exchange_rates_list <- list()
-
-# Loop through each target currency to fetch historical exchange rates from the base currency
-for (currency in target_currencies) {
-  # Fetch historical rates for current currency in the loop
-  exchange_data <-
-    historical_exchange_rates(
-      base_currency,
-      to = currency,
-      start_date = "2000-01-01",
-      end_date = Sys.Date()
-    )
-  
-  # Store this data in our list, indexed by the currency name
-  exchange_rates_list[[currency]] <- exchange_data
-}
-
-# Rename the 'rate' column of each dataframe in our list to the respective currency name
-for (i in seq_along(target_currencies)) {
-  colnames(exchange_rates_list[[i]])[2] <- target_currencies[i]
-}
-
-# Collapse all dataframes in the list by 'date' into a single dataframe
-fx_rates <-
-  Reduce(function(x, y)
-    merge(x, y, by = "date", all = TRUE), exchange_rates_list)
+# # Assuming you have today's date in a variable like this:
+# update_date <- Sys.Date()  # This gives today's date
+# 
+# # Format today's date in a readable format:
+# formatted_today_date <- format(update_date, format = "%d %B %Y")  # e.g., "05 August 2023"
+# 
+# # Set base currency and a vector of target currencies
+# base_currency <- "CHF"
+# target_currencies <- c("EUR", "USD", "JPY", "GBP", "CNY", "INR") # Added "CNY" and "INR"
+# 
+# 
+# # Create an empty list to store the exchange rate data for each target currency
+# exchange_rates_list <- list()
+# 
+# # Loop through each target currency to fetch historical exchange rates from the base currency
+# for (currency in target_currencies) {
+#   # Fetch historical rates for current currency in the loop
+#   exchange_data <-
+#     historical_exchange_rates(
+#       base_currency,
+#       to = currency,
+#       start_date = "2000-01-01",
+#       end_date = Sys.Date()
+#     )
+#   
+#   # Store this data in our list, indexed by the currency name
+#   exchange_rates_list[[currency]] <- exchange_data
+# }
+# 
+# # Rename the 'rate' column of each dataframe in our list to the respective currency name
+# for (i in seq_along(target_currencies)) {
+#   colnames(exchange_rates_list[[i]])[2] <- target_currencies[i]
+# }
+# 
+# # Collapse all dataframes in the list by 'date' into a single dataframe
+# fx_rates <-
+#   Reduce(function(x, y)
+#     merge(x, y, by = "date", all = TRUE), exchange_rates_list)
 
 
 # Import PPP data ---------------------------------------------------------
@@ -158,7 +243,7 @@ future_df$INR <-   # Added this line for India
 df_daily <- rbind(df_daily, future_df)
 
 # Assuming you have fx_rates from the previous code, add the year extraction:
-fx_rates <- fx_rates %>%
+fx_rates <- exchange_rates_df %>%
   mutate(year = year(date))
 
 # Merge the two dataframes
@@ -245,12 +330,11 @@ final_plot <- subplot(plots_list, nrows = 2)
 
 final_plot
 
-# Update date
-saveRDS(Sys.time(), "content/project/PPPvsMarketFXRate/PPPvsMarketFXRate1_update_date.rds")
+
 
 # Export 
 saveWidget(final_plot, "content/project/PPPvsMarketFXRate/PPPvsMarketFXRate1.html")
 
-# Clean-up
-rm(list = ls())
-gc()
+# # Clean-up
+# rm(list = ls())
+# gc()
