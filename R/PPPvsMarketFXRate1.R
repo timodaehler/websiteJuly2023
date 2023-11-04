@@ -9,8 +9,7 @@ library(quantmod)
 
 
 
-# Update date
-saveRDS(Sys.time(), "content/project/PPPvsMarketFXRate/PPPvsMarketFXRate1_update_date.rds")
+
 
 
 # Set base currency and target currencies
@@ -23,7 +22,9 @@ exchange_rates_list <- list()
 # Function to fetch and store exchange rates
 get_exchange_rates <- function(base, target, start_date, end_date) {
   currency_pair <- paste0(base, target, "=X") # Format required by Yahoo Finance
-  getSymbols(currency_pair, src = "yahoo", from = start_date, to = end_date, auto.assign = FALSE)
+  suppressWarnings(
+    getSymbols(currency_pair, src = "yahoo", from = start_date, to = end_date, auto.assign = FALSE)
+  )
 }
 
 # Loop over the target currencies and fetch the data
@@ -334,6 +335,10 @@ final_plot
 
 # Export 
 saveWidget(final_plot, "content/project/PPPvsMarketFXRate/PPPvsMarketFXRate1.html")
+
+
+# Update date
+saveRDS(Sys.time(), "content/project/PPPvsMarketFXRate/PPPvsMarketFXRate1_update_date.rds")
 
 # # Clean-up
 # rm(list = ls())
