@@ -59,8 +59,6 @@ library(blogdown)
 
 stop_server()
 
-
-
 # Alle .Rmd Files updaten respektive knitten ------------------------------
 # Hier schreibe ich eine Funktion die mir die Pfade zu allen index.Rmd Files gibt. 
 # Diese Files beinhalten die einzelnen Blogposts, die theoretisch täglich updaten sollte. 
@@ -114,5 +112,65 @@ knit_all_index_files <- function(directory) {
 knit_all_index_files("/Users/timodaehler_1/Desktop/websiteJuly2023/content/project/")
 
 
-
+stop_server()
 serve_site()
+
+
+
+# Funktion definieren, die Liste aller R Skripte erstellt
+list_r_scripts <- function(directory) {
+  # Get the full paths of all files in the directory
+  files <- list.files(directory, full.names = TRUE, recursive = FALSE)
+  # Filter for files that end with the .R extension (case insensitive)
+  r_scripts <- grep("\\.R$", files, value = TRUE, ignore.case = TRUE)
+  
+  # Print the scripts to the console
+  cat("R scripts found:\n")
+  if (length(r_scripts) > 0) {
+    cat(r_scripts, sep = "\n")
+  } else {
+    cat("No R scripts found in the directory.\n")
+  }
+  
+  return(r_scripts)
+}
+
+# Funktion verwenden um Liste aller R Skripte zu erstellen
+scripts_to_run <- list_r_scripts("/Users/timodaehler_1/Desktop/websiteJuly2023/R")
+
+
+# Funktion definieren, die Liste aller R Skripte basierend auf Vektor "scripts_to_run" ausfuert
+run_r_scripts <- function(scripts_to_run) {
+  # Check if scripts_to_run is not NULL or has length 0
+  if (is.null(scripts_to_run) || length(scripts_to_run) == 0) {
+    cat("No scripts to run.\n")
+    return()
+  }
+  
+  # Iterate over each script path
+  for (script in scripts_to_run) {
+    cat("Running:", script, "...\n")
+    
+    # Try sourcing the script and catch any errors
+    tryCatch({
+      source(script)
+      # If sourcing is successful, print a success message
+      cat("Success: The script", basename(script), "ran without errors.\n")
+    }, error = function(e) {
+      # If an error occurs, print an error message
+      cat("Error in", basename(script), ":", e$message, "\n")
+    }, warning = function(w) {
+      # If a warning occurs, print a warning message
+      cat("Warning in", basename(script), ":", w$message, "\n")
+    }, finally = {
+      # This block runs after either try or catch block
+      cat("Finished attempting to run", basename(script), "\n\n")
+    })
+  }
+}
+
+
+# scripts_to_run <- scripts_to_run %>% head(n = 1)
+
+
+run_r_scripts(scripts_to_run)

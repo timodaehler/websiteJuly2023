@@ -33,16 +33,17 @@ btc_data <-
   rename("Close" = "BTC-USD.Close", "Date" = Date)
 
 # Save the btc_data object as an RDS file
-saveRDS(btc_data, "/Users/timodaehler_1/Desktop/websiteJuly2023/content/project/Bitcoin/btc_data.rds")
+# saveRDS(btc_data, "/Users/timodaehler_1/Desktop/websiteJuly2023/content/project/Bitcoin/btc_data.rds")
 
-# Calculate the median of Close prices
+# Calculate the median and mean of Close prices
 median_close <- median(btc_data$Close)
+mean_close <- mean(btc_data$Close)
+
 
 # Create the main Plotly time series plot
 btc_plot <- 
-  plot_ly(data = btc_data, x = ~Date, y = ~Close, type = "scatter", mode = "lines", name = "1 Bitcoin in USD") %>%
+  plot_ly(data = btc_data, x = ~Date, y = ~Close, type = "scatter", mode = "lines", name = "BTC/USD") %>%
   layout(
-    # title = "Bitcoin (BTC-USD) Closing Prices Over Time",
     xaxis = list(title = ""),
     yaxis = list(title = "Close Price"),
     legend = list(
@@ -54,7 +55,10 @@ btc_plot <-
   ) %>%
   # Add horizontal line at the median Close price
   add_trace(x = ~Date, y = rep(median_close, length(btc_data$Date)), type = "scatter", mode = "lines",
-            line = list(dash = "dash", color = "black"), name = "Median")
+            line = list(dash = "dash", color = "black"), name = "Median") %>%
+  # Add horizontal line at the mean Close price
+  add_trace(x = ~Date, y = rep(mean_close, length(btc_data$Date)), type = "scatter", mode = "lines",
+            line = list(dash = "dash", color = "grey"), name = "Mean")
 
 
 # Show the plot
@@ -120,51 +124,3 @@ gt::gtsave(pretty_table_btc, "/Users/timodaehler_1/Desktop/websiteJuly2023/conte
 
 
 
-
-
-# Next try ----------------------------------------------------------------
-
-
-
-# Using the gt package for table styling
-library(gt)
-
-# Create a simple table
-simple_table <- 
-  data.frame(
-  Metric = c("Year-To-Date", "One Year", "Five Years"),
-  Value = c(5.2, -3.1, 12.5) )
-
-# Create a gt object
-styled_table <- 
-  simple_table %>%
-  gt() %>%
-  
-  # Center all the text in the cells
-  tab_style(
-    style = cell_text(align = "center", weight = "bold"),
-    locations = cells_body()
-  ) %>%
-  
-  # Color the header cells in blue
-  tab_style(
-    style = cell_fill(color = "#007BFF"),
-    locations = cells_column_labels()
-  ) %>%
-  
-  # Color the data cells in light gray
-  tab_style(
-    style = cell_fill(color = "#F5F5F5"),
-    locations = cells_body()
-  )
-
-# Show the table
-styled_table
-
-gt::gtsave(styled_table, "/Users/timodaehler_1/Desktop/websiteJuly2023/content/project/Bitcoin/pretty_table_btc_2.html")
-
-
-
-# # Clean-up
-# rm(list = ls())
-# gc()

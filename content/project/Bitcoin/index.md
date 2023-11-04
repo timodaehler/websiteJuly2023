@@ -51,14 +51,11 @@ Open in Fullscreen
 <iframe id="iframe1" src="Bitcoin1.html" width="100%" height="600px" frameborder="0">
 </iframe>
 
-<br> <br> Last update: 2023-11-03 13:44:30 CET
+<br> <br> Last update: 2023-11-04 10:36:08 CET
 
 #### Data Sources:
 
 - Yields: [Yahoo
   Finance](https://finance.yahoo.com/quote/BTC-USD?p=BTC-USD&.tsrc=fin-srch)
 
-<iframe src="pretty_table_btc.html" width="100%" height="300">
-</iframe>
-<iframe src="pretty_table_btc_2.html" width="100%" height="300">
-</iframe>
+<!-- <iframe src="pretty_table_btc.html" style="border:none"; width:auto; height:auto;  height="300"></iframe> -->
