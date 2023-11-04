@@ -13,9 +13,9 @@ library(readxl)
 # Display the full number instead of scientific notation
 options(scipen = 999)
 
-# Specify the file path
-file_path <- "/Users/timodaehler_1/Desktop/websiteJuly2023/gitignorefiles/ISIN und Namen von SPI Unternehmen.xlsx"
-
+# # Specify the file path
+# file_path <- "/Users/timodaehler_1/Desktop/websiteJuly2023/ISIN und Namen von SPI Unternehmen.xlsx"
+# 
 # # Read the data from Sheet2
 # my_data <- read_excel(file_path, sheet = "Sheet2")
 # 
@@ -24,17 +24,17 @@ file_path <- "/Users/timodaehler_1/Desktop/websiteJuly2023/gitignorefiles/ISIN u
 # for (isin in my_data$ISIN) {
 #   url <- paste0("https://www.six-group.com/en/products-services/the-swiss-stock-exchange/market-data/shares/share-explorer/share-details.", isin, "CHF4.html#/")
 #   twitter_title_tag <- read_html(url) %>% html_nodes(xpath = '//meta[@property="twitter:title"]') %>% html_attr('content')
-#   
+# 
 #   extracted_symbol <- str_extract(twitter_title_tag, "(?<= - )[A-Z]+(?= \\|)")
-#   
+# 
 #   my_data[my_data$ISIN == isin, "Ticker"] <- extracted_symbol
-#   
+# 
 #   Sys.sleep(1.5)
 # }
 # toc()
 # 
 # # Function to fetch market cap from Yahoo Finance
-# fetch_market_cap <- 
+# fetch_market_cap <-
 #   function(ticker) {
 #   url <- paste0("https://finance.yahoo.com/quote/", ticker, ".SW?p=", ticker, ".SW&.tsrc=fin-srch")
 #   tryCatch({
@@ -51,12 +51,12 @@ file_path <- "/Users/timodaehler_1/Desktop/websiteJuly2023/gitignorefiles/ISIN u
 # 
 # # Fetch market cap based on the newly-added Ticker column
 # tic()
-# my_data$MarketCap <- 
+# my_data$MarketCap <-
 #   sapply(my_data$Ticker, fetch_market_cap)
 # toc()
 # 
 # # Convert MarketCap to a numeric representation
-# my_data <- 
+# my_data <-
 #   my_data %>%
 #   mutate(
 #     MarketCapClean = str_remove_all(MarketCap, ","),
@@ -67,9 +67,9 @@ file_path <- "/Users/timodaehler_1/Desktop/websiteJuly2023/gitignorefiles/ISIN u
 #     )
 #   ) %>%
 #   select(-MarketCapClean)
-
-# Export and reimport data
-# saveRDS(my_data, "data_market_cap.rds")
+# 
+# # Export and reimport data
+# # saveRDS(my_data, "gitignorefiles/data_market_cap.rds")
 my_data <- readRDS("gitignorefiles/data_market_cap.rds")
 
 # Calculate the total market capitalization of SPI across all companies and then also display it in billions
@@ -182,9 +182,9 @@ saveRDS(Sys.time(), "content/project/BuffettIndicators/BuffettIndicators1_update
 # Export 
 saveWidget(p, "content/project/BuffettIndicators/BuffettIndicators1.html")
 
-# Clean-up
-rm(list = ls())
-gc()
+# # Clean-up
+# rm(list = ls())
+# gc()
 
 
 

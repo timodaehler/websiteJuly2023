@@ -57,7 +57,7 @@ Open in Fullscreen
 <iframe id="iframe1" src="PolicyRates1.html" width="100%" height="600px" frameborder="0">
 </iframe>
 
-<br> <br> Last update: 2023-10-22 21:52:42 CET
+<br> <br> Last update: 2023-11-04 14:47:07 CET
 
 #### Data Sources:
 

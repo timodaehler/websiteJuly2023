@@ -1,6 +1,10 @@
+
+
+
 # Alles aus dem Memory löschen
 rm(list = ls())
 gc()
+(begin <- Sys.time())
 
 # Die notwendigen Pakete laden 
 library(rmarkdown)
@@ -58,62 +62,6 @@ library(blogdown)
 
 
 stop_server()
-
-# Alle .Rmd Files updaten respektive knitten ------------------------------
-# Hier schreibe ich eine Funktion die mir die Pfade zu allen index.Rmd Files gibt. 
-# Diese Files beinhalten die einzelnen Blogposts, die theoretisch täglich updaten sollte. 
-get_index_paths <- function(directory) {
-  # 'index.Rmd' Dateien im Verzeichnis und seinen Unterverzeichnissen suchen
-  index_files <- list.files(directory, pattern = "index\\.Rmd$", recursive = TRUE, full.names = TRUE)
-  # Die gefundenen Pfade zurückgeben
-  return(index_files)
-}
-
-# Die Funktion anwenden, um die Pfade zu erhalten:
-index_paths <- get_index_paths("/Users/timodaehler_1/Desktop/websiteJuly2023/content/project/")
-
-# Die gefundenen Pfade ausdrucken
-print(index_paths)
-
-
-# Eine Funktion definieren, um eine einzelne Rmd-Datei zu stricken (knit)
-knit_single_file <- function(file_path) {
-  tryCatch({
-    # Versuchen, die Rmd-Datei zu rendern und das Ergebnis als Markdown-Datei zu speichern
-    rmarkdown::render(
-      input = file_path, 
-      output_format = rmarkdown::md_document(variant = "gfm", preserve_yaml = TRUE),
-      quiet = TRUE
-    )
-    # Erfolgsmeldung ausgeben, wenn das Stricken erfolgreich war
-    message("Erfolgreich gestrickt: ", file_path)
-  }, error = function(e) {
-    # Fehlermeldung ausgeben, wenn das Stricken fehlgeschlagen ist
-    message("Stricken fehlgeschlagen: ", file_path, "\n", "Fehler: ", e$message)
-  })
-}
-
-# Eine einzelne Rmd-Datei stricken (Beispiel auskommentiert)
-# knit_single_file("/Users/timodaehler_1/Desktop/websiteJuly2023/content/project//Bitcoin/index.Rmd")
-
-
-
-# Eine Funktion definieren, um alle 'index.Rmd' Dateien in einem Verzeichnis zu stricken
-knit_all_index_files <- function(directory) {
-  # Die Pfade zu allen 'index.Rmd' Dateien holen
-  index_paths <- get_index_paths(directory)
-  # Über die Pfade iterieren und jede Datei einzeln stricken
-  for (path in index_paths) {
-    knit_single_file(path)
-  }
-}
-
-# Alle 'index.Rmd' Dateien im Projektordner und dessen Unterverzeichnissen stricken
-knit_all_index_files("/Users/timodaehler_1/Desktop/websiteJuly2023/content/project/")
-
-
-stop_server()
-serve_site()
 
 
 
@@ -174,3 +122,68 @@ run_r_scripts <- function(scripts_to_run) {
 
 
 run_r_scripts(scripts_to_run)
+
+
+
+
+# Alle .Rmd Files updaten respektive knitten ------------------------------
+# Hier schreibe ich eine Funktion die mir die Pfade zu allen index.Rmd Files gibt. 
+# Diese Files beinhalten die einzelnen Blogposts, die theoretisch täglich updaten sollte. 
+get_index_paths <- function(directory) {
+  # 'index.Rmd' Dateien im Verzeichnis und seinen Unterverzeichnissen suchen
+  index_files <- list.files(directory, pattern = "index\\.Rmd$", recursive = TRUE, full.names = TRUE)
+  # Die gefundenen Pfade zurückgeben
+  return(index_files)
+}
+
+# Die Funktion anwenden, um die Pfade zu erhalten:
+index_paths <- get_index_paths("/Users/timodaehler_1/Desktop/websiteJuly2023/content/project/")
+
+# Die gefundenen Pfade ausdrucken
+print(index_paths)
+
+
+# Eine Funktion definieren, um eine einzelne Rmd-Datei zu stricken (knit)
+knit_single_file <- function(file_path) {
+  tryCatch({
+    # Versuchen, die Rmd-Datei zu rendern und das Ergebnis als Markdown-Datei zu speichern
+    rmarkdown::render(
+      input = file_path, 
+      output_format = rmarkdown::md_document(variant = "gfm", preserve_yaml = TRUE),
+      quiet = TRUE
+    )
+    # Erfolgsmeldung ausgeben, wenn das Stricken erfolgreich war
+    message("Erfolgreich gestrickt: ", file_path)
+  }, error = function(e) {
+    # Fehlermeldung ausgeben, wenn das Stricken fehlgeschlagen ist
+    message("Stricken fehlgeschlagen: ", file_path, "\n", "Fehler: ", e$message)
+  })
+}
+
+# Eine einzelne Rmd-Datei stricken (Beispiel auskommentiert)
+# knit_single_file("/Users/timodaehler_1/Desktop/websiteJuly2023/content/project//Bitcoin/index.Rmd")
+
+
+
+# Eine Funktion definieren, um alle 'index.Rmd' Dateien in einem Verzeichnis zu stricken
+knit_all_index_files <- function(directory) {
+  # Die Pfade zu allen 'index.Rmd' Dateien holen
+  index_paths <- get_index_paths(directory)
+  # Über die Pfade iterieren und jede Datei einzeln stricken
+  for (path in index_paths) {
+    knit_single_file(path)
+  }
+}
+
+# Alle 'index.Rmd' Dateien im Projektordner und dessen Unterverzeichnissen stricken
+knit_all_index_files("/Users/timodaehler_1/Desktop/websiteJuly2023/content/project/")
+
+
+stop_server()
+serve_site()
+
+
+(end <- Sys.time())
+
+# end - begin
+
