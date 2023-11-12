@@ -14,6 +14,7 @@ library(blogdown)
 
 # blogdown::install_hugo() 
 # Die Version wird später noch wichtig sein: 
+# hugo_version()
 # The latest Hugo version is v0.115.4 
 
 # Jetzt gehen wir auf https://themes.gohugo.io 
