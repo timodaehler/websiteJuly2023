@@ -12,10 +12,9 @@ title: Privacy Policy
 
 
 
-My website does not host third-party cookies and hosts three first-party cookies just to generally understand the audience of the website. The cookies are from Google Analytics.
+This website does not host third-party cookies but first-party cookies to understand the website's audience and improve user experience. These cookies are from Google Analytics. 
 
-You do not know what cookies are? You would like to learn more details? More information below.
-
+You do not know what cookies are and would like to learn more details? Find more information [here](https://www.osano.com/articles/how-cookies-work).
 
 
 
