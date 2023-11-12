@@ -47,11 +47,11 @@ color_scale <- list(
 p <- 
   plot_ly(data = yield_df, x = ~maturity_vals, y = ~Date, z = as.matrix(yield_df[,-1]), type = "surface", colorscale = color_scale) %>%
   layout(scene = list(
-    xaxis = list(title = "Maturity", autorange = "reversed"),
-    yaxis = list(title = "Date",
+    xaxis = list(title = "Maturity (yr)", autorange = "reversed"),
+    yaxis = list(title = "",
                  tickvals = as.Date(paste0(unique_years, "-01-01")),
                  ticktext = unique_years),
-    zaxis = list(title = "Yield"),
+    zaxis = list(title = "Yield (%)"),
     camera = list(
       eye = list(x = 2, y = 4.5, z = 2)  # Adjust these values as necessary
     ),

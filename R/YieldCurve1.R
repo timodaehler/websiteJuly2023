@@ -88,9 +88,9 @@ color_scale_swiss <- list(
 p <- 
   plot_ly(data = data, x = ~maturity_vals_swiss, y = ~Date, z = as.matrix(data[,-(1:2)]), type = "surface", colorscale = color_scale_swiss) %>%
   layout(scene = list(
-    xaxis = list(title = "Maturity", autorange = "reversed"),
-    yaxis = list(title = "Date"),
-    zaxis = list(title = "Yield"),
+    xaxis = list(title = "Maturity (yr)", autorange = "reversed"),
+    yaxis = list(title = ""),
+    zaxis = list(title = "Yield (%)"),
     camera = list(
       eye = list(x = 2, y = 4.5, z = 2)  # Adjust these values as necessary
     ),
