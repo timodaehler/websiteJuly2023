@@ -10,37 +10,6 @@ sections:
     username: admin
   id: about
 
-
-# - block: markdown
-#   content:
-#     subtitle: "Global Stock Indices Performance"
-#     text: |
-#     
-#       <div style="display: flex; flex-wrap: wrap; justify-content: space-between;">
-#         <div style="width: 100%; margin-bottom: 20px;">
-#           <iframe src="/uploads/my_map.html" width="100%" height="600px" frameborder="0"></iframe>
-#         </div>
-#       </div>
-#     
-# 
-#     title: "Performance of Various Global Stock Indices"
-#   design:
-#     columns: "1"
-#     
-#         #   <div style="display: flex; flex-wrap: wrap; justify-content: space-between;">
-#         # <div style="width: 100%; margin-bottom: 20px;">
-#         #   <iframe src="/uploads/current_index_performances.html" width="100%" height="600px" frameborder="0"></iframe>
-#         # </div>
-
-    
-
-
-# - block: tag_cloud
-#   content:
-#     title: Popular Topics
-#   design:
-#     columns: "2"
-    
 - block: portfolio
   content:
     buttons:
@@ -62,6 +31,32 @@ sections:
     flip_alt_rows: false
     view: showcase
   id: FinancialCharts
+  
+  
+  
+# - block: collection
+#   content:
+#     count: 5
+#     filters:
+#       author: ""
+#       category: ""
+#       exclude_featured: false
+#       exclude_future: false
+#       exclude_past: false
+#       folders:
+#       - post
+#       publication_type: ""
+#       tag: ""
+#     offset: 0
+#     order: desc
+#     subtitle: ""
+#     text: ""
+#     title: Recent Posts
+#   design:
+#     columns: "2"
+#     view: compact
+#   id: posts
+  
   
   
 - block: experience
@@ -148,28 +143,7 @@ sections:
 #   design:
 #     columns: "2"
 
-# - block: collection
-#   content:
-#     count: 5
-#     filters:
-#       author: ""
-#       category: ""
-#       exclude_featured: false
-#       exclude_future: false
-#       exclude_past: false
-#       folders:
-#       - post
-#       publication_type: ""
-#       tag: ""
-#     offset: 0
-#     order: desc
-#     subtitle: ""
-#     text: ""
-#     title: Recent Posts
-#   design:
-#     columns: "2"
-#     view: compact
-#   id: posts
+
   
 # - block: markdown
 #   content:
@@ -358,6 +332,40 @@ sections:
 #       icon_pack: fas
 #       name: Photography
 #     title: Skills
+
+
+
+
+# - block: markdown
+#   content:
+#     subtitle: "Global Stock Indices Performance"
+#     text: |
+#     
+#       <div style="display: flex; flex-wrap: wrap; justify-content: space-between;">
+#         <div style="width: 100%; margin-bottom: 20px;">
+#           <iframe src="/uploads/my_map.html" width="100%" height="600px" frameborder="0"></iframe>
+#         </div>
+#       </div>
+#     
+# 
+#     title: "Performance of Various Global Stock Indices"
+#   design:
+#     columns: "1"
+#     
+#         #   <div style="display: flex; flex-wrap: wrap; justify-content: space-between;">
+#         # <div style="width: 100%; margin-bottom: 20px;">
+#         #   <iframe src="/uploads/current_index_performances.html" width="100%" height="600px" frameborder="0"></iframe>
+#         # </div>
+
+    
+
+
+# - block: tag_cloud
+#   content:
+#     title: Popular Topics
+#   design:
+#     columns: "2"
+    
 
 
 title: null
