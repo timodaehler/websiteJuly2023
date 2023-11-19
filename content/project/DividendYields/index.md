@@ -51,7 +51,7 @@ Open in Fullscreen
 <iframe id="iframe1" src="DividendYields1.html" width="100%" height="600px" frameborder="0">
 </iframe>
 
-<br> <br> Last update: 2023-11-19 11:55:52 CET
+<br> <br> Last update: 2023-11-19 11:57:04 CET
 
 #### Data Sources:
 
@@ -72,7 +72,7 @@ Open in Fullscreen
 <iframe id="iframe2" src="DividendYields2.html" width="100%" height="600px" frameborder="0">
 </iframe>
 
-<br> <br> Last update: 2023-11-19 11:55:53 CET
+<br> <br> Last update: 2023-11-19 11:57:05 CET
 
 #### Data Sources:
 
