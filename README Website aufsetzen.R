@@ -10,6 +10,8 @@ gc()
 library(rmarkdown)
 library(devtools)
 library(blogdown)
+library(here)
+library(glue)
 
 
 # blogdown::install_hugo() 
