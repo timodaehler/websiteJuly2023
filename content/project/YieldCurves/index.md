@@ -51,7 +51,7 @@ Open in Fullscreen
 <iframe id="iframe1" src="YieldCurves1.html" width="100%" height="600px" frameborder="0">
 </iframe>
 
-<br> <br> Last update: 2023-11-19 11:55:18 CET
+<br> <br> Last update: 2023-11-19 11:56:28 CET
 
 #### Data Sources:
 
@@ -69,7 +69,7 @@ Open in Fullscreen
 <iframe id="iframe2" src="YieldCurves2.html" width="100%" height="600px" frameborder="0">
 </iframe>
 
-<br> <br> Last update: 2023-11-19 11:55:21 CET
+<br> <br> Last update: 2023-11-19 11:56:32 CET
 
 #### Data Sources:
 
