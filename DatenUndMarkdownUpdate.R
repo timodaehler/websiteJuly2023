@@ -1,5 +1,3 @@
-
-
 # Funktion definieren, die Liste aller R Skripte erstellt
 list_r_scripts <- function(directory) {
   # Get the full paths of all files in the directory
