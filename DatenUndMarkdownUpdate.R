@@ -1,6 +1,4 @@
 
-stop_server()
-
 
 # Funktion definieren, die Liste aller R Skripte erstellt
 list_r_scripts <- function(directory) {
@@ -112,5 +110,4 @@ knit_all_index_files("/Users/timodaehler_1/Desktop/websiteJuly2023/content/proje
 
 
 
-serve_site()
 
