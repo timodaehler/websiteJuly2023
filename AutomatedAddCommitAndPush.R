@@ -21,7 +21,7 @@ commit_and_push <- function(repo_path, commit_message) {
 }
 
 # Set the path to your local Git repository
-repo_path <- "~/Desktop/websiteJuly2023/"
+repo_path <- "/Users/timodaehler_1/Desktop/websiteJuly2023"
 
 # Set the commit message
 commit_message <- paste("Automated commit and push on", format(Sys.time(), "%Y-%m-%d %H:%M:%S"))
