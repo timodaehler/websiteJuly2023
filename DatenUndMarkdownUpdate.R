@@ -107,7 +107,3 @@ knit_all_index_files <- function(directory) {
 
 # Alle 'index.Rmd' Dateien im Projektordner und dessen Unterverzeichnissen stricken
 knit_all_index_files("/Users/timodaehler_1/Desktop/websiteJuly2023/content/project/")
-
-
-
-

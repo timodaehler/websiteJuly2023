@@ -28,7 +28,7 @@ while(TRUE) {
   # Run the script
   run_script(script_path)
   
-  # Wait for 5 minutes (300 seconds) before the next run
+  # Wait for 5 minutes (80 seconds) before the next run
   Sys.sleep(80)
 }
 

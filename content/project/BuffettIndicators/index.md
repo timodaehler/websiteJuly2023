@@ -51,7 +51,7 @@ Open in Fullscreen
 <iframe id="iframe1" src="BuffettIndicators1.html" width="100%" height="600px" frameborder="0">
 </iframe>
 
-<br> <br> Last update: 2023-11-19 10:51:13 CET
+<br> <br> Last update: 2023-11-19 11:17:36 CET
 
 #### Data Sources:
 
@@ -72,7 +72,7 @@ Open in Fullscreen
 <iframe id="iframe2" src="BuffettIndicators2.html" width="100%" height="600px" frameborder="0">
 </iframe>
 
-<br> <br> Last update: 2023-11-19 10:51:15 CET
+<br> <br> Last update: 2023-11-19 11:17:37 CET
 
 #### Data Sources:
 
