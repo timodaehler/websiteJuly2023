@@ -1,74 +1,50 @@
+# Dieses Skript führt zwei Skripte aus:
+#
+# DatenUndMarkdowUpdate.R
+# AutomatedAddCommitAndPush.R
+#
+# DatenUndMarkdowUpdate.R führt alle R-Skripte aus und erstellt dann alle .Rmd-Dateien, 
+# die Daten enthalten, welche von den R-Skripten importiert und verarbeitet wurden.
+# Nach Ausführung von DatenUndMarkdowUpdate.R sind die neuesten Daten für die Website bereit.
+#
+# Sobald die neuesten Daten für die Website bereit sind, fügt das Skript AutomatedAddCommitAndPush.R 
+# diese hinzu, führt einen Commit durch und lädt sie auf GitHub hoch.
+#
+# Netlify zieht dann alle paar Sekunden die neuesten Inhalte von GitHub und stellt die aktualisierte Website online.
 
-# Infinite loop to keep running the script
+# Endlosschleife, um das Skript kontinuierlich auszuführen
 while(TRUE) {
-  # Specify the path to your script
+  # Pfad des Skripts festlegen
   script_path <- "~/Desktop/websiteJuly2023/DatenUndMarkdownUpdate.R"
   
-  # Function to run another R script and suppress messages
+  # Funktion, um ein anderes R-Skript auszuführen und Nachrichten zu unterdrücken
   run_script <- function(script_path) {
     tryCatch({
-      # Start timer
+      # Startzeit messen
       start_time <- Sys.time()
       
-      # Suppress messages while running the script
+      # Nachrichten beim Ausführen des Skripts unterdrücken
       suppressMessages(source(script_path))
       
-      # End timer
+      # Endzeit messen
       end_time <- Sys.time()
       time_taken <- difftime(end_time, start_time, units = "secs")
       
-      # Custom success message
-      message(paste("- DatenUndMarkdownUpdate.R ran successfully for the last time at exactly", end_time, 
-                    "taking", time_taken, "seconds"))
+      # Benutzerdefinierte Erfolgsmeldung
+      message(paste("- DatenUndMarkdownUpdate.R wurde zuletzt erfolgreich ausgeführt um", end_time, 
+                    ", Dauer:", time_taken, "Sekunden"))
     }, error = function(e) {
-      # Error message
-      message(paste("- Error running DatenUndMarkdownUpdate.R:", Sys.time(), e$message))
+      # Fehlermeldung
+      message(paste("- Fehler bei der Ausführung von DatenUndMarkdownUpdate.R:", Sys.time(), e$message))
     })
   }
   
-  
-  
-  # Run the script
+  # Das Skript ausführen
   run_script(script_path)
   
-  
-  
+  # AutomatedAddCommitAndPush.R ausführen. Dieses Added, Committed, und Pushed die gerade generierten, neuen Date. 
   source(glue(here::here(), "AutomatedAddCommitAndPush.R", .sep = "/"))
   
-  
-  # library(git2r)
-  # 
-  # commit_and_push <- function(repo_path, commit_message) {
-  #   repo <- repository(repo_path)
-  #   
-  #   # Check if there are uncommitted changes
-  #   if (length(status(repo)$staged) == 0 && length(status(repo)$unstaged) == 0) {
-  #     message("No changes to commit at", Sys.time())
-  #     return()
-  #   }
-  #   
-  #   tryCatch({
-  #     add(repo, "*")  # Add all changes
-  #     commit(repo, commit_message)  # Commit changes
-  #     push(repo)  # Push to remote
-  #     
-  #     message("Changes successfully pushed to GitHub at", Sys.time())
-  #   }, error = function(e) {
-  #     message("Failed to push changes to GitHub:", e$message)
-  #   })
-  # }
-  # 
-  # # Set the path to your local Git repository
-  # repo_path <- "/Users/timodaehler_1/Desktop/websiteJuly2023"
-  # 
-  # # Set the commit message
-  # commit_message <- paste("Automated commit and push on", format(Sys.time(), "%Y-%m-%d %H:%M:%S"))
-  # 
-  # # Call the function
-  # commit_and_push(repo_path, commit_message)
-  
-  
-  # Wait for 100 seconds before the next run
-  Sys.sleep(300)
+  # Warten, bevor der nächste Durchlauf beginnt
+  Sys.sleep(10)
 }
-

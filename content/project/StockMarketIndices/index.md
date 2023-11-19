@@ -51,7 +51,7 @@ Open in Fullscreen
 <iframe id="iframe1" src="StockMarketIndices1.html" width="100%" height="600px" frameborder="0">
 </iframe>
 
-<br> <br> Last update: 2023-11-19 13:05:47 CET
+<br> <br> Last update: 2023-11-19 13:16:39 CET
 
 #### Data Sources:
 
@@ -69,7 +69,7 @@ Open in Fullscreen
 <iframe id="iframe2" src="StockMarketIndices2.html" width="100%" height="600px" frameborder="0">
 </iframe>
 
-<br> <br> Last update: 2023-11-19 13:05:49 CET
+<br> <br> Last update: 2023-11-19 13:16:41 CET
 
 #### Data Sources:
 
