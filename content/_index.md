@@ -103,7 +103,7 @@ sections:
       date_start: '2011-09-01'
       date_end: '2016-06-30'
       description: 
-    title: Education
+    title: Experience
   design:
     columns: "2"
   id: experience
