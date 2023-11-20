@@ -63,6 +63,30 @@ sections:
   content:
     date_format: Jan 2006
     items:
+    - company: Raiffeisen Switzerland
+      company_logo: 
+      company_url: ""
+      date_start: '2022-10-01'
+      date_end: ''
+      description: |2-
+        Conducting statistical analyses to identify risk factors and develop predictive models for managing credit, market, and operational risks, including calibration and backtesting of developed models in R
+          
+          Collaborating with other teams, including the Credit Office and IT, to integrate data and models into the IT infrastructure of the 220 Raiffeisen banks 
+      location: Zurich, Switzerland
+      title: Quantitative Analyst 
+    - company: KPMG Switzerland
+      company_logo: 
+      company_url: ""
+      date_start: '2021-10-01'
+      date_end: '2022-09-30'
+      description: |2-
+        Implementing a Python tool to assess liquidity risks for a globally systemically important bank (GSIB), reducing risk report generation from 3 days to just 1 day
+      
+        Assisting in regulatory audits, including the review of capital and liquidity requirements for medium-sized Swiss banks
+        
+        Developing a Maturity-Mismatch tool in Python to identify multi-year funding gaps for a GSIB
+      location: Zurich, Switzerland
+      title: Consultant in Financial Services Risk Consulting
     - company: University of Southern California
       company_logo: org-usc-color
       company_url: ""
@@ -79,6 +103,7 @@ sections:
           * International Economics
       location: Los Angeles, CA
       title: PhD in International Political Economy
+      
     - company: University of Southern California
       company_url: ''
       company_logo: org-usc-color
@@ -86,6 +111,14 @@ sections:
       date_start: '2016-08-01'
       date_end: '2017-12-31'
       title: MA in Economics
+      
+    - company: UBS
+      company_logo: 
+      company_url: ""
+      date_start: '2015-06-01'
+      date_end: '2015-12-30'
+      location: Zurich, Switzerland
+      title: Analyst Intern in CIO EM FX & FIXED INCOME
       
     - company: Harvard University
       company_logo: org-harvard
@@ -95,13 +128,21 @@ sections:
       location: Cambridge, MA
       title: Visiting Undergraduate Student
       
+    - company: TCW
+      company_logo: 
+      company_url: ""
+      date_start: '2013-07-01'
+      date_end: '2013-09-30'
+      location: New York, NY
+      title: Equity Analyst Intern
+      
     - title: BA in Economics
       company: University of St. Gallen
       company_url: ''
       company_logo: org-hsg-color
       location: St. Gallen, Switzerland
       date_start: '2011-09-01'
-      date_end: '2016-06-30'
+      date_end: '2014-12-30'
       description: 
     title: Experience
   design:
