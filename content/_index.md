@@ -68,10 +68,6 @@ sections:
       company_url: ""
       date_start: '2022-10-01'
       date_end: ''
-      description: |2-
-        Conducting statistical analyses to identify risk factors and develop predictive models for managing credit, market, and operational risks, including calibration and backtesting of developed models in R
-          
-          Collaborating with other teams, including the Credit Office and IT, to integrate data and models into the IT infrastructure of the 220 Raiffeisen banks 
       location: Zurich, Switzerland
       title: Quantitative Analyst 
     - company: KPMG Switzerland
@@ -79,12 +75,6 @@ sections:
       company_url: ""
       date_start: '2021-10-01'
       date_end: '2022-09-30'
-      description: |2-
-        Implementing a Python tool to assess liquidity risks for a globally systemically important bank (GSIB), reducing risk report generation from 3 days to just 1 day
-      
-        Assisting in regulatory audits, including the review of capital and liquidity requirements for medium-sized Swiss banks
-        
-        Developing a Maturity-Mismatch tool in Python to identify multi-year funding gaps for a GSIB
       location: Zurich, Switzerland
       title: Consultant in Financial Services Risk Consulting
     - company: University of Southern California

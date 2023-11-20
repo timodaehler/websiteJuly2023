@@ -30,11 +30,11 @@ superuser: true
 title: Timo B. Dähler, PhD
 
 ---
-At heart, I'm a macroeconomist who transitioned to the meticulous world of risk management as a quantitative analyst.
+I'm a trained economist working in the field of risk management. 
 
-When I'm not designing models, analyzing data, or identifying potential risks, you'll find me adventuring through the picturesque Swiss Alps or exploring the rugged beauty of California's Eastern Sierra. Through this website, I channel my curiosity into investment analysis, always on the lookout for intriguing insights and future trends.
+Beyond the realm of model design, data analysis, and risk identification, my adventures take me through the picturesque Swiss Alps and the rugged terrain of California's Eastern Sierra. On this website, I channel my curiosity into investment analysis, always on the lookout for new insights and emerging trends.
 
-If you resonate with my journey or see potential for collaboration, let's connect!
+If you resonate with my journey or see potential for collaboration, I'm open to connecting!
 
 <a href="/uploads/resume.pdf" target="_blank" role="button" style="font-size: 14px; padding: 5px 15px; border: none; border-radius: 20px; background-color: #1664c0; color: white; cursor: pointer; transition: background-color 0.3s; text-decoration: none;" onmouseover="this.style.backgroundColor='#0056b3'" onmouseout="this.style.backgroundColor='#007BFF'">DOWNLOAD CV</a>
 
