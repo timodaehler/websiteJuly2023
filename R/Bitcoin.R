@@ -39,9 +39,9 @@ btc_data <-
 median_close <- median(btc_data$Close)
 mean_close <- mean(btc_data$Close)
 
-
+# 
 # # Create the main Plotly time series plot
-# btc_plot <- 
+# btc_plot <-
 #   plot_ly(data = btc_data, x = ~Date, y = ~Close, type = "scatter", mode = "lines", name = "BTC/USD") %>%
 #   layout(
 #     xaxis = list(title = ""),
@@ -66,7 +66,7 @@ mean_close <- mean(btc_data$Close)
 
 
 btc_plot <- plot_ly(data = btc_data, x = ~Date, y = ~Close, type = "scatter", mode = "lines", name = "BTC/USD",
-                    text = ~paste(format(Date, "%e %b %Y"), ", ", sprintf("%.2f", Close)),  # Custom hover text in desired format
+                    text = ~paste("BTC/USD, ", format(Date, "%e %b %Y"), ", ", sprintf("%.2f", Close)),  # Custom hover text
                     hoverinfo = "text") %>%
   layout(
     xaxis = list(title = ""),
