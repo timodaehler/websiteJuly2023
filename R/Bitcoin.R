@@ -40,9 +40,34 @@ median_close <- median(btc_data$Close)
 mean_close <- mean(btc_data$Close)
 
 
-# Create the main Plotly time series plot
-btc_plot <- 
-  plot_ly(data = btc_data, x = ~Date, y = ~Close, type = "scatter", mode = "lines", name = "BTC/USD") %>%
+# # Create the main Plotly time series plot
+# btc_plot <- 
+#   plot_ly(data = btc_data, x = ~Date, y = ~Close, type = "scatter", mode = "lines", name = "BTC/USD") %>%
+#   layout(
+#     xaxis = list(title = ""),
+#     yaxis = list(title = "Close Price"),
+#     legend = list(
+#       x = 0.5,
+#       y = -0.1,
+#       xanchor = "center",
+#       orientation = "h"
+#     )
+#   ) %>%
+#   # Add horizontal line at the median Close price
+#   add_trace(x = ~Date, y = rep(median_close, length(btc_data$Date)), type = "scatter", mode = "lines",
+#             line = list(dash = "dash", color = "black"), name = "Median") %>%
+#   # Add horizontal line at the mean Close price
+#   add_trace(x = ~Date, y = rep(mean_close, length(btc_data$Date)), type = "scatter", mode = "lines",
+#             line = list(dash = "dash", color = "grey"), name = "Mean")
+# 
+# 
+# # Show the plot
+# btc_plot
+
+
+btc_plot <- plot_ly(data = btc_data, x = ~Date, y = ~Close, type = "scatter", mode = "lines", name = "BTC/USD",
+                    text = ~paste(format(Date, "%e %b %Y"), ", ", sprintf("%.2f", Close)),  # Custom hover text in desired format
+                    hoverinfo = "text") %>%
   layout(
     xaxis = list(title = ""),
     yaxis = list(title = "Close Price"),
@@ -59,7 +84,6 @@ btc_plot <-
   # Add horizontal line at the mean Close price
   add_trace(x = ~Date, y = rep(mean_close, length(btc_data$Date)), type = "scatter", mode = "lines",
             line = list(dash = "dash", color = "grey"), name = "Mean")
-
 
 # Show the plot
 btc_plot
