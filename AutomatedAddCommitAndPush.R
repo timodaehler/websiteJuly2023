@@ -14,7 +14,7 @@ commit_and_push <- function(repo_path, commit_message) {
     commit(repo, commit_message)  # Commit changes
     push(repo)  # Push to remote
 
-    message("Changes successfully pushed to GitHub at", Sys.time())
+    message("Changes successfully pushed to GitHub at ", Sys.time())
   }, error = function(e) {
     message("Failed to push changes to GitHub:", e$message)
   })
