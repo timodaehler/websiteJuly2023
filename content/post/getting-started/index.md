@@ -18,7 +18,7 @@ projects: []
 draft: true
 subtitle: "Welcome \U0001F44B We know that first impressions are important, so we've
   populated your new site with some initial content to help you get familiar with
-  everything in no time."
+  everything in no time.xxxx"
 summary: "Welcome \U0001F44B We know that first impressions are important, so we've
   populated your new site with some initial content to help you get familiar with
   everything in no time."

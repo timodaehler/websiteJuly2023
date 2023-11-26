@@ -1,6 +1,5 @@
 
-# Swiss 
-# # Switzerland -------------------------------------------------------------
+# Switzerland -------------------------------------------------------------
 
 # Load necessary libraries
 library(fredr)
@@ -17,9 +16,9 @@ library(htmlwidgets)
 swiss_recession_data <- fredr(series_id = "CHEREC", observation_start = as.Date("1995-01-01"))
 
 # Download OECD data for general government net lending/borrowing
-url <- "https://stats.oecd.org/sdmx-json/data/DP_LIVE/.GGNLEND.../OECD?contentType=csv&detail=code&separator=comma&csv-lang=en"
-response <- read_csv(url)
-response <- as.data.frame(response)
+# url <- "https://stats.oecd.org/sdmx-json/data/DP_LIVE/.GGNLEND.../OECD?contentType=csv&detail=code&separator=comma&csv-lang=en"
+# response <- read_csv(url)
+# response <- as.data.frame(response)
 
 # Filter OECD data for Switzerland (use the LOCATION code for Switzerland, usually 'CHE'), starting from 1995
 swiss_oecd_data <- response %>%
@@ -52,9 +51,9 @@ plotly_swiss_deficit <- plot_ly() %>%
             text = ~paste(format(date, "%Y"), sprintf("%.1f%%", Value)),  # Custom text for each point, showing only year
             hoverinfo = "text") %>%
   layout(
-    title = "Swiss Federal Surplus or Deficit (% of GDP) with Recession Periods (1995 onwards)",
+    title = "General government net lending/borrowing",
     xaxis = list(title = "Year"),
-    yaxis = list(title = "Federal Surplus or Deficit (% of GDP)", range = c(-16, 2)),
+    yaxis = list(title = "% of GDP", range = c(-16, 2)),
     shapes = lapply(1:nrow(swiss_recession_periods), function(i) {
       list(
         type = "rect",
@@ -80,6 +79,11 @@ plotly_swiss_deficit <- plotly_swiss_deficit %>%
 plotly_swiss_deficit
 
 
+# Update date
+saveRDS(Sys.time(), "content/post/writing-technical-content/SwissGeneralGovernmentDeficit1_update_date.rds")
+
+# Export the plot
+saveWidget(plotly_swiss_deficit, "content/post/writing-technical-content/SwissGeneralGovernmentDeficit1.html")
 
 
 
@@ -97,15 +101,14 @@ library(readr)
 library(countrycode)
 
 # Set FRED API key
-# fredr_set_key('your_api_key') # Uncomment and set your key if needed
 
 # Download U.S. recession data (USARECDM) from FRED, starting from 1995
-us_recession_data <- fredr(series_id = "USARECDM", observation_start = as.Date("1995-01-01"))
+us_recession_data <- fredr(series_id = "USARECDM", observation_start = as.Date("1995-01-01"))           
 
-# Download OECD data for general government net lending/borrowing
-url <- "https://stats.oecd.org/sdmx-json/data/DP_LIVE/.GGNLEND.../OECD?contentType=csv&detail=code&separator=comma&csv-lang=en"
-response <- read_csv(url)
-response <- as.data.frame(response)
+# # Download OECD data for general government net lending/borrowing
+# url <- "https://stats.oecd.org/sdmx-json/data/DP_LIVE/.GGNLEND.../OECD?contentType=csv&detail=code&separator=comma&csv-lang=en"
+# response <- read_csv(url)
+# response <- as.data.frame(response)
 
 # Filter OECD data for the United States (use the LOCATION code for the United States, usually 'USA'), starting from 1995
 us_oecd_data <- response %>%
@@ -135,9 +138,9 @@ plotly_us_deficit <- plot_ly() %>%
             text = ~paste(format(date, "%Y"), sprintf("%.1f%%", Value)),  # Custom text for each point, showing only year
             hoverinfo = "text") %>%
   layout(
-    # title = "U.S. Federal Surplus or Deficit (% of GDP) with Recession Periods (1995 onwards)",
+    title = "General government net lending/borrowing",
     xaxis = list(title = "Year"),
-    yaxis = list(title = "Federal Surplus or Deficit (% of GDP)", range = c(-16, 2)),
+    yaxis = list(title = "% of GDP", range = c(-16, 2)),
     shapes = lapply(1:nrow(us_recession_periods), function(i) {
       list(
         type = "rect",
@@ -158,15 +161,15 @@ plotly_us_deficit <- plotly_us_deficit %>%
   add_trace(x = c(min(us_oecd_data$date), max(us_oecd_data$date)), y = c(0, 0),
             type = "scatter", mode = "lines", 
             line = list(color = "black", dash = "dash"),
-            showlegend = FALSE)  # Hide this from the legend
+            showlegend = FALSE)  
 
 # plotly_us_deficit
 
 
 
 # Update date
-saveRDS(Sys.time(), "content/post/writing-technical-content/USFederalDeficit1_update_date.rds")
+saveRDS(Sys.time(), "content/post/writing-technical-content/USGeneralGovernmentDeficit1_update_date.rds")
 
 # Export the plot
-saveWidget(plotly_us_deficit, "content/post/writing-technical-content/USFederalDeficit1.html")
+saveWidget(plotly_us_deficit, "content/post/writing-technical-content/USGeneralGovernmentDeficit1.html")
 

@@ -51,7 +51,7 @@ Open in Fullscreen
 <iframe id="iframe1" src="ShillerPE1.html" width="100%" height="600px" frameborder="0">
 </iframe>
 
-<br> <br> Last update: 2023-11-26 17:25:14 CET
+<br> <br> Last update: 2023-11-26 20:35:05 CET
 
 #### Data Sources:
 
