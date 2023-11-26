@@ -51,7 +51,7 @@ sections:
 #     order: desc
 #     subtitle: ""
 #     text: ""
-#     title: Recent Posts
+#     title: Opinions
 #   design:
 #     columns: "2"
 #     view: compact

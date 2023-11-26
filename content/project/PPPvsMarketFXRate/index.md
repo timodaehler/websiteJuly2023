@@ -52,7 +52,7 @@ Open in Fullscreen
 <iframe id="iframe1" src="PPPvsMarketFXRate1.html" width="100%" height="600px" frameborder="0">
 </iframe>
 
-<br> <br> Last update: 2023-11-25 17:57:44 CET
+<br> <br> Last update: 2023-11-26 17:25:04 CET
 
 #### Data Sources:
 
@@ -72,7 +72,7 @@ Open in Fullscreen
 <iframe id="iframe2" src="PPPvsMarketFXRate2.html" width="100%" height="600px" frameborder="0">
 </iframe>
 
-<br> <br> Last update: 2023-11-25 17:57:55 CET
+<br> <br> Last update: 2023-11-26 17:25:13 CET
 
 #### Data Sources:
 
