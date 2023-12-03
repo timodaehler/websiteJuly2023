@@ -48,10 +48,18 @@ Featured below are some yields
 <button onclick="toggleFullscreen(&#39;iframe1&#39;)" style="font-size: 14px; padding: 5px 15px; border: none; border-radius: 20px; background-color: #1664c0; color: white; cursor: pointer; transition: background-color 0.3s;" onmouseover="this.style.backgroundColor=&#39;#0056b3&#39;" onmouseout="this.style.backgroundColor=&#39;#007BFF&#39;">
 Open in Fullscreen
 </button>
-<iframe id="iframe1" src="YieldCurves1.html" width="100%" height="600px" frameborder="0">
+<iframe id="iframe1" src="plot_3d_Swiss_yield_curve.html" width="100%" height="600px" frameborder="0">
 </iframe>
 
-<br> <br> Last update: 2023-11-26 20:35:15 CET
+<br>
+
+<button onclick="toggleFullscreen(&#39;iframe2&#39;)" style="font-size: 14px; padding: 5px 15px; border: none; border-radius: 20px; background-color: #1664c0; color: white; cursor: pointer; transition: background-color 0.3s;" onmouseover="this.style.backgroundColor=&#39;#0056b3&#39;" onmouseout="this.style.backgroundColor=&#39;#007BFF&#39;">
+Open in Fullscreen
+</button>
+<iframe id="iframe2" src="plot_simple_Swiss_yield_curve.html" width="100%" height="600px" frameborder="0">
+</iframe>
+
+<br> <br> Last update: 2023-12-03 16:26:39 CET
 
 #### Data Sources:
 
@@ -63,13 +71,21 @@ Open in Fullscreen
 
 <br>
 
-<button onclick="toggleFullscreen(&#39;iframe2&#39;)" style="font-size: 14px; padding: 5px 15px; border: none; border-radius: 20px; background-color: #1664c0; color: white; cursor: pointer; transition: background-color 0.3s;" onmouseover="this.style.backgroundColor=&#39;#0056b3&#39;" onmouseout="this.style.backgroundColor=&#39;#007BFF&#39;">
+<button onclick="toggleFullscreen(&#39;iframe3&#39;)" style="font-size: 14px; padding: 5px 15px; border: none; border-radius: 20px; background-color: #1664c0; color: white; cursor: pointer; transition: background-color 0.3s;" onmouseover="this.style.backgroundColor=&#39;#0056b3&#39;" onmouseout="this.style.backgroundColor=&#39;#007BFF&#39;">
 Open in Fullscreen
 </button>
-<iframe id="iframe2" src="YieldCurves2.html" width="100%" height="600px" frameborder="0">
+<iframe id="iframe3" src="plot_3d_US_yield_curve.html" width="100%" height="600px" frameborder="0">
 </iframe>
 
-<br> <br> Last update: 2023-11-26 20:35:20 CET
+<br>
+
+<button onclick="toggleFullscreen(&#39;iframe4&#39;)" style="font-size: 14px; padding: 5px 15px; border: none; border-radius: 20px; background-color: #1664c0; color: white; cursor: pointer; transition: background-color 0.3s;" onmouseover="this.style.backgroundColor=&#39;#0056b3&#39;" onmouseout="this.style.backgroundColor=&#39;#007BFF&#39;">
+Open in Fullscreen
+</button>
+<iframe id="iframe4" src="plot_simple_US_yield_curve.html" width="100%" height="600px" frameborder="0">
+</iframe>
+
+<br> <br> Last update: 2023-12-03 16:26:43 CET
 
 #### Data Sources:
 

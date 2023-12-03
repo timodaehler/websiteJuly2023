@@ -51,7 +51,7 @@ Open in Fullscreen
 <iframe id="iframe1" src="Bitcoin1.html" width="100%" height="600px" frameborder="0">
 </iframe>
 
-<br> <br> Last update: 2023-11-26 20:34:28 CET
+<br> <br> Last update: 2023-12-03 16:25:51 CET
 
 #### Data Sources:
 

@@ -1,3 +1,9 @@
+# Das Skript dient zur Visualisierung von Renditekurven für die Schweiz. Es lädt die Daten von einer externen Quelle, bereitet sie vor und stellt sie in drei verschiedenen Formen dar:
+#   
+# Eine 3D-Renditekurve für verschiedene Laufzeiten.
+# Eine einfache Renditekurve für das aktuellste Datum.
+# Einen Plot, der die Renditen für verschiedene Laufzeiten über die Zeit zeigt.
+
 # Load the required libraries for data visualization and manipulation
 library(RColorBrewer)
 library(tidyverse)
@@ -33,7 +39,6 @@ data <- data %>% mutate(`Yield` = ifelse(`Yield` == "", NA, `Yield`))
 # Fill NA values with the previous non-NA values
 data <- data %>% group_by(Maturity) %>% fill(Yield, .direction = "down") %>% ungroup()
 
-
 # Rename values in the Central Bank column for clearer interpretation
 data <- 
   data %>%
@@ -58,11 +63,6 @@ data <- data %>%
   spread(key = Maturity, value = Yield, sep = "_")
 
 
-
-
-
-# Continuing from where the first code stopped:
-
 # Ensure data is sorted by Date and Date is in proper format
 data <- data %>% 
   arrange(as.Date(Date, format = "%Y-%m-%d"))
@@ -85,7 +85,7 @@ color_scale_swiss <- list(
 )
 
 # Plot the yield curve for Switzerland
-p <- 
+plot_3d_Swiss_yield_curve <- 
   plot_ly(data = data, x = ~maturity_vals_swiss, y = ~Date, z = as.matrix(data[,-(1:2)]), type = "surface", colorscale = color_scale_swiss) %>%
   layout(scene = list(
     xaxis = list(title = "Maturity (yr)", autorange = "reversed"),
@@ -97,13 +97,107 @@ p <-
     aspectratio = list(x=1, y=4, z=1)  # Adjust this to make y-axis longer relative to others
   ))
 
-p
+plot_3d_Swiss_yield_curve
 
 # Update date
-saveRDS(Sys.time(), "content/project/YieldCurves/YieldCurves1_update_date.rds")
+saveRDS(Sys.time(), "content/project/YieldCurves/plot_3d_Swiss_yield_curve_update_date.rds")
 
 # Export 
-saveWidget(p, "content/project/YieldCurves/YieldCurves1.html")
+saveWidget(plot_3d_Swiss_yield_curve, "content/project/YieldCurves/plot_3d_Swiss_yield_curve.html")
+
+
+
+
+
+
+
+
+
+
+# Convert the Date column to Date format if it's not already
+data$Date <- as.Date(data$Date)
+
+# Find the most recent date
+most_recent_date <- max(data$Date)
+
+# Filter the data for the most recent date
+recent_data <- data %>% filter(Date == most_recent_date)
+
+# Transform the data to long format for plotting
+long_recent_data <- recent_data %>% 
+  select(-Date) %>% 
+  gather(key = "Maturity", value = "Yield") %>%
+  mutate(Maturity_Number = as.numeric(gsub("Maturity_", "", Maturity)),
+         Yield = as.numeric(Yield)) %>%  # Convert Yield to numeric
+  arrange(Maturity_Number) # Arrange by numeric value
+
+# Find the maximum Y value
+max_yield <- max(long_recent_data$Yield, na.rm = TRUE)
+
+# Creating the yield curve plot with customized y-axis limits
+plot_simple_Swiss_yield_curve <-
+  plot_ly(
+    data = long_recent_data,
+    x = ~ Maturity_Number,
+    y = ~ Yield,
+    type = 'scatter',
+    mode = 'lines',
+    text = ~ Maturity,
+    hoverinfo = 'text+y'
+  )
+
+# Customize the plot
+plot_simple_Swiss_yield_curve <-
+  plot_simple_Swiss_yield_curve %>% layout(
+    title = paste("Yield Curve on", most_recent_date),
+    xaxis = list(title = "Maturity (Years)"),
+    yaxis = list(title = "Yield (%)", range = c(-0.5, max_yield + 0.5))
+  )
+
+# Print the plot
+plot_simple_Swiss_yield_curve
+
+
+# Export 
+saveWidget(plot_simple_Swiss_yield_curve, "content/project/YieldCurves/plot_simple_Swiss_yield_curve.html")
+
+
+
+
+
+
+
+
+
+# Plot mit den Yields für verschiedene Laufzeiten pro Zeitpunkt über die Zeit --------
+
+# Transform the data to long format
+long_data <- data %>%
+  gather(key = "Maturity", value = "Yield", -Date) %>%
+  mutate(
+    Maturity = gsub("Maturity_", "", Maturity),  # Remove 'Maturity_' prefix
+    Maturity_Label = ifelse(as.numeric(Maturity) == 1, paste(Maturity, "yr"), paste(Maturity, "yrs")),  # Add 'yr' or 'yrs'
+    Yield = as.numeric(Yield)  # Ensure Yield is numeric
+  )
+
+# Create the plot with custom hover text
+p <- plot_ly(data = long_data, x = ~Date, y = ~Yield, color = ~Maturity_Label, type = 'scatter', mode = 'lines',
+             hoverinfo = 'text', text = ~paste(format(Date, "%d %b %Y"), ", ", format(Yield, digits = 4), ", ", Maturity_Label))
+
+# Customize the plot
+p <- p %>% layout(title = "Yield vs. Date for Different Maturities",
+                  xaxis = list(title = "Date"),
+                  yaxis = list(title = "Yield", tickformat = ".2f"))
+
+# Print the plot
+p
+
+
+
+
+
+
+
 
 # Clean-up
 rm(list = ls())

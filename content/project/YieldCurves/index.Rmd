@@ -46,10 +46,16 @@ Featured below are some yields
 <br> 
 
 <button onclick="toggleFullscreen('iframe1')" style="font-size: 14px; padding: 5px 15px; border: none; border-radius: 20px; background-color: #1664c0; color: white; cursor: pointer; transition: background-color 0.3s;" onmouseover="this.style.backgroundColor='#0056b3'" onmouseout="this.style.backgroundColor='#007BFF'">Open in Fullscreen</button>
-<iframe id="iframe1" src="YieldCurves1.html" width="100%" height="600px" frameborder="0"> </iframe>
+<iframe id="iframe1" src="plot_3d_Swiss_yield_curve.html" width="100%" height="600px" frameborder="0"> </iframe>
+
+<br> 
+
+<button onclick="toggleFullscreen('iframe2')" style="font-size: 14px; padding: 5px 15px; border: none; border-radius: 20px; background-color: #1664c0; color: white; cursor: pointer; transition: background-color 0.3s;" onmouseover="this.style.backgroundColor='#0056b3'" onmouseout="this.style.backgroundColor='#007BFF'">Open in Fullscreen</button>
+<iframe id="iframe2" src="plot_simple_Swiss_yield_curve.html" width="100%" height="600px" frameborder="0"> </iframe>
+
 
 ```{r, include=FALSE}
-YieldCurves1_update_date <- readRDS("~/Desktop/websiteJuly2023/content/project/YieldCurves/YieldCurves1_update_date.rds")
+YieldCurves1_update_date <- readRDS("~/Desktop/websiteJuly2023/content/project/YieldCurves/plot_3d_Swiss_yield_curve_update_date.rds")
 ``` 
 
 <br> <br> 
@@ -64,11 +70,16 @@ Last update: `r YieldCurves1_update_date` CET
 ### US Yield Curve
 <br> 
 
-<button onclick="toggleFullscreen('iframe2')" style="font-size: 14px; padding: 5px 15px; border: none; border-radius: 20px; background-color: #1664c0; color: white; cursor: pointer; transition: background-color 0.3s;" onmouseover="this.style.backgroundColor='#0056b3'" onmouseout="this.style.backgroundColor='#007BFF'">Open in Fullscreen</button>
-<iframe id="iframe2" src="YieldCurves2.html" width="100%" height="600px" frameborder="0"> </iframe>
+<button onclick="toggleFullscreen('iframe3')" style="font-size: 14px; padding: 5px 15px; border: none; border-radius: 20px; background-color: #1664c0; color: white; cursor: pointer; transition: background-color 0.3s;" onmouseover="this.style.backgroundColor='#0056b3'" onmouseout="this.style.backgroundColor='#007BFF'">Open in Fullscreen</button>
+<iframe id="iframe3" src="plot_3d_US_yield_curve.html" width="100%" height="600px" frameborder="0"> </iframe>
+
+<br> 
+
+<button onclick="toggleFullscreen('iframe4')" style="font-size: 14px; padding: 5px 15px; border: none; border-radius: 20px; background-color: #1664c0; color: white; cursor: pointer; transition: background-color 0.3s;" onmouseover="this.style.backgroundColor='#0056b3'" onmouseout="this.style.backgroundColor='#007BFF'">Open in Fullscreen</button>
+<iframe id="iframe4" src="plot_simple_US_yield_curve.html" width="100%" height="600px" frameborder="0"> </iframe>
 
 ```{r, include=FALSE}
-YieldCurves2_update_date <- readRDS("~/Desktop/websiteJuly2023/content/project/YieldCurves/YieldCurves2_update_date.rds")
+YieldCurves2_update_date <- readRDS("~/Desktop/websiteJuly2023/content/project/YieldCurves/plot_3d_US_yield_curve_update_date.rds")
 ``` 
 
 <br> <br> 

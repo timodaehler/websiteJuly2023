@@ -48,3 +48,4 @@ while(TRUE) {
   # Warten, bevor der nächste Durchlauf beginnt
   Sys.sleep(10)
 }
+
