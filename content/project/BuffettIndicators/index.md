@@ -72,7 +72,7 @@ Open in Fullscreen
 <iframe id="iframe2" src="BuffettIndicators2.html" width="100%" height="600px" frameborder="0">
 </iframe>
 
-<br> <br> Last update: 2024-02-19 22:28:35 CET
+<br> <br> Last update: 2024-02-19 22:30:01 CET
 
 #### Data Sources:
 
