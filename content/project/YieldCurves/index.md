@@ -59,7 +59,7 @@ Open in Fullscreen
 <iframe id="iframe2" src="plot_simple_Swiss_yield_curve.html" width="100%" height="600px" frameborder="0">
 </iframe>
 
-<br> <br> Last update: 2024-03-09 21:25:58 CET
+<br> <br> Last update: 2024-03-09 21:28:04 CET
 
 #### Data Sources:
 
