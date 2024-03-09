@@ -183,7 +183,7 @@ knit_all_index_files("/Users/timodaehler_1/Desktop/websiteJuly2023/content/proje
 
 
 stop_server()
-# serve_site()
+serve_site()
 
 
 (end <- Sys.time())

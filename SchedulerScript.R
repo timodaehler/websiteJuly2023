@@ -46,6 +46,6 @@ while(TRUE) {
   source(glue(here::here(), "AutomatedAddCommitAndPush.R", .sep = "/"))
   
   # Warten, bevor der nächste Durchlauf beginnt
-  Sys.sleep(10)
+  Sys.sleep(60)
 }
 

@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>MACRO | Timo B. Dähler</title>
-    <link>https://example.com/tag/macro/</link>
-      <atom:link href="https://example.com/tag/macro/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://timodaehler.com/tag/macro/</link>
+      <atom:link href="https://timodaehler.com/tag/macro/index.xml" rel="self" type="application/rss+xml" />
     <description>MACRO</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Thu, 31 Aug 2023 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://example.com/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
+      <url>https://timodaehler.com/media/icon_hubfe94eff2c7665b447a2981da60b398b_967851_512x512_fill_lanczos_center_3.png</url>
       <title>MACRO</title>
-      <link>https://example.com/tag/macro/</link>
+      <link>https://timodaehler.com/tag/macro/</link>
     </image>
     
     <item>
       <title>Policy Rates</title>
-      <link>https://example.com/project/policyrates/</link>
+      <link>https://timodaehler.com/project/policyrates/</link>
       <pubDate>Thu, 31 Aug 2023 00:00:00 +0000</pubDate>
-      <guid>https://example.com/project/policyrates/</guid>
-      <description>
+      <guid>https://timodaehler.com/project/policyrates/</guid>
+      <description>&lt;!-- 
 
 
 
@@ -39,14 +39,34 @@
     }
 &lt;/script&gt;
 
-
-&lt;p&gt;Featured below are policy rates from central banks essential from a Swiss perspective.&lt;/p&gt;
+ --&gt;
+&lt;!-- Load Plotly JavaScript library --&gt;
+&lt;script src=&#34;https://cdn.plot.ly/plotly-latest.min.js&#34;&gt;&lt;/script&gt;
+&lt;!-- Add the toggle fullscreen function --&gt;
+&lt;script&gt;
+    function toggleFullscreen(iframeId) {
+        let iframe = document.getElementById(iframeId);
+        if (iframe.requestFullscreen) {
+            iframe.requestFullscreen();
+        } else if (iframe.mozRequestFullScreen) { /* Firefox */
+            iframe.mozRequestFullScreen();
+        } else if (iframe.webkitRequestFullscreen) { /* Chrome, Safari &amp; Opera */
+            iframe.webkitRequestFullscreen();
+        } else if (iframe.msRequestFullscreen) { /* IE/Edge */
+            iframe.msRequestFullscreen();
+        }
+    }
+&lt;/script&gt;
+&lt;p&gt;Featured below are policy rates from central banks essential from a
+Swiss perspective.&lt;/p&gt;
 &lt;h3 id=&#34;policy-rates&#34;&gt;Policy Rates&lt;/h3&gt;
-&lt;br&gt; 
-&lt;p&gt;&lt;button onclick=&#34;toggleFullscreen(&#39;iframe1&#39;)&#34; style=&#34;font-size: 14px; padding: 5px 15px; border: none; border-radius: 20px; background-color: #1664c0; color: white; cursor: pointer; transition: background-color 0.3s;&#34; onmouseover=&#34;this.style.backgroundColor=&#39;#0056b3&#39;&#34; onmouseout=&#34;this.style.backgroundColor=&#39;#007BFF&#39;&#34;&gt;Open in Fullscreen&lt;/button&gt;&lt;/p&gt;
-&lt;iframe id=&#34;iframe1&#34; src=&#34;PolicyRates1.html&#34; width=&#34;100%&#34; height=&#34;600px&#34; frameborder=&#34;0&#34;&gt; &lt;/iframe&gt;
-&lt;p&gt;&lt;br&gt; &lt;br&gt;
-Last update: 2023-09-01 14:01:12 CET&lt;/p&gt;
+&lt;br&gt;
+&lt;button onclick=&#34;toggleFullscreen(&amp;#39;iframe1&amp;#39;)&#34; style=&#34;font-size: 14px; padding: 5px 15px; border: none; border-radius: 20px; background-color: #1664c0; color: white; cursor: pointer; transition: background-color 0.3s;&#34; onmouseover=&#34;this.style.backgroundColor=&amp;#39;#0056b3&amp;#39;&#34; onmouseout=&#34;this.style.backgroundColor=&amp;#39;#007BFF&amp;#39;&#34;&gt;
+Open in Fullscreen
+&lt;/button&gt;
+&lt;iframe id=&#34;iframe1&#34; src=&#34;PolicyRates1.html&#34; width=&#34;100%&#34; height=&#34;600px&#34; frameborder=&#34;0&#34;&gt;
+&lt;/iframe&gt;
+&lt;p&gt;&lt;br&gt; &lt;br&gt; Last update: 2024-03-04 08:37:36 CET&lt;/p&gt;
 &lt;h4 id=&#34;data-sources&#34;&gt;Data Sources:&lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;Policy Rates: &lt;a href=&#34;https://data.snb.ch/de/topics/snb/cube/snboffzisa&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;SNB&lt;/a&gt;&lt;/li&gt;
