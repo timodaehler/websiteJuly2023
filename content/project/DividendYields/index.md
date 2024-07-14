@@ -72,7 +72,7 @@ Open in Fullscreen
 <iframe id="iframe2" src="DividendYields2.html" width="100%" height="600px" frameborder="0">
 </iframe>
 
-<br> <br> Last update: 2024-06-09 20:06:17 CET
+<br> <br> Last update: 2024-07-14 17:43:18 CET
 
 #### Data Sources:
 
